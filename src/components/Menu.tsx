@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MessageSquare } from 'lucide-react';
+import { MessageSquare, Search, X } from 'lucide-react';
 import { MENU_ITEMS, getLocalizedText } from '../data';
 import { Category, MenuItem, ProductStats } from '../types';
 import { useLanguage } from '../context/LanguageContext';
@@ -15,6 +15,7 @@ export default function Menu() {
   const { addItem } = useCart();
   const [activeCategory, setActiveCategory] = useState<Category | 'All'>('All');
   const [activeTag, setActiveTag] = useState<string | 'All'>('All');
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedProduct, setSelectedProduct] = useState<MenuItem | null>(null);
   const [productStats, setProductStats] = useState<Record<string, ProductStats>>({});
   const [addedItems, setAddedItems] = useState<Record<string, boolean>>({});
@@ -58,7 +59,10 @@ export default function Menu() {
   const filteredItems = MENU_ITEMS.filter(item => {
     const categoryMatch = activeCategory === 'All' || item.category === activeCategory;
     const tagMatch = activeTag === 'All' || item.tags.includes(activeTag);
-    return categoryMatch && tagMatch;
+    const searchMatch = searchQuery.trim() === '' ||
+      getLocalizedText(item.title, language).toLowerCase().includes(searchQuery.toLowerCase()) ||
+      getLocalizedText(item.description, language).toLowerCase().includes(searchQuery.toLowerCase());
+    return categoryMatch && tagMatch && searchMatch;
   });
 
   return (
@@ -73,7 +77,27 @@ export default function Menu() {
             {t.menu.tagline}
           </motion.span>
           <h2 className="text-4xl md:text-5xl mb-8">{t.menu.title}</h2>
-          
+
+          {/* Search Bar */}
+          <div className="relative max-w-md mx-auto mt-6 mb-2">
+            <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-forest/40" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={e => setSearchQuery(e.target.value)}
+              placeholder={t.menu.searchPlaceholder || 'Rechercher une glace...'}
+              className="w-full pl-10 pr-10 py-3 bg-white border border-forest/10 rounded-full text-sm focus:outline-none focus:border-gold transition-colors shadow-sm"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery('')}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-forest/30 hover:text-forest transition-colors"
+              >
+                <X size={14} />
+              </button>
+            )}
+          </div>
+
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             {categories.map((cat) => (
               <button
@@ -125,6 +149,18 @@ export default function Menu() {
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence mode="popLayout">
+            {filteredItems.length === 0 && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="col-span-3 text-center py-20 text-forest/40"
+              >
+                <span className="text-5xl block mb-4">🍦</span>
+                <p className="text-sm font-bold uppercase tracking-widest">
+                  {t.menu.noResults || 'Aucun résultat trouvé'}
+                </p>
+              </motion.div>
+            )}
             {filteredItems.map((item) => (
               <motion.div
                 key={item.id}
