@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MessageSquare, Star } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
 import { MENU_ITEMS, getLocalizedText } from '../data';
 import { Category, MenuItem, ProductStats } from '../types';
 import { useLanguage } from '../context/LanguageContext';
@@ -8,13 +8,22 @@ import ProductReviewSection from './ProductReviewSection';
 import { ReviewService } from '../services/ReviewService';
 import StarRating from './StarRating';
 import { TRANSLATIONS } from '../data/translations';
+import { useCart } from '../context/CartContext';
 
 export default function Menu() {
   const { t, language } = useLanguage();
+  const { addItem } = useCart();
   const [activeCategory, setActiveCategory] = useState<Category | 'All'>('All');
   const [activeTag, setActiveTag] = useState<string | 'All'>('All');
   const [selectedProduct, setSelectedProduct] = useState<MenuItem | null>(null);
   const [productStats, setProductStats] = useState<Record<string, ProductStats>>({});
+  const [addedItems, setAddedItems] = useState<Record<string, boolean>>({});
+
+  const handleAddToCart = (item: MenuItem) => {
+    addItem(item);
+    setAddedItems(prev => ({ ...prev, [item.id]: true }));
+    setTimeout(() => setAddedItems(prev => ({ ...prev, [item.id]: false })), 1500);
+  };
 
   useEffect(() => {
     const unsubscribes = MENU_ITEMS.map(item => 
@@ -163,8 +172,15 @@ export default function Menu() {
                   </p>
                   
                   <div className="flex gap-3">
-                    <button className="flex-1 py-3 bg-forest text-cream rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-gold transition-all">
-                      {t.menu.cta}
+                    <button
+                      onClick={() => handleAddToCart(item)}
+                      className={`flex-1 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all ${
+                        addedItems[item.id]
+                          ? 'bg-green-600 text-white'
+                          : 'bg-forest text-cream hover:bg-gold'
+                      }`}
+                    >
+                      {addedItems[item.id] ? `✓ ${(t as any).cart?.added || 'Ajouté'}` : t.menu.cta}
                     </button>
                     <button 
                       onClick={() => setSelectedProduct(item)}

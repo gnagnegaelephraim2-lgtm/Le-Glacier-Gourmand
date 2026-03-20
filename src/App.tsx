@@ -16,26 +16,33 @@ import Footer from './components/Footer';
 import AIChat from './components/AIChat';
 import Preloader from './components/Preloader';
 import { LanguageProvider } from './context/LanguageContext';
+import { CartProvider } from './context/CartContext';
+import CartDrawer from './components/CartDrawer';
+import CheckoutModal from './components/CheckoutModal';
 
 export default function App() {
   return (
     <LanguageProvider>
-      <Preloader />
-      <div className="min-h-screen selection:bg-gold selection:text-forest">
-        <Navbar />
-        <main>
-          <Hero />
-          <Story />
-          <Commitment />
-          <Menu />
-          <Desserts />
-          <Events />
-          <Gallery />
-          <Reviews />
-        </main>
-        <Footer />
-        <AIChat />
-      </div>
+      <CartProvider>
+        <Preloader />
+        <div className="min-h-screen selection:bg-gold selection:text-forest">
+          <Navbar />
+          <main>
+            <Hero />
+            <Story />
+            <Commitment />
+            <Menu />
+            <Desserts />
+            <Events />
+            <Gallery />
+            <Reviews />
+          </main>
+          <Footer />
+          <AIChat />
+          <CartDrawer />
+          <CheckoutModal />
+        </div>
+      </CartProvider>
     </LanguageProvider>
   );
 }

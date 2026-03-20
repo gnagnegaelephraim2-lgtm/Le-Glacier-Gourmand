@@ -97,18 +97,18 @@ export default function ProductReviewSection({ product, onClose }: ProductReview
           <X size={20} />
         </button>
 
-        <div className="p-8 border-b border-forest/10 flex items-center gap-6">
+        <div className="p-6 sm:p-8 border-b border-forest/10 flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 text-center sm:text-left">
           <img 
             src={product.image} 
             alt={getLocalizedText(product.title, language)}
             loading="lazy"
             decoding="async"
-            className="w-full h-auto rounded-2xl object-cover shadow-md"
+            className="w-32 h-32 sm:w-28 sm:h-28 rounded-2xl object-cover shadow-md flex-shrink-0"
             referrerPolicy="no-referrer"
           />
-          <div>
+          <div className="flex-1 w-full flex flex-col items-center sm:items-start">
             <h3 className="text-2xl font-serif text-forest">{getLocalizedText(product.title, language)}</h3>
-            <div className="flex items-center gap-3 mt-1">
+            <div className="flex items-center justify-center sm:justify-start gap-3 mt-2">
               <StarRating rating={stats?.averageRating || 0} size={14} />
               <span className="text-xs text-forest/60 font-medium">
                 {stats ? `${stats.averageRating.toFixed(1)} (${stats.reviewCount} ${t.reviews.reviewCount})` : t.menu.noReviews}

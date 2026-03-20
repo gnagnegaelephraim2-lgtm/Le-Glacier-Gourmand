@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, ShoppingCart, Instagram, Facebook, User as UserIcon, LogOut, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { Language } from '../data/translations';
+import { useCart } from '../context/CartContext';
 import Logo from './Logo';
 import { auth, logout } from '../firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
@@ -15,6 +16,7 @@ export default function Navbar() {
   const [authMode, setAuthMode] = useState<'login' | 'signup'>('login');
   const [user, setUser] = useState<User | null>(null);
   const { t, language, setLanguage } = useLanguage();
+  const { totalItems, setIsCartOpen } = useCart();
 
   const LANGUAGES: { code: Language; label: string; flag: string }[] = [
     { code: 'fr', label: 'Français', flag: '🇫🇷' },
@@ -155,9 +157,13 @@ export default function Navbar() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="p-2 rounded-full bg-forest/20 backdrop-blur-md text-white border border-white/20 hover:bg-gold transition-colors"
+            onClick={() => setIsCartOpen(true)}
+            className="relative p-2 rounded-full bg-forest/20 backdrop-blur-md text-white border border-white/20 hover:bg-gold transition-colors"
           >
             <ShoppingCart size={20} />
+            {totalItems > 0 && (
+              <span className="absolute -top-1 -right-1 w-4 h-4 bg-gold rounded-full border-2 border-forest" />
+            )}
           </motion.button>
         </div>
 
@@ -194,8 +200,11 @@ export default function Navbar() {
               )}
             </AnimatePresence>
           </div>
-          <button className="p-2">
+          <button className="relative p-2" onClick={() => setIsCartOpen(true)}>
             <ShoppingCart size={24} />
+            {totalItems > 0 && (
+              <span className="absolute top-0.5 right-0.5 w-3.5 h-3.5 bg-gold rounded-full border-2 border-white" />
+            )}
           </button>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
