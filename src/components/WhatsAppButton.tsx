@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 
-const WHATSAPP_NUMBER = '23052000000'; // À remplacer par le vrai numéro
+const WHATSAPP_NUMBER = '23059890767';
 const MESSAGE = encodeURIComponent('Bonjour Le Glacier Gourmand ! Je souhaite passer une commande 🍦');
 
 export default function WhatsAppButton() {
