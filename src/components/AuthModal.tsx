@@ -2,15 +2,11 @@ import { useState, FormEvent, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import {
-  X, Mail, Lock, User as UserIcon, LogIn, UserPlus, AlertCircle, Chrome,
-  Facebook, Instagram, Twitter, Music2
+  X, Mail, Lock, User as UserIcon, LogIn, UserPlus, AlertCircle, Chrome
 } from 'lucide-react';
 import {
   auth,
   signInWithGoogle,
-  signInWithFacebook,
-  signInWithTwitter,
-  signInWithInstagram,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   updateProfile
@@ -215,44 +211,13 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'login' }: Au
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3">
             <button
               onClick={() => handleSocialSignIn('Google', signInWithGoogle)}
               className="py-3 bg-white border border-forest/10 text-forest rounded-xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:border-gold hover:text-gold transition-all shadow-sm"
             >
               <Chrome size={16} />
               Google
-            </button>
-            <button
-              onClick={() => handleSocialSignIn('Facebook', signInWithFacebook)}
-              className="py-3 bg-white border border-forest/10 text-forest rounded-xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:border-[#1877F2] hover:text-[#1877F2] transition-all shadow-sm"
-            >
-              <Facebook size={16} />
-              Facebook
-            </button>
-            <button
-              onClick={() => handleSocialSignIn('Instagram', signInWithInstagram)}
-              className="py-3 bg-white border border-forest/10 text-forest rounded-xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:border-[#E4405F] hover:text-[#E4405F] transition-all shadow-sm"
-            >
-              <Instagram size={16} />
-              Instagram
-            </button>
-            <button
-              onClick={() => handleSocialSignIn('X', signInWithTwitter)}
-              className="py-3 bg-white border border-forest/10 text-forest rounded-xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:border-black hover:text-black transition-all shadow-sm"
-            >
-              <Twitter size={16} />
-              X (Twitter)
-            </button>
-            <button
-              disabled
-              className="col-span-2 relative py-3 bg-white border border-forest/10 text-forest/30 rounded-xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 shadow-sm cursor-not-allowed"
-            >
-              <Music2 size={16} />
-              TikTok
-              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-[8px] bg-gold/20 text-gold px-2 py-0.5 rounded-full font-bold tracking-widest uppercase">
-                Bientôt
-              </span>
             </button>
           </div>
         </div>
