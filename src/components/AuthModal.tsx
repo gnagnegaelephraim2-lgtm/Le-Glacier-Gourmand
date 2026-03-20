@@ -11,12 +11,12 @@ import {
   signInWithFacebook,
   signInWithTwitter,
   signInWithInstagram,
-  signInWithTikTok,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   updateProfile
 } from '../firebase';
 import { useLanguage } from '../context/LanguageContext';
+import { useToast } from '../context/ToastContext';
 
 interface AuthModalProps {
   isOpen: boolean;
@@ -26,6 +26,7 @@ interface AuthModalProps {
 
 export default function AuthModal({ isOpen, onClose, initialMode = 'login' }: AuthModalProps) {
   const { t } = useLanguage();
+  const { showToast } = useToast();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -73,12 +74,15 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'login' }: Au
     setError(null);
     try {
       await signInFunc();
+      showToast(`Connecté via ${providerName} !`, 'success', '🎉');
       onClose();
     } catch (err: any) {
       console.error(err);
       let message = `${t.auth.socialError} ${providerName}.`;
       if (err.code === 'auth/popup-closed-by-user') message = t.auth.popupClosed;
       if (err.code === 'auth/unauthorized-domain') message = t.auth.unauthorizedDomain;
+      if (err.code === 'auth/operation-not-allowed') message = `${providerName} n'est pas encore activé. Configurez-le dans Firebase Console.`;
+      if (err.code === 'auth/account-exists-with-different-credential') message = 'Un compte existe déjà avec cet email. Essayez une autre méthode.';
       setError(message);
     }
   };
@@ -214,38 +218,41 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'login' }: Au
           <div className="grid grid-cols-2 gap-3">
             <button
               onClick={() => handleSocialSignIn('Google', signInWithGoogle)}
-              className="py-3 bg-white border border-forest/10 text-forest rounded-xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:border-gold transition-all shadow-sm"
+              className="py-3 bg-white border border-forest/10 text-forest rounded-xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:border-gold hover:text-gold transition-all shadow-sm"
             >
-              <Chrome size={16} className="text-gold" />
+              <Chrome size={16} />
               Google
             </button>
             <button
               onClick={() => handleSocialSignIn('Facebook', signInWithFacebook)}
               className="py-3 bg-white border border-forest/10 text-forest rounded-xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:border-[#1877F2] hover:text-[#1877F2] transition-all shadow-sm"
             >
-              <Facebook size={16} className="text-forest transition-colors" />
+              <Facebook size={16} />
               Facebook
             </button>
             <button
               onClick={() => handleSocialSignIn('Instagram', signInWithInstagram)}
               className="py-3 bg-white border border-forest/10 text-forest rounded-xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:border-[#E4405F] hover:text-[#E4405F] transition-all shadow-sm"
             >
-              <Instagram size={16} className="text-forest transition-colors" />
+              <Instagram size={16} />
               Instagram
             </button>
             <button
               onClick={() => handleSocialSignIn('X', signInWithTwitter)}
               className="py-3 bg-white border border-forest/10 text-forest rounded-xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:border-black hover:text-black transition-all shadow-sm"
             >
-              <Twitter size={16} className="text-forest transition-colors" />
+              <Twitter size={16} />
               X (Twitter)
             </button>
             <button
-              onClick={() => handleSocialSignIn('TikTok', signInWithTikTok)}
-              className="col-span-2 py-3 bg-white border border-forest/10 text-forest rounded-xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:border-[#00f2fe] transition-all shadow-sm"
+              disabled
+              className="col-span-2 relative py-3 bg-white border border-forest/10 text-forest/30 rounded-xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 shadow-sm cursor-not-allowed"
             >
-              <Music2 size={16} className="text-forest" />
+              <Music2 size={16} />
               TikTok
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-[8px] bg-gold/20 text-gold px-2 py-0.5 rounded-full font-bold tracking-widest uppercase">
+                Bientôt
+              </span>
             </button>
           </div>
         </div>
