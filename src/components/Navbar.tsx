@@ -17,13 +17,14 @@ export default function Navbar() {
   const [user, setUser] = useState<User | null>(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Mauritius timezone UTC+4
+  // Mauritius timezone UTC+4 (direct offset calculation — no browser timezone dependency)
   useEffect(() => {
     const checkOpen = () => {
       const now = new Date();
-      const muTime = new Date(now.toLocaleString('en-US', { timeZone: 'Indian/Mauritius' }));
-      const day = muTime.getDay(); // 0=Sun, 1=Mon ... 6=Sat
-      const hours = muTime.getHours() + muTime.getMinutes() / 60;
+      // Add UTC+4 offset directly
+      const muDate = new Date(now.getTime() + 4 * 60 * 60 * 1000);
+      const day = muDate.getUTCDay(); // 0=Sun, 1=Mon ... 6=Sat
+      const hours = muDate.getUTCHours() + muDate.getUTCMinutes() / 60;
       if (day >= 1 && day <= 4) setIsOpen(hours >= 8.5 && hours < 18);       // Mon–Thu
       else if (day === 5 || day === 6) setIsOpen(hours >= 8.5 && hours < 20); // Fri–Sat
       else setIsOpen(hours >= 8.5 && hours < 15);                             // Sun
