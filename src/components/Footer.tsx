@@ -1,10 +1,49 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Phone, Mail, Instagram, Facebook, Send } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { useToast } from '../context/ToastContext';
+import { db } from '../firebase';
+import { collection, addDoc, query, where, getDocs, serverTimestamp } from 'firebase/firestore';
 import Logo from './Logo';
 
 export default function Footer() {
   const { t } = useLanguage();
+  const { showToast } = useToast();
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleNewsletter = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim() || isSubmitting) return;
+
+    setIsSubmitting(true);
+    try {
+      // Check if already subscribed
+      const existing = await getDocs(
+        query(collection(db, 'newsletter'), where('email', '==', email.toLowerCase()))
+      );
+
+      if (!existing.empty) {
+        showToast('Vous êtes déjà inscrit(e) !', 'info', '💌');
+        setEmail('');
+        return;
+      }
+
+      await addDoc(collection(db, 'newsletter'), {
+        email: email.toLowerCase(),
+        subscribedAt: serverTimestamp(),
+      });
+
+      showToast('Inscription confirmée ! Merci 🎉', 'success', '💌');
+      setEmail('');
+    } catch (err) {
+      console.error(err);
+      showToast('Une erreur est survenue. Réessayez.', 'error', '❌');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const navLinks = [
     { name: t.nav.home, href: '#hero' },
@@ -68,15 +107,19 @@ export default function Footer() {
               <p className="text-xs text-cream/40 mb-6 leading-relaxed">
                 {t.footer.newsletterDesc}
               </p>
-              <form className="relative" onSubmit={(e) => e.preventDefault()}>
-                <input 
-                  type="email" 
-                  placeholder="E-mail" 
+              <form className="relative" onSubmit={handleNewsletter}>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
+                  placeholder="E-mail"
+                  required
                   className="w-full bg-white/5 border-b border-cream/10 py-2 text-xs focus:outline-none focus:border-gold transition-colors placeholder:text-cream/20"
                 />
-                <button 
+                <button
                   type="submit"
-                  className="absolute right-0 bottom-2 text-gold hover:text-cream transition-colors"
+                  disabled={isSubmitting}
+                  className="absolute right-0 bottom-2 text-gold hover:text-cream transition-colors disabled:opacity-40"
                 >
                   <Send size={14} />
                 </button>
