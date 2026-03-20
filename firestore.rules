@@ -1,0 +1,68 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: reviews
+    // Document ID: auto-generated
+    // Fields:
+    //   - productId: string (required) - ID of the menu item
+    //   - rating: number (required, 1-5) - Rating given by user
+    //   - comment: string (optional) - Review text
+    //   - userId: string (required) - UID of the reviewer
+    //   - userName: string (required) - Name of the reviewer
+    //   - createdAt: timestamp (required) - Time of creation
+    //
+    // Collection: productStats
+    // Document ID: productId
+    // Fields:
+    //   - averageRating: number (required) - Average rating
+    //   - reviewCount: number (required) - Total reviews
+    //
+    // ===============================================================
+
+    // Helper Functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isValidReview(data) {
+      return data.productId is string &&
+             data.rating is number && data.rating >= 1 && data.rating <= 5 &&
+             data.userId == request.auth.uid &&
+             data.userName is string && data.userName.size() > 0 &&
+             data.createdAt == request.time;
+    }
+
+    function isValidStats(data) {
+      return data.averageRating is number && data.averageRating >= 1 && data.averageRating <= 5 &&
+             data.reviewCount is number && data.reviewCount >= 0;
+    }
+
+    // Reviews rules
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create: if isAuthenticated() && isValidReview(request.resource.data);
+      allow update: if false; // Reviews are immutable for now
+      allow delete: if isOwner(resource.data.userId);
+    }
+
+    // Product Stats rules
+    match /productStats/{productId} {
+      allow read: if true;
+      allow write: if isAuthenticated() && isValidStats(request.resource.data);
+    }
+
+    // User profiles (if needed for names)
+    match /users/{userId} {
+      allow read: if true;
+      allow write: if isOwner(userId);
+    }
+  }
+}

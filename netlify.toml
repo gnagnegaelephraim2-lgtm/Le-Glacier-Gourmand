@@ -1,0 +1,36 @@
+# ── Build ─────────────────────────────────────────────────────────────────────
+[build]
+  # 1. Build the React frontend
+  # 2. Add the musl target (static binary, no system lib deps on Lambda)
+  # 3. Compile the Rust function
+  # 4. Place the bootstrap binary where Netlify expects it
+  command = """
+    npm run build && \
+    rustup target add x86_64-unknown-linux-musl && \
+    cd functions-src && \
+    cargo build --release --target x86_64-unknown-linux-musl && \
+    mkdir -p ../netlify/functions/chat && \
+    cp target/x86_64-unknown-linux-musl/release/bootstrap ../netlify/functions/chat/bootstrap
+  """
+  publish   = "dist"
+  functions = "netlify/functions"
+
+# ── Local dev (netlify dev) ───────────────────────────────────────────────────
+[dev]
+  command     = "npm run dev"
+  port        = 3000
+  targetPort  = 3000
+
+# ── Redirects ─────────────────────────────────────────────────────────────────
+
+# API → Rust function
+[[redirects]]
+  from   = "/api/chat"
+  to     = "/.netlify/functions/chat"
+  status = 200
+
+# SPA fallback (React Router)
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200

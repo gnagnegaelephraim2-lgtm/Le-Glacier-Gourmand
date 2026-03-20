@@ -1,0 +1,5 @@
+{
+  "name": "Le Glacier Gourmand",
+  "description": "Luxury artisanal ice-cream boutique in Beau Plan, Mauritius. 100% natural, small-batch production.",
+  "requestFramePermissions": ["geolocation"]
+}
