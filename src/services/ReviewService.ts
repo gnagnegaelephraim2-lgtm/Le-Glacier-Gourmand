@@ -31,14 +31,15 @@ export const ReviewService = {
 
     try {
       await runTransaction(db, async (transaction) => {
-        // 1. Add the review
-        const reviewRef = doc(collection(db, 'reviews'));
-        transaction.set(reviewRef, reviewData);
-
-        // 2. Update product stats
+        // 1. Reads must come before writes in a client-side transaction
         const statsRef = doc(db, 'productStats', productId);
         const statsDoc = await transaction.get(statsRef);
 
+        // 2. Write the review
+        const reviewRef = doc(collection(db, 'reviews'));
+        transaction.set(reviewRef, reviewData);
+
+        // 3. Write product stats
         if (!statsDoc.exists()) {
           transaction.set(statsRef, {
             averageRating: rating,
@@ -48,7 +49,7 @@ export const ReviewService = {
           const currentStats = statsDoc.data() as ProductStats;
           const newCount = currentStats.reviewCount + 1;
           const newAverage = ((currentStats.averageRating * currentStats.reviewCount) + rating) / newCount;
-          
+
           transaction.update(statsRef, {
             averageRating: newAverage,
             reviewCount: newCount,
@@ -78,8 +79,8 @@ export const ReviewService = {
   subscribeToProductReviews(productId: string, callback: (reviews: Review[]) => void) {
     const reviewsRef = collection(db, 'reviews');
     const q = query(
-      reviewsRef, 
-      where('productId', '==', productId), 
+      reviewsRef,
+      where('productId', '==', productId),
       orderBy('createdAt', 'desc')
     );
 
@@ -87,11 +88,30 @@ export const ReviewService = {
       const reviews = snapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data(),
+        name: doc.data().userName,
         date: doc.data().createdAt?.toDate()?.toLocaleDateString() || 'Just now'
       } as Review));
       callback(reviews);
     }, (error) => {
       handleFirestoreError(error, OperationType.LIST, 'reviews');
+    });
+  },
+
+  // Get all reviews (for the testimonials section)
+  subscribeToAllReviews(callback: (reviews: Review[]) => void) {
+    const reviewsRef = collection(db, 'reviews');
+    const q = query(reviewsRef, orderBy('createdAt', 'desc'));
+
+    return onSnapshot(q, (snapshot) => {
+      const reviews = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data(),
+        name: doc.data().userName,
+        date: doc.data().createdAt?.toDate()?.toLocaleDateString() || 'Just now'
+      } as Review));
+      callback(reviews);
+    }, () => {
+      callback([]);
     });
   }
 };

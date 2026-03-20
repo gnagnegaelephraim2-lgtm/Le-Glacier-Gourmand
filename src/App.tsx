@@ -15,34 +15,45 @@ import Reviews from './components/Reviews';
 import Footer from './components/Footer';
 import AIChat from './components/AIChat';
 import Preloader from './components/Preloader';
+import CustomCursor from './components/CustomCursor';
+import ScrollProgressBar from './components/ScrollProgressBar';
+import BackToTop from './components/BackToTop';
+import WhatsAppButton from './components/WhatsAppButton';
 import { LanguageProvider } from './context/LanguageContext';
 import { CartProvider } from './context/CartContext';
+import { ToastProvider } from './context/ToastContext';
 import CartDrawer from './components/CartDrawer';
 import CheckoutModal from './components/CheckoutModal';
 
 export default function App() {
   return (
     <LanguageProvider>
-      <CartProvider>
-        <Preloader />
-        <div className="min-h-screen selection:bg-gold selection:text-forest">
-          <Navbar />
-          <main>
-            <Hero />
-            <Story />
-            <Commitment />
-            <Menu />
-            <Desserts />
-            <Events />
-            <Gallery />
-            <Reviews />
-          </main>
-          <Footer />
-          <AIChat />
-          <CartDrawer />
-          <CheckoutModal />
-        </div>
-      </CartProvider>
+      <ToastProvider>
+        <CartProvider>
+          <CustomCursor />
+          <ScrollProgressBar />
+          <Preloader />
+          <div className="min-h-screen selection:bg-gold selection:text-forest">
+            <Navbar />
+            <main>
+              <Hero />
+              <Story />
+              <Commitment />
+              <Menu />
+              <Desserts />
+              <Events />
+              <Gallery />
+              <Reviews />
+            </main>
+            <Footer />
+            <AIChat />
+            <CartDrawer />
+            <CheckoutModal />
+            <WhatsAppButton />
+            <BackToTop />
+          </div>
+        </CartProvider>
+      </ToastProvider>
     </LanguageProvider>
   );
 }

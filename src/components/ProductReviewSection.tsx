@@ -7,6 +7,7 @@ import { ReviewService } from '../services/ReviewService';
 import { Review, ProductStats, MenuItem } from '../types';
 import { getLocalizedText } from '../data';
 import { useLanguage } from '../context/LanguageContext';
+import { useToast } from '../context/ToastContext';
 import StarRating from './StarRating';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import AuthModal from './AuthModal';
@@ -18,6 +19,7 @@ interface ProductReviewSectionProps {
 
 export default function ProductReviewSection({ product, onClose }: ProductReviewSectionProps) {
   const { language, t } = useLanguage();
+  const { showToast } = useToast();
   const [reviews, setReviews] = useState<Review[]>([]);
   const [stats, setStats] = useState<ProductStats | null>(null);
   const [user, setUser] = useState<User | null>(null);
@@ -67,8 +69,10 @@ export default function ProductReviewSection({ product, onClose }: ProductReview
       );
       setNewComment('');
       setNewRating(5);
+      showToast(t.reviews.submitSuccess || 'Avis publié !', 'success', '⭐');
     } catch (err) {
       setError(t.reviews.submitError);
+      showToast(t.reviews.submitError, 'error', '❌');
       console.error(err);
     } finally {
       setIsSubmitting(false);

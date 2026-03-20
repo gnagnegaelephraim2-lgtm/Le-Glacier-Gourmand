@@ -15,6 +15,23 @@ export default function Navbar() {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [authMode, setAuthMode] = useState<'login' | 'signup'>('login');
   const [user, setUser] = useState<User | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Mauritius timezone UTC+4
+  useEffect(() => {
+    const checkOpen = () => {
+      const now = new Date();
+      const muTime = new Date(now.toLocaleString('en-US', { timeZone: 'Indian/Mauritius' }));
+      const day = muTime.getDay(); // 0=Sun, 1=Mon ... 6=Sat
+      const hours = muTime.getHours() + muTime.getMinutes() / 60;
+      if (day >= 1 && day <= 4) setIsOpen(hours >= 8.5 && hours < 18);       // Mon–Thu
+      else if (day === 5 || day === 6) setIsOpen(hours >= 8.5 && hours < 20); // Fri–Sat
+      else setIsOpen(hours >= 8.5 && hours < 15);                             // Sun
+    };
+    checkOpen();
+    const interval = setInterval(checkOpen, 60000);
+    return () => clearInterval(interval);
+  }, []);
   const { t, language, setLanguage } = useLanguage();
   const { totalItems, setIsCartOpen } = useCart();
 
@@ -74,6 +91,12 @@ export default function Navbar() {
         >
           <Logo className={`h-16 md:h-20 ${isScrolled ? 'text-forest' : 'text-white'}`} showText={false} />
         </motion.div>
+
+        {/* Open/Closed badge */}
+        <div className={`hidden md:flex items-center gap-1.5 px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest border ${isOpen ? 'bg-green-500/20 border-green-400/40 text-green-300' : 'bg-red-500/20 border-red-400/40 text-red-300'}`}>
+          <span className={`w-1.5 h-1.5 rounded-full animate-pulse ${isOpen ? 'bg-green-400' : 'bg-red-400'}`} />
+          {isOpen ? 'Ouvert' : 'Fermé'}
+        </div>
 
         {/* Center: Links */}
         <div className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8">

@@ -1,5 +1,8 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { MenuItem } from '../types';
+import { useToast } from './ToastContext';
+import { getLocalizedText } from '../data';
+import { useLanguage } from './LanguageContext';
 
 export interface CartItem {
   item: MenuItem;
@@ -23,6 +26,9 @@ interface CartContextType {
 const CartContext = createContext<CartContextType | null>(null);
 
 export function CartProvider({ children }: { children: ReactNode }) {
+  const { showToast } = useToast();
+  const { language } = useLanguage();
+
   const [items, setItems] = useState<CartItem[]>(() => {
     try {
       const saved = sessionStorage.getItem('cart');
@@ -46,6 +52,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       }
       return [...prev, { item, quantity: 1 }];
     });
+    showToast(getLocalizedText(item.title, language), 'success', '🛒');
   };
 
   const removeItem = (id: string) => {

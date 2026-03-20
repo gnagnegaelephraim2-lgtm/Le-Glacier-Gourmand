@@ -4,6 +4,7 @@ import { X } from 'lucide-react';
 import { GALLERY_IMAGES } from '../data';
 import { useLanguage } from '../context/LanguageContext';
 import { GalleryImage } from '../types';
+import LazyImage from './LazyImage';
 
 export default function Gallery() {
   const { t } = useLanguage();
@@ -33,12 +34,11 @@ export default function Gallery() {
               className="relative group overflow-hidden rounded-2xl break-inside-avoid cursor-pointer"
               onClick={() => setSelectedImage(img)}
             >
-              <img
+              <LazyImage
                 src={img.url}
                 alt={img.caption}
-                loading="lazy"
-                decoding="async"
                 referrerPolicy="no-referrer"
+                wrapperClassName="w-full"
                 className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-forest/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
