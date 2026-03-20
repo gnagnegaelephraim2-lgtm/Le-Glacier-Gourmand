@@ -204,7 +204,7 @@ export const TRANSLATIONS = {
       privacy: "Confidentialité",
     },
     chat: {
-      welcome: "Bonjour ! Je suis votre concierge de luxe. Comment puis-je vous aider à découvrir nos saveurs artisanales ou à suivre votre commande aujourd'hui ?",
+      welcome: "Bonjour, {name} ! Je suis Chrys, votre concierge de luxe. Comment puis-je vous aider à découvrir nos saveurs artisanales ou à suivre votre commande aujourd'hui ?",
       placeholder: "Demandez à notre concierge...",
       online: "En ligne",
       concierge: "Concierge",
@@ -507,7 +507,7 @@ export const TRANSLATIONS = {
       privacy: 'Privacy',
     },
     chat: {
-      welcome: "Hello! I'm your luxury concierge. How can I help you discover our artisan flavors or track your order today?",
+      welcome: "Hello, {name}! I'm Chrys, your luxury concierge. How can I help you discover our artisan flavors or track your order today?",
       placeholder: 'Ask our concierge...',
       online: 'Online',
       concierge: 'Concierge',
@@ -810,7 +810,7 @@ export const TRANSLATIONS = {
       privacy: 'Konfidansialite',
     },
     chat: {
-      welcome: 'Bonzour! Mo ou konsyerz de liks. Kouma mo kapav ed ou dekouver nou savér artizanal ou swiv ou komannd zordi?',
+      welcome: 'Bonzour, {name}! Mo Chrys, ou konsyerz de liks. Kouma mo kapav ed ou dekouver nou savér artizanal ou swiv ou komannd zordi?',
       placeholder: 'Demann nou konsyerz...',
       online: 'En Linny',
       concierge: 'Konsyerz',
@@ -1113,7 +1113,7 @@ export const TRANSLATIONS = {
       privacy: 'الخصوصية',
     },
     chat: {
-      welcome: 'مرحباً! أنا كونسيرج الفاخر. كيف يمكنني مساعدتك في اكتشاف نكهاتنا الحرفية أو تتبع طلبك اليوم؟',
+      welcome: 'مرحباً، {name}! أنا Chrys، كونسيرجك الفاخر. كيف يمكنني مساعدتك في اكتشاف نكهاتنا الحرفية أو تتبع طلبك اليوم؟',
       placeholder: 'اسأل كونسيرجنا...',
       online: 'متصل',
       concierge: 'كونسيرج',
@@ -1416,7 +1416,7 @@ export const TRANSLATIONS = {
       privacy: 'गोपनीयता',
     },
     chat: {
-      welcome: 'नमस्ते! मैं आपका लक्जरी कॉन्सीयर्ज हूं। आज मैं आपको हमारे हस्तनिर्मित स्वाद खोजने या आपके ऑर्डर को ट्रैक करने में कैसे मदद कर सकता हूं?',
+      welcome: 'नमस्ते, {name}! मैं Chrys हूं, आपका लक्जरी कॉन्सीयर्ज। आज मैं आपको हमारे हस्तनिर्मित स्वाद खोजने या आपके ऑर्डर को ट्रैक करने में कैसे मदद कर सकता हूं?',
       placeholder: 'हमारे कॉन्सीयर्ज से पूछें...',
       online: 'ऑनलाइन',
       concierge: 'कॉन्सीयर्ज',
@@ -1719,7 +1719,7 @@ export const TRANSLATIONS = {
       privacy: '隐私',
     },
     chat: {
-      welcome: '您好！我是您的豪华礼宾。今天我可以如何帮助您探索我们的手工口味或追踪您的订单？',
+      welcome: '您好，{name}！我是Chrys，您的豪华礼宾。今天我可以如何帮助您探索我们的手工口味或追踪您的订单？',
       placeholder: '向我们的礼宾询问...',
       online: '在线',
       concierge: '礼宾',

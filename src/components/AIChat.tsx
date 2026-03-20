@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Send, Sparkles, Trash2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { auth } from '../firebase';
+import { onAuthStateChanged, User } from 'firebase/auth';
 
 const MOCK_ORDERS: Record<string, string> = {
   'GL-1234': 'Votre commande est en cours de préparation avec des mangues fraîches de Maurice.',
@@ -34,13 +36,24 @@ export default function AIChat() {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  const [user, setUser] = useState<User | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const orderInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    setMessages([{ role: 'ai', text: t.chat.welcome, timestamp: new Date() }]);
-  }, [language, t.chat.welcome]);
+    const unsub = onAuthStateChanged(auth, setUser);
+    return () => unsub();
+  }, []);
+
+  const userName = user?.displayName?.split(' ')[0] || user?.email?.split('@')[0] || null;
+
+  useEffect(() => {
+    const welcome = userName
+      ? t.chat.welcome.replace('{name}', userName)
+      : t.chat.welcome.replace(', {name}', '').replace('{name}', '');
+    setMessages([{ role: 'ai', text: welcome, timestamp: new Date() }]);
+  }, [language, t.chat.welcome, userName]);
 
   // Auto-scroll
   useEffect(() => {
@@ -76,6 +89,7 @@ export default function AIChat() {
           message: userMsg,
           language,
           history: messages.map(m => ({ role: m.role, text: m.text })),
+          userName,
         }),
       });
 
@@ -174,7 +188,7 @@ export default function AIChat() {
                   <Sparkles size={20} className="text-gold" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-lg leading-none">{t.chat.concierge}</h4>
+                  <h4 className="font-serif text-lg leading-none">Chrys</h4>
                   <span className="text-[10px] uppercase tracking-widest opacity-60">{t.chat.online}</span>
                 </div>
               </div>
