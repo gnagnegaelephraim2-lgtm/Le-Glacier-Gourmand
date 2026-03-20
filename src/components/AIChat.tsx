@@ -126,6 +126,18 @@ export default function AIChat() {
   const formatTime = (date: Date) =>
     date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
+  const renderText = (text: string) => {
+    // Convert basic markdown to JSX
+    const parts = text.split(/(\*\*.*?\*\*|\*.*?\*)/g);
+    return parts.map((part, i) => {
+      if (part.startsWith('**') && part.endsWith('**'))
+        return <strong key={i}>{part.slice(2, -2)}</strong>;
+      if (part.startsWith('*') && part.endsWith('*'))
+        return <em key={i}>{part.slice(1, -1)}</em>;
+      return part;
+    });
+  };
+
   const suggestions = SUGGESTIONS[language] ?? SUGGESTIONS.fr;
   const showSuggestions = messages.length <= 1 && !isLoading;
 
@@ -244,7 +256,7 @@ export default function AIChat() {
                         : 'bg-white text-forest shadow-sm rounded-tl-none border border-forest/5'
                     }`}
                   >
-                    {msg.text}
+                    {renderText(msg.text)}
                   </div>
                   <span className="text-[10px] text-forest/30 mt-0.5 px-1">
                     {formatTime(msg.timestamp)}
