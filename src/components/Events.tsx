@@ -43,6 +43,7 @@ export default function Events() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsBookingOpen(true)}
+              data-cursor="cart"
               className="px-10 py-5 bg-forest text-white rounded-full font-bold shadow-xl hover:bg-gold transition-all flex items-center gap-3"
             >
               <Calendar size={20} />
