@@ -6,7 +6,3 @@ coverage/
 *.log
 .env*
 !.env.example
-
-# Firebase config — never commit these
-firebase-applet-config.json
-firebase-blueprint.json
