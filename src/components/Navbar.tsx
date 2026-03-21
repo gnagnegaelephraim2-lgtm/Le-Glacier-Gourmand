@@ -5,10 +5,9 @@ import { useLanguage } from '../context/LanguageContext';
 import { Language } from '../data/translations';
 import { useCart } from '../context/CartContext';
 import Logo from './Logo';
-import { auth, logout, getRedirectResult } from '../firebase';
+import { auth, logout } from '../firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import AuthModal from './AuthModal';
-import { useToast } from '../context/ToastContext';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,8 +16,6 @@ export default function Navbar() {
   const [authMode, setAuthMode] = useState<'login' | 'signup'>('login');
   const [user, setUser] = useState<User | null>(null);
   const [isOpen, setIsOpen] = useState(false);
-  const { showToast } = useToast();
-
   // Mauritius timezone UTC+4 (direct offset calculation — no browser timezone dependency)
   useEffect(() => {
     const checkOpen = () => {
@@ -65,23 +62,6 @@ export default function Navbar() {
     };
   }, []);
 
-  // Handle result from signInWithRedirect (runs once on page load after Google redirect)
-  useEffect(() => {
-    getRedirectResult(auth)
-      .then((result) => {
-        if (result?.user) {
-          showToast('Connecté avec Google !', 'success', '🎉');
-        }
-      })
-      .catch((err: any) => {
-        if (err.code === 'auth/unauthorized-domain') {
-          showToast('Domaine non autorisé dans Firebase Console.', 'error', '🔒');
-        } else if (err.code && err.code !== 'auth/popup-closed-by-user') {
-          showToast('Erreur de connexion Google.', 'error', '❌');
-        }
-      });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   const openAuth = (mode: 'login' | 'signup') => {
     setAuthMode(mode);

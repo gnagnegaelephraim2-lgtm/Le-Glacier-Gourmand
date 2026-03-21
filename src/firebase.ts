@@ -5,8 +5,7 @@ import {
   FacebookAuthProvider,
   TwitterAuthProvider,
   OAuthProvider,
-  signInWithRedirect,
-  getRedirectResult,
+  signInWithPopup,
   signOut,
   onAuthStateChanged,
   User,
@@ -63,13 +62,12 @@ async function testConnection() {
 }
 testConnection();
 
-// Auth Helpers — redirect-based (works on mobile, avoids popup blockers)
-export const signInWithGoogle = () => signInWithRedirect(auth, googleProvider);
-export const signInWithFacebook = () => signInWithRedirect(auth, facebookProvider);
-export const signInWithTwitter = () => signInWithRedirect(auth, twitterProvider);
-export const signInWithTikTok = () => signInWithRedirect(auth, tiktokProvider);
-export const signInWithInstagram = () => signInWithRedirect(auth, instagramProvider);
-export { getRedirectResult };
+// Auth Helpers
+export const signInWithGoogle = () => signInWithPopup(auth, googleProvider);
+export const signInWithFacebook = () => signInWithPopup(auth, facebookProvider);
+export const signInWithTwitter = () => signInWithPopup(auth, twitterProvider);
+export const signInWithTikTok = () => signInWithPopup(auth, tiktokProvider);
+export const signInWithInstagram = () => signInWithPopup(auth, instagramProvider);
 
 export { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, sendPasswordResetEmail };
 export const logout = () => signOut(auth);
