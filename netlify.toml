@@ -1,20 +1,6 @@
 # ── Build ─────────────────────────────────────────────────────────────────────
 [build]
-  # 1. Build the React frontend
-  # 2. Add the musl target (static binary, no system lib deps on Lambda)
-  # 3. Compile the Rust function
-  # 4. Place the bootstrap binary where Netlify expects it
-  command = """
-    npm run build && \
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && \
-    source $HOME/.cargo/env && \
-    rustup default stable && \
-    rustup target add x86_64-unknown-linux-musl && \
-    cd functions-src && \
-    cargo build --release --target x86_64-unknown-linux-musl && \
-    mkdir -p ../netlify/functions/chat && \
-    cp target/x86_64-unknown-linux-musl/release/bootstrap ../netlify/functions/chat/bootstrap
-  """
+  command   = "npm run build"
   publish   = "dist"
   functions = "netlify/functions"
 
