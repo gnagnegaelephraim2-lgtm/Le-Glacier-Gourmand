@@ -47,6 +47,15 @@ export default function Menu() {
     'Lunch':     'lunch',
   };
 
+  const CATEGORY_EMOJI: Record<string, string> = {
+    'Ice Cream': '🍦',
+    'Sorbet':    '🍧',
+    'Desserts':  '🍨',
+    'Breakfast': '🥞',
+    'Drinks':    '☕',
+    'Lunch':     '🍽️',
+  };
+
   const categories: { key: Category | 'All'; label: string }[] = [
     { key: 'All', label: t.menu.categories.all },
     { key: 'Ice Cream', label: t.menu.categories.iceCream },
@@ -221,14 +230,13 @@ export default function Menu() {
                   <div className="flex gap-3">
                     <button
                       onClick={() => handleAddToCart(item)}
-                      data-cursor="cart"
                       className={`flex-1 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all ${
                         addedItems[item.id]
                           ? 'bg-green-600 text-white'
                           : 'bg-forest text-cream hover:bg-gold'
                       }`}
                     >
-                      {addedItems[item.id] ? `✓ ${(t as any).cart?.added || 'Ajouté'}` : t.menu.cta}
+                      {addedItems[item.id] ? `${CATEGORY_EMOJI[item.category] ?? '✓'} ${(t as any).cart?.added || 'Ajouté'}` : t.menu.cta}
                     </button>
                     <button 
                       onClick={() => setSelectedProduct(item)}

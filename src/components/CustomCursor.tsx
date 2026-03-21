@@ -17,7 +17,6 @@ export default function CustomCursor() {
     let clicking  = false;
 
     const CURSOR_MAP: Record<string, string> = {
-      cart:      '🛒',
       icecream:  '🍦',
       sorbet:    '🍧',
       dessert:   '🍨',
@@ -27,9 +26,8 @@ export default function CustomCursor() {
     };
 
     const resolveEmoji = () => {
-      if (cursorVal === 'cart') return '🛒';
       if (cursorVal in CURSOR_MAP) return CURSOR_MAP[cursorVal];
-      // raw emoji passed directly (e.g. data-cursor="☕")
+      // raw emoji passed directly
       if (cursorVal) return cursorVal;
       return hovering ? '🍨' : '🍦';
     };

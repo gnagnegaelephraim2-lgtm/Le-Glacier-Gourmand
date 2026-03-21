@@ -182,7 +182,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsCartOpen(true)}
-            data-cursor="cart"
+           
             className="relative p-2 rounded-full bg-forest/20 backdrop-blur-md text-white border border-white/20 hover:bg-gold transition-colors"
           >
             <ShoppingCart size={20} />
@@ -225,7 +225,7 @@ export default function Navbar() {
               )}
             </AnimatePresence>
           </div>
-          <button className="relative p-2" onClick={() => setIsCartOpen(true)} data-cursor="cart">
+          <button className="relative p-2" onClick={() => setIsCartOpen(true)}>
             <ShoppingCart size={24} />
             {totalItems > 0 && (
               <span className="absolute top-0.5 right-0.5 w-3.5 h-3.5 bg-gold rounded-full border-2 border-white" />
