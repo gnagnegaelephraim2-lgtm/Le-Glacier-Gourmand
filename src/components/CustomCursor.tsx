@@ -13,6 +13,7 @@ export default function CustomCursor() {
     let posX = -200, posY = -200;
     let ringX = -200, ringY = -200;
     let hovering = false;
+    let isCart   = false;
     let clicking = false;
 
     const setOpacity = (v: number) => {
@@ -24,7 +25,7 @@ export default function CustomCursor() {
       const scale  = clicking ? 0.7 : hovering ? 1.4 : 1;
       const rotate = hovering ? '-15deg' : '0deg';
       cursor.style.transform = `translate(-50%,-50%) scale(${scale}) rotate(${rotate})`;
-      cursor.textContent = hovering ? '🍨' : '🍦';
+      cursor.textContent = isCart ? '🛒' : hovering ? '🍨' : '🍦';
 
       const size = hovering ? '52px' : '34px';
       ring.style.width  = size;
@@ -41,9 +42,11 @@ export default function CustomCursor() {
       setOpacity(1);
 
       if (target) {
-        const wasHovering = hovering;
+        const prevHovering = hovering;
+        const prevCart     = isCart;
         hovering = !!target.closest('a,button,[role="button"],input,textarea,select,label');
-        if (wasHovering !== hovering) updateCursorStyle();
+        isCart   = !!target.closest('[data-cursor="cart"]');
+        if (prevHovering !== hovering || prevCart !== isCart) updateCursorStyle();
       }
     };
 
