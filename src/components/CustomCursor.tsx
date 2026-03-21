@@ -6,10 +6,15 @@ export default function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isFinePointer, setIsFinePointer] = useState(false);
 
   useEffect(() => {
-    // Only activate on devices with a real mouse
-    if (!window.matchMedia('(pointer: fine)').matches) return;
+    setIsFinePointer(window.matchMedia('(pointer: fine)').matches);
+  }, []);
+
+  useEffect(() => {
+    // Only activate on devices with a real mouse/trackpad
+    if (!isFinePointer) return;
 
     let rafId: number;
     let mouseX = -200;
@@ -64,6 +69,9 @@ export default function CustomCursor() {
       cancelAnimationFrame(rafId);
     };
   }, []);
+
+  // Render nothing on phones/tablets (coarse pointer = touch screen)
+  if (!isFinePointer) return null;
 
   return (
     <>
