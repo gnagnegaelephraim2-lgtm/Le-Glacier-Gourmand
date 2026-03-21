@@ -6,41 +6,51 @@ export default function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [isFinePointer, setIsFinePointer] = useState(false);
 
   useEffect(() => {
-    setIsFinePointer(window.matchMedia('(pointer: fine)').matches);
-  }, []);
-
-  useEffect(() => {
-    // Only activate on devices with a real mouse/trackpad
-    if (!isFinePointer) return;
-
     let rafId: number;
-    let mouseX = -200;
-    let mouseY = -200;
+    let posX = -200;
+    let posY = -200;
     let ringX = -200;
     let ringY = -200;
 
-    const moveCursor = (e: MouseEvent) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
+    const moveToPoint = (x: number, y: number, target?: Element | null) => {
+      posX = x;
+      posY = y;
       setIsVisible(true);
-
       if (cursorRef.current) {
-        cursorRef.current.style.left = `${mouseX}px`;
-        cursorRef.current.style.top = `${mouseY}px`;
+        cursorRef.current.style.left = `${x}px`;
+        cursorRef.current.style.top = `${y}px`;
       }
+      if (target) {
+        setIsHovering(!!target.closest('a, button, [role="button"], input, textarea, select, label'));
+      }
+    };
 
-      const target = e.target as HTMLElement;
-      setIsHovering(
-        !!target.closest('a, button, [role="button"], input, textarea, select, label')
-      );
+    const onMouseMove = (e: MouseEvent) => moveToPoint(e.clientX, e.clientY, e.target as Element);
+    const onMouseDown = () => setIsClicking(true);
+    const onMouseUp = () => setIsClicking(false);
+    const onMouseLeave = () => setIsVisible(false);
+    const onMouseEnter = () => setIsVisible(true);
+
+    // Touch support — ice cream follows your finger
+    const onTouchStart = (e: TouchEvent) => {
+      const t = e.touches[0];
+      moveToPoint(t.clientX, t.clientY);
+      setIsClicking(true);
+    };
+    const onTouchMove = (e: TouchEvent) => {
+      const t = e.touches[0];
+      moveToPoint(t.clientX, t.clientY);
+    };
+    const onTouchEnd = () => {
+      setIsClicking(false);
+      setIsVisible(false);
     };
 
     const animateRing = () => {
-      ringX += (mouseX - ringX) * 0.1;
-      ringY += (mouseY - ringY) * 0.1;
+      ringX += (posX - ringX) * 0.1;
+      ringY += (posY - ringY) * 0.1;
       if (ringRef.current) {
         ringRef.current.style.left = `${ringX}px`;
         ringRef.current.style.top = `${ringY}px`;
@@ -48,30 +58,28 @@ export default function CustomCursor() {
       rafId = requestAnimationFrame(animateRing);
     };
 
-    const onMouseDown = () => setIsClicking(true);
-    const onMouseUp = () => setIsClicking(false);
-    const onMouseLeave = () => setIsVisible(false);
-    const onMouseEnter = () => setIsVisible(true);
-
-    document.addEventListener('mousemove', moveCursor);
+    document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mousedown', onMouseDown);
     document.addEventListener('mouseup', onMouseUp);
+    document.addEventListener('touchstart', onTouchStart, { passive: true });
+    document.addEventListener('touchmove', onTouchMove, { passive: true });
+    document.addEventListener('touchend', onTouchEnd);
     document.documentElement.addEventListener('mouseleave', onMouseLeave);
     document.documentElement.addEventListener('mouseenter', onMouseEnter);
     rafId = requestAnimationFrame(animateRing);
 
     return () => {
-      document.removeEventListener('mousemove', moveCursor);
+      document.removeEventListener('mousemove', onMouseMove);
       document.removeEventListener('mousedown', onMouseDown);
       document.removeEventListener('mouseup', onMouseUp);
+      document.removeEventListener('touchstart', onTouchStart);
+      document.removeEventListener('touchmove', onTouchMove);
+      document.removeEventListener('touchend', onTouchEnd);
       document.documentElement.removeEventListener('mouseleave', onMouseLeave);
       document.documentElement.removeEventListener('mouseenter', onMouseEnter);
       cancelAnimationFrame(rafId);
     };
   }, []);
-
-  // Render nothing on phones/tablets (coarse pointer = touch screen)
-  if (!isFinePointer) return null;
 
   return (
     <>
