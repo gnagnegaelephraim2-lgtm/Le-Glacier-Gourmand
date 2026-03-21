@@ -247,7 +247,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-50 md:hidden bg-cream/98 backdrop-blur-xl flex flex-col pt-24"
+            className="fixed inset-0 z-[99999] md:hidden bg-cream/98 backdrop-blur-xl flex flex-col pt-24"
           >
             <div className="flex flex-col p-8 gap-6 overflow-y-auto">
               {navLinks.map((link) => (
