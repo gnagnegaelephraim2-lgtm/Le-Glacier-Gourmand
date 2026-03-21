@@ -58,6 +58,7 @@ export default function Hero() {
               transition={{ duration: 2, ease: "linear" }}
               alt="Hero background"
               referrerPolicy="no-referrer"
+              fetchPriority={currentImage === 0 ? 'high' : 'auto'}
               className="absolute inset-0 w-full h-full object-cover brightness-[0.75]"
             />
           )}

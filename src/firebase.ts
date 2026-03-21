@@ -1,13 +1,14 @@
 import { initializeApp } from 'firebase/app';
-import { 
-  getAuth, 
-  GoogleAuthProvider, 
+import {
+  getAuth,
+  GoogleAuthProvider,
   FacebookAuthProvider,
   TwitterAuthProvider,
   OAuthProvider,
-  signInWithPopup, 
-  signOut, 
-  onAuthStateChanged, 
+  signInWithRedirect,
+  getRedirectResult,
+  signOut,
+  onAuthStateChanged,
   User,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -62,12 +63,13 @@ async function testConnection() {
 }
 testConnection();
 
-// Auth Helpers
-export const signInWithGoogle = () => signInWithPopup(auth, googleProvider);
-export const signInWithFacebook = () => signInWithPopup(auth, facebookProvider);
-export const signInWithTwitter = () => signInWithPopup(auth, twitterProvider);
-export const signInWithTikTok = () => signInWithPopup(auth, tiktokProvider);
-export const signInWithInstagram = () => signInWithPopup(auth, instagramProvider);
+// Auth Helpers — redirect-based (works on mobile, avoids popup blockers)
+export const signInWithGoogle = () => signInWithRedirect(auth, googleProvider);
+export const signInWithFacebook = () => signInWithRedirect(auth, facebookProvider);
+export const signInWithTwitter = () => signInWithRedirect(auth, twitterProvider);
+export const signInWithTikTok = () => signInWithRedirect(auth, tiktokProvider);
+export const signInWithInstagram = () => signInWithRedirect(auth, instagramProvider);
+export { getRedirectResult };
 
 export { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, sendPasswordResetEmail };
 export const logout = () => signOut(auth);
