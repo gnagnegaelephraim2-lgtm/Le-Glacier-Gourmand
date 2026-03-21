@@ -38,6 +38,15 @@ export default function Menu() {
     return () => unsubscribes.forEach(unsub => unsub());
   }, []);
 
+  const CATEGORY_CURSOR: Record<string, string> = {
+    'Ice Cream': 'icecream',
+    'Sorbet':    'sorbet',
+    'Desserts':  'dessert',
+    'Breakfast': 'breakfast',
+    'Drinks':    'drinks',
+    'Lunch':     'lunch',
+  };
+
   const categories: { key: Category | 'All'; label: string }[] = [
     { key: 'All', label: t.menu.categories.all },
     { key: 'Ice Cream', label: t.menu.categories.iceCream },
@@ -104,9 +113,10 @@ export default function Menu() {
               <button
                 key={cat.key}
                 onClick={() => setActiveCategory(cat.key)}
+                data-cursor={cat.key === 'All' ? undefined : CATEGORY_CURSOR[cat.key]}
                 className={`px-4 sm:px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest transition-all whitespace-nowrap ${
-                  activeCategory === cat.key 
-                    ? 'bg-forest text-cream shadow-lg' 
+                  activeCategory === cat.key
+                    ? 'bg-forest text-cream shadow-lg'
                     : 'bg-cream text-forest border border-forest/10 hover:border-gold'
                 }`}
               >
@@ -170,6 +180,7 @@ export default function Menu() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 whileHover={{ y: -10 }}
+                data-cursor={CATEGORY_CURSOR[item.category] ?? 'icecream'}
                 className="bg-cream rounded-3xl overflow-hidden shadow-xl border border-forest/5 group"
               >
                 <div className="aspect-square overflow-hidden relative">

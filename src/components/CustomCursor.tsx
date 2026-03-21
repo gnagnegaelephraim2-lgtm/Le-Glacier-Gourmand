@@ -12,9 +12,27 @@ export default function CustomCursor() {
     let rafId: number;
     let posX = -200, posY = -200;
     let ringX = -200, ringY = -200;
-    let hovering = false;
-    let isCart   = false;
-    let clicking = false;
+    let hovering  = false;
+    let cursorVal = '';   // value of nearest data-cursor attribute
+    let clicking  = false;
+
+    const CURSOR_MAP: Record<string, string> = {
+      cart:      '🛒',
+      icecream:  '🍦',
+      sorbet:    '🍧',
+      dessert:   '🍨',
+      breakfast: '🥞',
+      drinks:    '☕',
+      lunch:     '🍽️',
+    };
+
+    const resolveEmoji = () => {
+      if (cursorVal === 'cart') return '🛒';
+      if (cursorVal in CURSOR_MAP) return CURSOR_MAP[cursorVal];
+      // raw emoji passed directly (e.g. data-cursor="☕")
+      if (cursorVal) return cursorVal;
+      return hovering ? '🍨' : '🍦';
+    };
 
     const setOpacity = (v: number) => {
       cursor.style.opacity = String(v);
@@ -25,7 +43,7 @@ export default function CustomCursor() {
       const scale  = clicking ? 0.7 : hovering ? 1.4 : 1;
       const rotate = hovering ? '-15deg' : '0deg';
       cursor.style.transform = `translate(-50%,-50%) scale(${scale}) rotate(${rotate})`;
-      cursor.textContent = isCart ? '🛒' : hovering ? '🍨' : '🍦';
+      cursor.textContent = resolveEmoji();
 
       const size = hovering ? '52px' : '34px';
       ring.style.width  = size;
@@ -42,11 +60,12 @@ export default function CustomCursor() {
       setOpacity(1);
 
       if (target) {
-        const prevHovering = hovering;
-        const prevCart     = isCart;
-        hovering = !!target.closest('a,button,[role="button"],input,textarea,select,label');
-        isCart   = !!target.closest('[data-cursor="cart"]');
-        if (prevHovering !== hovering || prevCart !== isCart) updateCursorStyle();
+        const prevHovering  = hovering;
+        const prevCursorVal = cursorVal;
+        hovering  = !!target.closest('a,button,[role="button"],input,textarea,select,label');
+        const el  = target.closest('[data-cursor]') as HTMLElement | null;
+        cursorVal = el ? (el.dataset.cursor ?? '') : '';
+        if (prevHovering !== hovering || prevCursorVal !== cursorVal) updateCursorStyle();
       }
     };
 
