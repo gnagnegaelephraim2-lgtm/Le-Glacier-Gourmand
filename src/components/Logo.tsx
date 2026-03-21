@@ -1,4 +1,5 @@
 import React from 'react';
+import { img } from '../utils/image';
 
 interface LogoProps {
   className?: string;
@@ -9,10 +10,9 @@ export default function Logo({ className = "h-12", showText = true }: LogoProps)
   return (
     <div className={`flex items-center gap-4 ${className}`}>
       <img 
-        src="https://i.ibb.co/TxwrGGRh/Logo.png" 
-        alt="Le Glacier Gourmand Logo" 
+        src={img('https://i.ibb.co/TxwrGGRh/Logo.png', 200)}
+        alt="Le Glacier Gourmand Logo"
         className="h-full w-auto object-contain brightness-0 invert"
-        referrerPolicy="no-referrer"
       />
       {showText && (
         <div className="flex flex-col -space-y-1">

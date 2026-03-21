@@ -5,6 +5,7 @@ import { GALLERY_IMAGES } from '../data';
 import { useLanguage } from '../context/LanguageContext';
 import { GalleryImage } from '../types';
 import LazyImage from './LazyImage';
+import { img } from '../utils/image';
 
 export default function Gallery() {
   const { t } = useLanguage();
@@ -25,24 +26,24 @@ export default function Gallery() {
         </div>
 
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-          {GALLERY_IMAGES.map((img, i) => (
+          {GALLERY_IMAGES.map((gImg, i) => (
             <motion.div
-              key={img.id}
+              key={gImg.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               className="relative group overflow-hidden rounded-2xl break-inside-avoid cursor-pointer"
-              onClick={() => setSelectedImage(img)}
+              onClick={() => setSelectedImage(gImg)}
             >
               <LazyImage
-                src={img.url}
-                alt={img.caption}
-                referrerPolicy="no-referrer"
+                src={gImg.url}
+                alt={gImg.caption}
+                optimizeWidth={700}
                 wrapperClassName="w-full"
                 className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-forest/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                <span className="text-cream font-serif italic text-xl">{img.caption}</span>
+                <span className="text-cream font-serif italic text-xl">{gImg.caption}</span>
               </div>
             </motion.div>
           ))}
@@ -74,11 +75,10 @@ export default function Gallery() {
               onClick={(e) => e.stopPropagation()}
             >
               <img
-                src={selectedImage.url}
+                src={img(selectedImage.url, 1200)}
                 alt={selectedImage.caption}
                 loading="lazy"
                 decoding="async"
-                referrerPolicy="no-referrer"
                 className="max-h-[80vh] w-auto rounded-2xl shadow-2xl"
               />
               <motion.p

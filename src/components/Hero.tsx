@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, MapPin, X } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { img } from '../utils/image';
 
 const BACKGROUND_IMAGES = [
   ...Array.from({ length: 17 }, (_, i) => `/hero${i + 1}.png`)
@@ -51,13 +52,12 @@ export default function Hero() {
           {isFirstImageLoaded && (
             <motion.img
               key={currentImage}
-              src={BACKGROUND_IMAGES[currentImage]}
+              src={img(BACKGROUND_IMAGES[currentImage], 1280)}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 2, ease: "linear" }}
               alt="Hero background"
-              referrerPolicy="no-referrer"
               fetchPriority={currentImage === 0 ? 'high' : 'auto'}
               className="absolute inset-0 w-full h-full object-cover brightness-[0.75]"
             />

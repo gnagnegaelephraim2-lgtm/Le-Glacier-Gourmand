@@ -4,6 +4,7 @@ import { MessageSquare, Search, X } from 'lucide-react';
 import { MENU_ITEMS, getLocalizedText } from '../data';
 import { Category, MenuItem, ProductStats } from '../types';
 import { useLanguage } from '../context/LanguageContext';
+import { img } from '../utils/image';
 import ProductReviewSection from './ProductReviewSection';
 import { ReviewService } from '../services/ReviewService';
 import StarRating from './StarRating';
@@ -174,12 +175,11 @@ export default function Menu() {
                 <div className="aspect-square overflow-hidden relative">
                   <img
                     key={item.image}
-                    src={item.image}
+                    src={img(item.image, 400)}
                     alt={getLocalizedText(item.title, language)}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     loading="lazy"
                     decoding="async"
-                    referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 right-4 flex flex-col items-end gap-2">
                     {item.tags.map(tag => (

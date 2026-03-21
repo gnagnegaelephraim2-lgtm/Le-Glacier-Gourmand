@@ -24,6 +24,11 @@
   to     = "/index.html"
   status = 200
 
+# ── Netlify Image CDN ─────────────────────────────────────────────────────────
+# Allow proxying remote images from ImgBB through Netlify's image CDN
+[images]
+  remote_images = ["https://i\\.ibb\\.co/.*"]
+
 # ── Cache headers ──────────────────────────────────────────────────────────────
 
 # Hero images (large local PNGs) — cache 1 year

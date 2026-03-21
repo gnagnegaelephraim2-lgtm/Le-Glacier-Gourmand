@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { useLanguage } from '../context/LanguageContext';
+import { img } from '../utils/image';
 
 export default function Story() {
   const { t } = useLanguage();
@@ -16,7 +17,7 @@ export default function Story() {
         >
           <div className="overflow-hidden rounded-2xl shadow-2xl">
             <img
-              src="https://i.ibb.co/XZCnHpJB/K-D.jpg"
+              src={img('https://i.ibb.co/XZCnHpJB/K-D.jpg', 900)}
               alt="Artisan at work"
               loading="lazy"
               decoding="async"

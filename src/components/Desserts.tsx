@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { img } from '../utils/image';
 
 export default function Desserts() {
   const { t } = useLanguage();
@@ -58,7 +59,7 @@ export default function Desserts() {
                   className="flex gap-6 items-center group cursor-pointer"
                 >
                   <div className="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
-                    <img src={dessert.image} alt={dessert.title} loading="lazy" decoding="async" referrerPolicy="no-referrer" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img src={img(dessert.image, 200)} alt={dessert.title} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <div>
                     <h3 className="text-xl font-serif group-hover:text-gold transition-colors">{dessert.title}</h3>
@@ -72,12 +73,12 @@ export default function Desserts() {
 
           <div className="hidden lg:grid relative grid-cols-2 gap-4 h-[600px]">
              <motion.div style={{ y: y1 }} className="space-y-4">
-                <img src="https://i.ibb.co/Z1LN4KCD/Douceur-Macadamia-Coupe-202603181823.jpg" loading="lazy" decoding="async" referrerPolicy="no-referrer" className="rounded-3xl h-80 w-full object-cover" alt="Douceur Macadamia" />
-                <img src="https://i.ibb.co/27jDZDxy/Gaufre-aux-fruits-202603181659.jpg" loading="lazy" decoding="async" referrerPolicy="no-referrer" className="rounded-3xl h-60 w-full object-cover" alt="Gaufre aux Fruits" />
+                <img src={img('https://i.ibb.co/Z1LN4KCD/Douceur-Macadamia-Coupe-202603181823.jpg', 700)} loading="lazy" decoding="async" className="rounded-3xl h-80 w-full object-cover" alt="Douceur Macadamia" />
+                <img src={img('https://i.ibb.co/27jDZDxy/Gaufre-aux-fruits-202603181659.jpg', 700)} loading="lazy" decoding="async" className="rounded-3xl h-60 w-full object-cover" alt="Gaufre aux Fruits" />
              </motion.div>
              <motion.div style={{ y: y2 }} className="space-y-4 pt-20">
-                <img src="https://i.ibb.co/fYmm9b3T/Generate-Chocolat-Icre-cream-202603181857.jpg" loading="lazy" decoding="async" referrerPolicy="no-referrer" className="rounded-3xl h-60 w-full object-cover" alt="Voyage en Terre Chocolat" />
-                <img src="https://i.ibb.co/KxDPkfDf/Pitaya-Rose-Sauvage-202603181727.jpg" loading="lazy" decoding="async" referrerPolicy="no-referrer" className="rounded-3xl h-80 w-full object-cover" alt="Pitaya Rose Sauvage" />
+                <img src={img('https://i.ibb.co/fYmm9b3T/Generate-Chocolat-Icre-cream-202603181857.jpg', 700)} loading="lazy" decoding="async" className="rounded-3xl h-60 w-full object-cover" alt="Voyage en Terre Chocolat" />
+                <img src={img('https://i.ibb.co/KxDPkfDf/Pitaya-Rose-Sauvage-202603181727.jpg', 700)} loading="lazy" decoding="async" className="rounded-3xl h-80 w-full object-cover" alt="Pitaya Rose Sauvage" />
              </motion.div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Star, CheckCircle2, Calendar } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import EventBookingModal from './EventBookingModal';
+import { img } from '../utils/image';
 
 export default function Events() {
   const { t } = useLanguage();
@@ -58,7 +59,7 @@ export default function Events() {
           >
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
               <img 
-                src="https://i.ibb.co/0VmSrZ3c/Ice-cream-cart-202603182313.jpg" 
+                src={img('https://i.ibb.co/0VmSrZ3c/Ice-cream-cart-202603182313.jpg', 900)} 
                 alt="Ice Cream Cart" 
                 loading="lazy"
                 decoding="async"

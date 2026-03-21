@@ -3,6 +3,7 @@ import { X, Trash2, ShoppingCart } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useLanguage } from '../context/LanguageContext';
 import { getLocalizedText } from '../data';
+import { img } from '../utils/image';
 
 export default function CartDrawer() {
   const { items, isCartOpen, setIsCartOpen, setIsCheckoutOpen, removeItem, updateQuantity, totalItems, totalPrice } = useCart();
@@ -76,7 +77,7 @@ export default function CartDrawer() {
                       className="flex gap-4 bg-white rounded-2xl p-3 shadow-sm border border-forest/5"
                     >
                       <img
-                        src={item.image}
+                        src={img(item.image, 128)}
                         alt={name}
                         className="w-16 h-16 rounded-xl object-cover flex-shrink-0"
                         loading="lazy"
