@@ -56,7 +56,7 @@ export default function Desserts() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.2 }}
-                  data-cursor="🍽️"
+                  data-cursor="lunch"
                   className="flex gap-6 items-center group cursor-pointer"
                 >
                   <div className="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
