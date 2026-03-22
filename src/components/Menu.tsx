@@ -56,6 +56,11 @@ export default function Menu() {
     'Lunch':     '🍽️',
   };
 
+  const ITEM_EMOJI: Record<string, string> = {
+    'drink-detox':            '🍹',
+    'drink-amore-pistacchio': '🥛',
+  };
+
   const categories: { key: Category | 'All'; label: string }[] = [
     { key: 'All', label: t.menu.categories.all },
     { key: 'Ice Cream', label: t.menu.categories.iceCream },
@@ -189,7 +194,7 @@ export default function Menu() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 whileHover={{ y: -10 }}
-                data-cursor={CATEGORY_CURSOR[item.category] ?? 'icecream'}
+                data-cursor={ITEM_EMOJI[item.id] ?? CATEGORY_CURSOR[item.category] ?? 'icecream'}
                 className="bg-cream rounded-3xl overflow-hidden shadow-xl border border-forest/5 group"
               >
                 <div className="aspect-square overflow-hidden relative">
@@ -236,7 +241,7 @@ export default function Menu() {
                           : 'bg-forest text-cream hover:bg-gold'
                       }`}
                     >
-                      {addedItems[item.id] ? `${CATEGORY_EMOJI[item.category] ?? '✓'} ${(t as any).cart?.added || 'Ajouté'}` : t.menu.cta}
+                      {addedItems[item.id] ? `${ITEM_EMOJI[item.id] ?? CATEGORY_EMOJI[item.category] ?? '✓'} ${(t as any).cart?.added || 'Ajouté'}` : t.menu.cta}
                     </button>
                     <button 
                       onClick={() => setSelectedProduct(item)}
