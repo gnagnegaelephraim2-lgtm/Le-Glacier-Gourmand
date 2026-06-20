@@ -208,7 +208,7 @@ export default function EspacePro() {
           >
             B2B
           </motion.span>
-          <h2 className="text-4xl md:text-5xl mb-6 font-serif">{t.title}</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 font-serif">{t.title}</h2>
           <p className="text-forest/70 text-base max-w-2xl mx-auto font-light leading-relaxed">
             {t.subtitle}
           </p>
@@ -216,27 +216,27 @@ export default function EspacePro() {
         </div>
 
         {/* Tab Controls */}
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex flex-col sm:flex-row justify-center gap-3 mb-12">
           <button
             onClick={() => { setActiveTab('catalog'); setOrderPlaced(false); }}
-            className={`px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all ${
+            className={`px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2 ${
               activeTab === 'catalog'
                 ? 'bg-forest text-cream shadow-xl shadow-forest/10'
                 : 'bg-white text-forest border border-forest/10 hover:border-gold'
             }`}
           >
-            <ClipboardList size={14} className="inline mr-2" />
+            <ClipboardList size={14} />
             {t.tabCatalog}
           </button>
           <button
             onClick={() => { setActiveTab('builder'); setOrderPlaced(false); }}
-            className={`px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all ${
+            className={`px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2 ${
               activeTab === 'builder'
                 ? 'bg-forest text-cream shadow-xl shadow-forest/10'
                 : 'bg-white text-forest border border-forest/10 hover:border-gold'
             }`}
           >
-            <ShoppingCart size={14} className="inline mr-2" />
+            <ShoppingCart size={14} />
             {t.tabBuilder}
           </button>
         </div>
@@ -259,7 +259,7 @@ export default function EspacePro() {
                     <p className="text-xs text-forest/50 mt-2">{t.catalogDesc}</p>
                   </div>
                   
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
                     {FLAVORS.map(flavor => (
                       <div key={flavor} className="bg-white rounded-2xl p-5 border border-forest/5 shadow-md flex flex-col justify-between hover:scale-[1.02] hover:border-gold transition-all duration-300">
                         <div>

@@ -68,12 +68,12 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-forest via-transparent to-forest/20 z-10" />
       </div>
 
-      <div className="relative z-10 text-center px-6 max-w-5xl pt-20">
+      <div className="relative z-10 text-center px-6 max-w-5xl pt-28 md:pt-24 lg:pt-20">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-8 leading-[0.9] font-serif text-balance"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-8 leading-[0.9] font-serif text-balance"
         >
           <span className="block font-normal tracking-tight">{t.hero.title}</span>
           <motion.span 

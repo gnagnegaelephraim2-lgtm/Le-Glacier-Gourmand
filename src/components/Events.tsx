@@ -12,7 +12,7 @@ export default function Events() {
   return (
     <section id="events" className="py-24 bg-cream overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -22,8 +22,8 @@ export default function Events() {
             <span className="text-gold font-bold uppercase tracking-[0.3em] text-sm mb-4 block">
               {t.events.tagline}
             </span>
-            <h2 className="text-5xl md:text-6xl font-serif text-forest mb-8 leading-tight">
-              {t.events.title} <br />
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-forest mb-6 md:mb-8 leading-tight">
+              {t.events.title}{' '}
               <span className="italic font-light text-gold">{t.events.titleItalic}</span>
             </h2>
             <p className="text-forest/70 text-lg mb-10 leading-relaxed max-w-xl">
@@ -44,7 +44,7 @@ export default function Events() {
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsBookingOpen(true)}
              
-              className="px-10 py-5 bg-forest text-white rounded-full font-bold shadow-xl hover:bg-gold transition-all flex items-center gap-3"
+              className="w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 bg-forest text-white rounded-full font-bold shadow-xl hover:bg-gold transition-all flex items-center justify-center gap-3"
             >
               <Calendar size={20} />
               {t.events.cta}

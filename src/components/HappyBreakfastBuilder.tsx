@@ -105,7 +105,7 @@ export default function HappyBreakfastBuilder() {
         </label>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 items-center mt-6">
+      <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start mt-10 sm:mt-6">
         <div>
           <div className="flex items-center gap-2.5 mb-4">
             <span className="p-2 bg-gold/20 rounded-xl text-gold">

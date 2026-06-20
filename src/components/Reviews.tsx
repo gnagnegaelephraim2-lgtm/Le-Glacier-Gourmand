@@ -40,7 +40,7 @@ export default function Reviews() {
           >
             {t.reviews.tagline}
           </motion.span>
-          <h2 className="text-4xl md:text-5xl mb-8 text-forest">{t.reviews.title}</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 md:mb-8 text-forest">{t.reviews.title}</h2>
         </div>
 
         <div className="flex gap-4 sm:gap-8 animate-marquee">

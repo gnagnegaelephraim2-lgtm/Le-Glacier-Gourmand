@@ -22,7 +22,7 @@ export default function Gallery() {
           >
             {t.gallery.tagline}
           </motion.span>
-          <h2 className="text-4xl md:text-5xl mb-8">{t.gallery.title}</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 md:mb-8">{t.gallery.title}</h2>
         </div>
 
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">

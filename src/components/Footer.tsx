@@ -59,7 +59,7 @@ export default function Footer() {
   return (
     <footer id="location" className="bg-forest text-cream pt-12 pb-12">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 lg:gap-16 mb-12 md:mb-20">
           {/* Brand & Socials */}
           <div className="space-y-8">
             <Logo className="h-20" showText={false} />

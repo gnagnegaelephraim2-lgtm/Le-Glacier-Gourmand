@@ -183,7 +183,7 @@ export default function Menu() {
           >
             {t.menu.tagline}
           </motion.span>
-          <h2 className="text-4xl md:text-5xl mb-8">{t.menu.title}</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 md:mb-8">{t.menu.title}</h2>
 
           {/* Search Bar */}
           <div className="relative max-w-md mx-auto mt-6 mb-2">
@@ -211,7 +211,7 @@ export default function Menu() {
                 key={cat.key}
                 onClick={() => setActiveCategory(cat.key)}
                 data-cursor={cat.key === 'All' ? undefined : CATEGORY_CURSOR[cat.key]}
-                className={`px-4 sm:px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest transition-all whitespace-nowrap ${
+                className={`px-3 sm:px-5 md:px-6 py-2.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all whitespace-nowrap ${
                   activeCategory === cat.key
                     ? 'bg-forest text-cream shadow-lg'
                     : 'bg-cream text-forest border border-forest/10 hover:border-gold'

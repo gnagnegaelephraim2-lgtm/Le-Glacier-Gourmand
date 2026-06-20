@@ -6,8 +6,8 @@ export default function Story() {
   const { t } = useLanguage();
 
   return (
-    <section id="story" className="py-24 px-6 max-w-7xl mx-auto">
-      <div className="grid md:grid-cols-2 gap-16 items-center">
+    <section id="story" className="py-16 md:py-24 px-6 max-w-7xl mx-auto overflow-x-hidden">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -25,7 +25,7 @@ export default function Story() {
               className="w-full h-auto block"
             />
           </div>
-          <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-gold rounded-2xl -z-10" />
+          <div className="absolute -bottom-8 -right-8 w-32 md:w-48 h-32 md:h-48 bg-gold rounded-2xl -z-10 hidden sm:block" />
         </motion.div>
 
         <motion.div
@@ -37,7 +37,7 @@ export default function Story() {
           <span className="text-gold font-medium tracking-widest uppercase text-sm mb-4 block">
             {t.story.tagline}
           </span>
-          <h2 className="text-4xl md:text-5xl mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 md:mb-8 leading-tight">
             <span className="block">{t.story.title}</span>
             <span className="italic font-light text-gold">{t.story.titleItalic}</span>
           </h2>

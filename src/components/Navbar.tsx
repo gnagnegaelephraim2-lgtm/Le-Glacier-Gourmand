@@ -91,7 +91,7 @@ export default function Navbar() {
           animate={{ opacity: 1, x: 0 }}
           className="flex-shrink-0"
         >
-          <Logo className={`h-28 md:h-36 ${isScrolled ? 'text-forest' : 'text-white'}`} showText={false} />
+          <Logo className={`h-12 sm:h-14 md:h-20 lg:h-24 ${isScrolled ? 'text-forest' : 'text-white'}`} showText={false} />
         </motion.div>
 
         {/* Open/Closed badge */}

@@ -96,7 +96,7 @@ export default function Desserts() {
   const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + signaturePlats.length) % signaturePlats.length);
 
   return (
-    <section id="plats-signature" className="py-24 bg-forest text-cream overflow-hidden">
+    <section id="plats-signature" className="py-16 md:py-24 bg-forest text-cream overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Full-width presentation text */}
@@ -108,7 +108,7 @@ export default function Desserts() {
           >
             {t.desserts.tagline}
           </motion.span>
-          <h2 className="text-5xl md:text-6xl leading-tight mb-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-8 md:mb-10">
             <span className="block">{t.desserts.title}</span>
             <span className="italic font-light">{t.desserts.titleItalic}</span>
           </h2>
@@ -132,7 +132,7 @@ export default function Desserts() {
                 className="grid md:grid-cols-2"
               >
                 {/* Photo */}
-                <div className="relative aspect-square md:aspect-auto md:min-h-[420px] overflow-hidden">
+                <div className="relative aspect-video sm:aspect-square md:aspect-auto md:min-h-[380px] lg:min-h-[420px] overflow-hidden">
                   <img
                     src={img(signaturePlats[currentIndex].image, 800)}
                     alt={getLocalizedText(signaturePlats[currentIndex].title, language)}

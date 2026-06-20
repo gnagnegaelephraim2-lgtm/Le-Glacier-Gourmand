@@ -64,7 +64,7 @@ export default function Commitment() {
           <span className="text-gold font-medium tracking-widest uppercase text-sm mb-4 block">
             {language === 'fr' ? 'Savoir-faire Unique' : 'Unique Expertise'}
           </span>
-          <h2 className="text-4xl md:text-5xl mb-6 font-serif text-cream">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 font-serif text-cream">
             {language === 'fr' ? 'NOTRE SAVOIR-FAIRE' : 'OUR EXPERTISE'}
           </h2>
           <div className="w-24 h-1 bg-gold mx-auto mb-8" />
@@ -76,7 +76,7 @@ export default function Commitment() {
         </motion.div>
 
         {/* 3 Columns Layout */}
-        <div className="grid md:grid-cols-3 gap-10 mb-24 max-w-6xl mx-auto text-left">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 mb-16 md:mb-24 max-w-6xl mx-auto text-left">
           {columns.map((col, idx) => (
             <motion.div
               key={idx}
@@ -84,7 +84,7 @@ export default function Commitment() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.15 }}
-              className="bg-white/[0.03] border border-white/10 rounded-3xl p-8 hover:border-gold/30 hover:bg-white/[0.05] transition-all duration-500 shadow-xl"
+              className="bg-white/[0.03] border border-white/10 rounded-3xl p-5 md:p-8 hover:border-gold/30 hover:bg-white/[0.05] transition-all duration-500 shadow-xl"
             >
               <div className="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center mb-6">
                 {col.icon}
