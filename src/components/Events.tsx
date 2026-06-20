@@ -60,7 +60,7 @@ export default function Events() {
           >
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
               <img 
-                src={img('https://i.ibb.co/0VmSrZ3c/Ice-cream-cart-202603182313.jpg', 900)} 
+                src={img('/images/Ice-cream-cart-202603182313.jpg', 900)} 
                 alt="Ice Cream Cart" 
                 loading="lazy"
                 decoding="async"

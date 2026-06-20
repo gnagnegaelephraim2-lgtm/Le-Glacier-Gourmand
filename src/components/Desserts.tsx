@@ -28,7 +28,7 @@ export default function Desserts() {
         zh: "无麸质布鲁塞尔华夫饼，优质熏三文鱼，牛油果泥，香草奶油芝士，野生芝麻菜，柠檬汁。"
       },
       price: "Rs 380",
-      image: "https://i.ibb.co/27jDZDxy/Gaufre-aux-fruits-202603181659.jpg"
+      image: "/images/Gaufre-aux-fruits-202603181659.jpg"
     },
     {
       title: {
@@ -48,7 +48,7 @@ export default function Desserts() {
         zh: "无麸质酥脆华夫饼，分切野生菌菇（平菇、牛肝菌），烤大蒜奶油，帕马森干酪碎，新鲜欧芹。"
       },
       price: "Rs 340",
-      image: "https://i.ibb.co/Z1LN4KCD/Douceur-Macadamia-Coupe-202603181823.jpg"
+      image: "/images/Douceur-Macadamia-Coupe-202603181823.jpg"
     },
     {
       title: {
@@ -68,7 +68,7 @@ export default function Desserts() {
         zh: "无麸质轻盈华夫饼，有机蛋制作蓬松煎蛋，陈年切达干酪，马苏里拉，大孔干酪，新鲜细香葱。"
       },
       price: "Rs 320",
-      image: "https://i.ibb.co/fYmm9b3T/Generate-Chocolat-Icre-cream-202603181857.jpg"
+      image: "/images/Generate-Chocolat-Icre-cream-202603181857.jpg"
     },
     {
       title: {
@@ -88,7 +88,7 @@ export default function Desserts() {
         zh: "金黄自制法式面包，本地甘蔗糖焦糖，毛里求斯香草卡仕达酱，新鲜水果酱。"
       },
       price: "Rs 290",
-      image: "https://i.ibb.co/KxDPkfDf/Pitaya-Rose-Sauvage-202603181727.jpg"
+      image: "/images/Pitaya-Rose-Sauvage-202603181727.jpg"
     }
   ];
 

@@ -40,12 +40,12 @@ export default function Commitment() {
   ];
 
   const creations = [
-    { url: 'https://i.ibb.co/DHXN6svQ/Banana-Split-Gourmand-202603182224.jpg', title: 'Banana Split' },
-    { url: 'https://i.ibb.co/BHCS2hHP/Warm-chocolate-cake-202603182228.jpg', title: 'Fondant Chocolat' },
-    { url: 'https://i.ibb.co/Z1LN4KCD/Douceur-Macadamia-Coupe-202603181823.jpg', title: 'Coupe Macadamia' },
-    { url: 'https://i.ibb.co/27jDZDxy/Gaufre-aux-fruits-202603181659.jpg', title: 'Gaufre aux Fruits' },
-    { url: 'https://i.ibb.co/ns1Yd23r/Cr-pe-Salmon-Avocado-202603182013.jpg', title: 'Crêpe Saumon' },
-    { url: 'https://i.ibb.co/fYmm9b3T/Generate-Chocolat-Icre-cream-202603181857.jpg', title: 'Terre Chocolat' }
+    { url: '/images/Banana-Split-Gourmand-202603182224.jpg', title: 'Banana Split' },
+    { url: '/images/Warm-chocolate-cake-202603182228.jpg', title: 'Fondant Chocolat' },
+    { url: '/images/Douceur-Macadamia-Coupe-202603181823.jpg', title: 'Coupe Macadamia' },
+    { url: '/images/Gaufre-aux-fruits-202603181659.jpg', title: 'Gaufre aux Fruits' },
+    { url: '/images/Cr-pe-Salmon-Avocado-202603182013.jpg', title: 'Crêpe Saumon' },
+    { url: '/images/Generate-Chocolat-Icre-cream-202603181857.jpg', title: 'Terre Chocolat' }
   ];
 
   return (

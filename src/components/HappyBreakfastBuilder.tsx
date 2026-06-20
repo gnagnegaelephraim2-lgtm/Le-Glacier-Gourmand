@@ -77,8 +77,8 @@ export default function HappyBreakfastBuilder() {
       price: `Rs ${isPromoActive ? promoTotal : regularTotal}`,
       category: 'sales',
       image: base === 'gaufre' 
-        ? 'https://i.ibb.co/27jDZDxy/Gaufre-aux-fruits-202603181659.jpg'
-        : 'https://i.ibb.co/ymY3FMqB/Caf-Gourmand-Cr-pe-202603182018.jpg',
+        ? '/images/Gaufre-aux-fruits-202603181659.jpg'
+        : '/images/Caf-Gourmand-Cr-pe-202603182018.jpg',
       tags: isPromoActive ? ['Happy Breakfast', '50% OFF', 'Topping Offert'] : ['Breakfast']
     };
 

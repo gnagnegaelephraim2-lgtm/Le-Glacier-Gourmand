@@ -17,7 +17,7 @@ export default function Story() {
         >
           <div className="overflow-hidden rounded-2xl shadow-2xl">
             <img
-              src={img('https://i.ibb.co/XZCnHpJB/K-D.jpg', 900)}
+              src={img('/images/K-D.jpg', 900)}
               alt="Artisan at work"
               loading="lazy"
               decoding="async"

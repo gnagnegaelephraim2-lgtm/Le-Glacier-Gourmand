@@ -27,7 +27,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 160',
     category: 'glaces',
     subcategory: 'artisanales',
-    image: 'https://i.ibb.co/KcLFpvx1/Pistaches-de-Sicile-202603191032.jpg',
+    image: '/images/Pistaches-de-Sicile-202603191032.jpg',
     tags: ['Best-Seller', 'Sans Gluten'],
   },
   {
@@ -51,7 +51,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 160',
     category: 'glaces',
     subcategory: 'artisanales',
-    image: 'https://i.ibb.co/KzjVCn9V/image-png-202603191029.jpg',
+    image: '/images/image-png-202603191029.jpg',
     tags: ['Naturel'],
   },
   {
@@ -75,7 +75,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 160',
     category: 'glaces',
     subcategory: 'artisanales',
-    image: 'https://i.ibb.co/231RqV6N/Generate-an-Ice-cream-202603181640.jpg',
+    image: '/images/Generate-an-Ice-cream-202603181640.jpg',
     tags: ['Intense', 'Chocolat'],
   },
   {
@@ -99,7 +99,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 160',
     category: 'glaces',
     subcategory: 'artisanales',
-    image: 'https://i.ibb.co/DfqxmKxq/Caramel-Beurre-Sal-202603181648.jpg',
+    image: '/images/Caramel-Beurre-Sal-202603181648.jpg',
     tags: ['Gourmand'],
   },
   {
@@ -123,7 +123,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 160',
     category: 'glaces',
     subcategory: 'artisanales',
-    image: 'https://i.ibb.co/60djZKPM/Generate-ice-cream-images-202603181629.jpg',
+    image: '/images/Generate-ice-cream-images-202603181629.jpg',
     tags: ['Intense'],
   },
   {
@@ -147,7 +147,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 160',
     category: 'glaces',
     subcategory: 'artisanales',
-    image: 'https://i.ibb.co/1ttKNrxN/Cashew-ice-cream-202603181606.jpg',
+    image: '/images/Cashew-ice-cream-202603181606.jpg',
     tags: ['Gourmand', 'Chocolat'],
   },
   {
@@ -171,7 +171,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 160',
     category: 'glaces',
     subcategory: 'artisanales',
-    image: 'https://i.ibb.co/1ttKNrxN/Cashew-ice-cream-202603181606.jpg',
+    image: '/images/Cashew-ice-cream-202603181606.jpg',
     tags: ['Naturel'],
   },
   {
@@ -195,7 +195,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 160',
     category: 'glaces',
     subcategory: 'artisanales',
-    image: 'https://i.ibb.co/1ttKNrxN/Cashew-ice-cream-202603181606.jpg',
+    image: '/images/Cashew-ice-cream-202603181606.jpg',
     tags: ['Naturel'],
   },
   {
@@ -219,7 +219,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 160',
     category: 'glaces',
     subcategory: 'artisanales',
-    image: 'https://i.ibb.co/N68dhGRR/Litchie-sorbet-plein-202603181733.jpg',
+    image: '/images/Litchie-sorbet-plein-202603181733.jpg',
     tags: ['Sur Demande'],
   },
   {
@@ -243,7 +243,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 160',
     category: 'glaces',
     subcategory: 'artisanales',
-    image: 'https://i.ibb.co/mVqN8Jnb/Sorbet-100-fruit-202603181753.jpg',
+    image: '/images/Sorbet-100-fruit-202603181753.jpg',
     tags: ['Sur Demande', 'Local'],
   },
 
@@ -269,7 +269,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 190',
     category: 'glaces',
     subcategory: 'creations',
-    image: 'https://i.ibb.co/RTzrGqfF/Remove-the-writting-202603181815.jpg',
+    image: '/images/Remove-the-writting-202603181815.jpg',
     tags: ['Signature', 'Exotique'],
   },
   {
@@ -293,7 +293,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 190',
     category: 'glaces',
     subcategory: 'creations',
-    image: 'https://i.ibb.co/TpcHDWf/Duo-Pitaya-Ananas-202603181820.jpg',
+    image: '/images/Duo-Pitaya-Ananas-202603181820.jpg',
     tags: ['Best-Seller', 'Exotique'],
   },
   {
@@ -317,7 +317,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 190',
     category: 'glaces',
     subcategory: 'creations',
-    image: 'https://i.ibb.co/KxDPkfDf/Pitaya-Rose-Sauvage-202603181727.jpg',
+    image: '/images/Pitaya-Rose-Sauvage-202603181727.jpg',
     tags: ['Best-Seller', 'Fruit Local'],
   },
   {
@@ -341,7 +341,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 190',
     category: 'glaces',
     subcategory: 'creations',
-    image: 'https://i.ibb.co/M5PL8P4N/Ice-cream-in-202603181737.jpg',
+    image: '/images/Ice-cream-in-202603181737.jpg',
     tags: ['Populaire', 'Local'],
   },
   {
@@ -365,7 +365,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 190',
     category: 'glaces',
     subcategory: 'creations',
-    image: 'https://i.ibb.co/WXWtNV1/Passion-fruit-sorbet-202603181747.jpg',
+    image: '/images/Passion-fruit-sorbet-202603181747.jpg',
     tags: ['Saisonnier', 'Végan'],
   },
   {
@@ -389,7 +389,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 190',
     category: 'glaces',
     subcategory: 'creations',
-    image: 'https://i.ibb.co/bM7sPJFf/Fraise-des-Champs-202603181726.jpg',
+    image: '/images/Fraise-des-Champs-202603181726.jpg',
     tags: ['Nouveau'],
   },
   {
@@ -413,7 +413,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 190',
     category: 'glaces',
     subcategory: 'creations',
-    image: 'https://i.ibb.co/VkZR6Dk/Citron-Givr-sorbet-202603181741.jpg',
+    image: '/images/Citron-Givr-sorbet-202603181741.jpg',
     tags: ['Sur Demande'],
   },
   {
@@ -437,7 +437,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 190',
     category: 'glaces',
     subcategory: 'creations',
-    image: 'https://i.ibb.co/bM7sPJFf/Fraise-des-Champs-202603181726.jpg',
+    image: '/images/Fraise-des-Champs-202603181726.jpg',
     tags: ['Saisonnier', 'Local'],
   },
   {
@@ -461,7 +461,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 190',
     category: 'glaces',
     subcategory: 'creations',
-    image: 'https://i.ibb.co/93SCJCx7/Coco-Givr-La-202603181748.jpg',
+    image: '/images/Coco-Givr-La-202603181748.jpg',
     tags: ['Sur Demande'],
   },
   {
@@ -485,7 +485,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 190',
     category: 'glaces',
     subcategory: 'creations',
-    image: 'https://i.ibb.co/1ttKNrxN/Cashew-ice-cream-202603181606.jpg',
+    image: '/images/Cashew-ice-cream-202603181606.jpg',
     tags: ['Sur Demande'],
   },
   {
@@ -509,7 +509,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 190',
     category: 'glaces',
     subcategory: 'creations',
-    image: 'https://i.ibb.co/jBXd8sJ/Ananas-Victoria-sorbet-202603181805.jpg',
+    image: '/images/Ananas-Victoria-sorbet-202603181805.jpg',
     tags: ['Sur Demande'],
   },
   {
@@ -533,7 +533,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 190',
     category: 'glaces',
     subcategory: 'creations',
-    image: 'https://i.ibb.co/jBXd8sJ/Ananas-Victoria-sorbet-202603181805.jpg',
+    image: '/images/Ananas-Victoria-sorbet-202603181805.jpg',
     tags: ['Sur Demande'],
   },
 
@@ -558,7 +558,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 350',
     category: 'sucres',
-    image: 'https://i.ibb.co/Z1LN4KCD/Douceur-Macadamia-Coupe-202603181823.jpg',
+    image: '/images/Douceur-Macadamia-Coupe-202603181823.jpg',
     tags: ['Signature'],
   },
   {
@@ -581,7 +581,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 350',
     category: 'sucres',
-    image: 'https://i.ibb.co/gLJCPfRw/Mango-pineapple-pitaya-202603181824.jpg',
+    image: '/images/Mango-pineapple-pitaya-202603181824.jpg',
     tags: ['Signature', 'Fruitée'],
   },
   {
@@ -604,7 +604,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 350',
     category: 'sucres',
-    image: 'https://i.ibb.co/qFMtbnyL/Lady-and-Red-202603181827.jpg',
+    image: '/images/Lady-and-Red-202603181827.jpg',
     tags: ['Élégant'],
   },
   {
@@ -627,7 +627,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 350',
     category: 'sucres',
-    image: 'https://i.ibb.co/fY7Vbp3n/Jolie-Coco-Glace-202603181838.jpg',
+    image: '/images/Jolie-Coco-Glace-202603181838.jpg',
     tags: ['Exotique'],
   },
   {
@@ -650,7 +650,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 350',
     category: 'sucres',
-    image: 'https://i.ibb.co/ycq1DVY3/Exotic-sorbet-fruit-202603181831.jpg',
+    image: '/images/Exotic-sorbet-fruit-202603181831.jpg',
     tags: ['Vitamines'],
   },
   {
@@ -673,7 +673,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 350',
     category: 'sucres',
-    image: 'https://i.ibb.co/LD9k9kyX/La-Gourmande-Glace-202603181836.jpg',
+    image: '/images/La-Gourmande-Glace-202603181836.jpg',
     tags: ['Signature'],
   },
   {
@@ -696,7 +696,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 350',
     category: 'sucres',
-    image: 'https://i.ibb.co/fYmm9b3T/Generate-Chocolat-Icre-cream-202603181857.jpg',
+    image: '/images/Generate-Chocolat-Icre-cream-202603181857.jpg',
     tags: ['Chocolat'],
   },
   {
@@ -719,7 +719,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 350',
     category: 'sucres',
-    image: 'https://i.ibb.co/Kz8MHQFL/Douceur-de-Moris-202603181859.jpg',
+    image: '/images/Douceur-de-Moris-202603181859.jpg',
     tags: ['Local'],
   },
   {
@@ -742,7 +742,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 350',
     category: 'sucres',
-    image: 'https://i.ibb.co/sJts8ZNp/L-Or-de-Moris-202603181901.jpg',
+    image: '/images/L-Or-de-Moris-202603181901.jpg',
     tags: ['Prestige'],
   },
   {
@@ -765,7 +765,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 350',
     category: 'sucres',
-    image: 'https://i.ibb.co/Y4RW4zMT/Gream-Ice-cream-202603181906.jpg',
+    image: '/images/Gream-Ice-cream-202603181906.jpg',
     tags: ['Élégant'],
   },
   {
@@ -788,7 +788,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 350',
     category: 'sucres',
-    image: 'https://i.ibb.co/hGsDd53/Amore-Mio-Duo-202603181907.jpg',
+    image: '/images/Amore-Mio-Duo-202603181907.jpg',
     tags: ['Duo'],
   },
   {
@@ -811,7 +811,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 280',
     category: 'sucres',
-    image: 'https://i.ibb.co/DHXN6svQ/Banana-Split-Gourmand-202603182224.jpg',
+    image: '/images/Banana-Split-Gourmand-202603182224.jpg',
     tags: ['Signature', 'Gourmand'],
   },
   {
@@ -834,7 +834,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 320',
     category: 'sucres',
-    image: 'https://i.ibb.co/BHCS2hHP/Warm-chocolate-cake-202603182228.jpg',
+    image: '/images/Warm-chocolate-cake-202603182228.jpg',
     tags: ['Signature', 'Chocolat'],
   },
 
@@ -859,7 +859,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 320',
     category: 'sucres',
-    image: 'https://i.ibb.co/27jDZDxy/Gaufre-aux-fruits-202603181659.jpg',
+    image: '/images/Gaufre-aux-fruits-202603181659.jpg',
     tags: ['Frais', 'Vitamines'],
   },
   {
@@ -882,7 +882,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 320',
     category: 'sucres',
-    image: 'https://i.ibb.co/nGtT7V6/Gaufre-Banane-Caramel-202603181831.jpg',
+    image: '/images/Gaufre-Banane-Caramel-202603181831.jpg',
     tags: ['Gourmand', 'Local'],
   },
   {
@@ -905,7 +905,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 580',
     category: 'sales',
-    image: 'https://i.ibb.co/XZpgkv2H/Gaufre-salmon-avocado-202603181957.jpg',
+    image: '/images/Gaufre-salmon-avocado-202603181957.jpg',
     tags: ['Salé', 'Formule'],
   },
   {
@@ -928,7 +928,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 480',
     category: 'sales',
-    image: 'https://i.ibb.co/gFVy04s5/Gaufre-Champignons-3-202603181958.jpg',
+    image: '/images/Gaufre-Champignons-3-202603181958.jpg',
     tags: ['Végétarien', 'Gourmand'],
   },
   {
@@ -951,7 +951,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 450',
     category: 'sales',
-    image: 'https://i.ibb.co/SYH2N1y/Gaufre-Omelette-3-202603182003.jpg',
+    image: '/images/Gaufre-Omelette-3-202603182003.jpg',
     tags: ['Protéiné'],
   },
   {
@@ -974,7 +974,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 450',
     category: 'sales',
-    image: 'https://i.ibb.co/Tqw3cg6Q/Cr-pe-sarrasin-champignons-202603182005.jpg',
+    image: '/images/Cr-pe-sarrasin-champignons-202603182005.jpg',
     tags: ['Végétarien', 'Salé'],
   },
   {
@@ -997,7 +997,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 450',
     category: 'sales',
-    image: 'https://i.ibb.co/ns1Yd23r/Cr-pe-Salmon-Avocado-202603182013.jpg',
+    image: '/images/Cr-pe-Salmon-Avocado-202603182013.jpg',
     tags: ['Sans Gluten', 'Raffiné'],
   },
   {
@@ -1020,7 +1020,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 280',
     category: 'hotDrinks',
-    image: 'https://i.ibb.co/kgYvvt61/Caf-Gourmand-Gaufre-202603182015.jpg',
+    image: '/images/Caf-Gourmand-Gaufre-202603182015.jpg',
     tags: ['Classique'],
   },
   {
@@ -1043,7 +1043,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 280',
     category: 'hotDrinks',
-    image: 'https://i.ibb.co/ymY3FMqB/Caf-Gourmand-Cr-pe-202603182018.jpg',
+    image: '/images/Caf-Gourmand-Cr-pe-202603182018.jpg',
     tags: ['Classique'],
   },
   {
@@ -1066,7 +1066,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 380',
     category: 'sucres',
-    image: 'https://i.ibb.co/qYBbBhJg/Brioche-perdue-caramel-202603182021.jpg',
+    image: '/images/Brioche-perdue-caramel-202603182021.jpg',
     tags: ['Sucré', 'Gourmand'],
   },
 
@@ -1091,7 +1091,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 450',
     category: 'sales',
-    image: 'https://i.ibb.co/bg9hT2dx/La-Foresti-re-mushrooms-202603182024.jpg',
+    image: '/images/La-Foresti-re-mushrooms-202603182024.jpg',
     tags: ['Truffe', 'Déjeuner'],
   },
   {
@@ -1114,7 +1114,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 480',
     category: 'sales',
-    image: 'https://i.ibb.co/fdB9zD8z/Goat-cheese-honey-202603182026.jpg',
+    image: '/images/Goat-cheese-honey-202603182026.jpg',
     tags: ['Sucré-Salé'],
   },
   {
@@ -1137,7 +1137,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 350',
     category: 'sales',
-    image: 'https://i.ibb.co/prhdwLbG/Quiche-du-Jour-202603182030.jpg',
+    image: '/images/Quiche-du-Jour-202603182030.jpg',
     tags: ['Maison', 'Léger'],
   },
 
@@ -1162,7 +1162,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 300',
     category: 'hotDrinks',
-    image: 'https://i.ibb.co/KxmJYLHL/Jus-Fruit-Frais-202603182032.jpg',
+    image: '/images/Jus-Fruit-Frais-202603182032.jpg',
     tags: ['Santé', 'Frais'],
   },
   {
@@ -1185,7 +1185,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 380',
     category: 'frappes',
-    image: 'https://i.ibb.co/B2Sm6Pkz/Milkshake-Amore-Pistacchio-202603182034.jpg',
+    image: '/images/Milkshake-Amore-Pistacchio-202603182034.jpg',
     tags: ['Luxe', 'Végétal'],
   },
   {
@@ -1208,7 +1208,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 120',
     category: 'hotDrinks',
-    image: 'https://i.ibb.co/s97VR8Rt/Espresso-Artisanal-Ristretto-202603182036.jpg',
+    image: '/images/Espresso-Artisanal-Ristretto-202603182036.jpg',
     tags: ['Énergie'],
   },
   {
@@ -1231,7 +1231,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 150',
     category: 'hotDrinks',
-    image: 'https://i.ibb.co/qFCqYTv2/Espresso-Artisanal-Ristretto-202603182039.jpg',
+    image: '/images/Espresso-Artisanal-Ristretto-202603182039.jpg',
     tags: ['Végétal'],
   },
   {
@@ -1254,7 +1254,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 120',
     category: 'hotDrinks',
-    image: 'https://i.ibb.co/8LRzw3vk/Caf-noir-fra-chement-202603182043.jpg',
+    image: '/images/Caf-noir-fra-chement-202603182043.jpg',
     tags: ['Classique'],
   },
   {
@@ -1277,7 +1277,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 140',
     category: 'hotDrinks',
-    image: 'https://i.ibb.co/QvFZVwg2/Americano-Grand-Caf-202603182056.jpg',
+    image: '/images/Americano-Grand-Caf-202603182056.jpg',
     tags: ['Classique'],
   },
   {
@@ -1300,7 +1300,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 140',
     category: 'hotDrinks',
-    image: 'https://i.ibb.co/S47xZYk1/Cappuccino-V-g-tal-Lait-202603182104.jpg',
+    image: '/images/Cappuccino-V-g-tal-Lait-202603182104.jpg',
     tags: ['Végétal', 'Bio'],
   },
   {
@@ -1323,7 +1323,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 160',
     category: 'hotDrinks',
-    image: 'https://i.ibb.co/Jwtb6b4R/Latte-Macchiato-V-g-tal-202603182122.jpg',
+    image: '/images/Latte-Macchiato-V-g-tal-202603182122.jpg',
     tags: ['Végétal', 'Bio'],
   },
   {
@@ -1346,7 +1346,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 190',
     category: 'hotDrinks',
-    image: 'https://i.ibb.co/BHDdmkyX/Latte-Pistache-Bio-202603182126.jpg',
+    image: '/images/Latte-Pistache-Bio-202603182126.jpg',
     tags: ['Bio', 'Végétal'],
   },
   {
@@ -1369,7 +1369,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 180',
     category: 'hotDrinks',
-    image: 'https://i.ibb.co/m5JwNZxY/Chocolat-Chaud-V-g-tal-202603182129.jpg',
+    image: '/images/Chocolat-Chaud-V-g-tal-202603182129.jpg',
     tags: ['Végétal', 'Gourmand'],
   },
   {
@@ -1392,7 +1392,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 'Rs 100',
     category: 'hotDrinks',
-    image: 'https://i.ibb.co/Vp3LTV5K/Th-Bois-Ch-rie-202603182134.jpg',
+    image: '/images/Th-Bois-Ch-rie-202603182134.jpg',
     tags: ['Local'],
   },
 ];
@@ -1422,10 +1422,10 @@ export const REVIEWS: Review[] = [
 ];
 
 export const GALLERY_IMAGES: GalleryImage[] = [
-  { id: '1', url: 'https://i.ibb.co/XZpgkv2H/Gaufre-salmon-avocado-202603181957.jpg', caption: 'Gaufre Saumon & Avocat' },
-  { id: '2', url: 'https://i.ibb.co/gFVy04s5/Gaufre-Champignons-3-202603181958.jpg', caption: 'Gaufre Champignons' },
-  { id: '3', url: 'https://i.ibb.co/SYH2N1y/Gaufre-Omelette-3-202603182003.jpg', caption: 'Gaufre Omelette' },
-  { id: '4', url: 'https://i.ibb.co/Tqw3cg6Q/Cr-pe-sarrasin-champignons-202603182005.jpg', caption: 'Crêpe Sarrasin' },
-  { id: '5', url: 'https://i.ibb.co/bg9hT2dx/La-Foresti-re-mushrooms-202603182024.jpg', caption: 'La Forestière' },
-  { id: '6', url: 'https://i.ibb.co/ns1Yd23r/Cr-pe-Salmon-Avocado-202603182013.jpg', caption: 'Crêpe Sarrasin Saumon & Avocat' }
+  { id: '1', url: '/images/Gaufre-salmon-avocado-202603181957.jpg', caption: 'Gaufre Saumon & Avocat' },
+  { id: '2', url: '/images/Gaufre-Champignons-3-202603181958.jpg', caption: 'Gaufre Champignons' },
+  { id: '3', url: '/images/Gaufre-Omelette-3-202603182003.jpg', caption: 'Gaufre Omelette' },
+  { id: '4', url: '/images/Cr-pe-sarrasin-champignons-202603182005.jpg', caption: 'Crêpe Sarrasin' },
+  { id: '5', url: '/images/La-Foresti-re-mushrooms-202603182024.jpg', caption: 'La Forestière' },
+  { id: '6', url: '/images/Cr-pe-Salmon-Avocado-202603182013.jpg', caption: 'Crêpe Sarrasin Saumon & Avocat' }
 ];

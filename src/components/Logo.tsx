@@ -10,7 +10,7 @@ export default function Logo({ className = "h-12", showText = true }: LogoProps)
   return (
     <div className={`flex items-center gap-4 ${className}`}>
       <img 
-        src={img('https://i.ibb.co/TxwrGGRh/Logo.png', 200)}
+        src={img('/images/Logo.png', 200)}
         alt="Le Glacier Gourmand Logo"
         className="h-full w-auto object-contain brightness-0 invert"
       />

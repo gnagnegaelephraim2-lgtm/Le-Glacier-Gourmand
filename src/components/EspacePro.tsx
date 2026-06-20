@@ -149,8 +149,8 @@ export default function EspacePro() {
       price: `Rs ${price}`,
       category: 'glaces',
       image: format === '1/2' 
-        ? 'https://i.ibb.co/bg9hT2dx/La-Foresti-re-mushrooms-202603182024.jpg' 
-        : 'https://i.ibb.co/Z1LN4KCD/Douceur-Macadamia-Coupe-202603181823.jpg',
+        ? '/images/La-Foresti-re-mushrooms-202603182024.jpg' 
+        : '/images/Douceur-Macadamia-Coupe-202603181823.jpg',
       tags: ['B2B Custom', format === '1/2' ? 'Liquide' : '1kg']
     };
 
@@ -278,7 +278,7 @@ export default function EspacePro() {
                               },
                               price: 'Rs 750',
                               category: 'glaces',
-                              image: 'https://i.ibb.co/Z1LN4KCD/Douceur-Macadamia-Coupe-202603181823.jpg',
+                              image: '/images/Douceur-Macadamia-Coupe-202603181823.jpg',
                               tags: ['B2B', 'Bac 1kg']
                             };
                             addItem(catalogItem);
