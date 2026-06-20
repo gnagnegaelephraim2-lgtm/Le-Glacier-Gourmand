@@ -10,6 +10,7 @@ import { ReviewService } from '../services/ReviewService';
 import StarRating from './StarRating';
 import { TRANSLATIONS } from '../data/translations';
 import { useCart } from '../context/CartContext';
+import HappyBreakfastBuilder from './HappyBreakfastBuilder';
 
 export default function Menu() {
   const { t, language } = useLanguage();
@@ -39,21 +40,19 @@ export default function Menu() {
   }, []);
 
   const CATEGORY_CURSOR: Record<string, string> = {
-    'Ice Cream': 'icecream',
-    'Sorbet':    'sorbet',
-    'Desserts':  'dessert',
-    'Breakfast': 'breakfast',
-    'Drinks':    'drinks',
-    'Lunch':     'lunch',
+    'hotDrinks': 'drinks',
+    'glaces':    'icecream',
+    'sucres':    'dessert',
+    'frappes':   'drinks',
+    'sales':     'lunch',
   };
 
   const CATEGORY_EMOJI: Record<string, string> = {
-    'Ice Cream': '🍦',
-    'Sorbet':    '🍧',
-    'Desserts':  '🍨',
-    'Breakfast': '🥞',
-    'Drinks':    '☕',
-    'Lunch':     '🍽️',
+    'hotDrinks': '☕',
+    'glaces':    '🍦',
+    'sucres':    '🥞',
+    'frappes':   '🥛',
+    'sales':     '🍽️',
   };
 
   const ITEM_EMOJI: Record<string, string> = {
@@ -63,12 +62,11 @@ export default function Menu() {
 
   const categories: { key: Category | 'All'; label: string }[] = [
     { key: 'All', label: t.menu.categories.all },
-    { key: 'Ice Cream', label: t.menu.categories.iceCream },
-    { key: 'Sorbet', label: t.menu.categories.sorbet },
-    { key: 'Desserts', label: t.menu.categories.desserts },
-    { key: 'Drinks', label: t.menu.categories.drinks },
-    { key: 'Breakfast', label: t.menu.categories.breakfast },
-    { key: 'Lunch', label: t.menu.categories.lunch },
+    { key: 'hotDrinks', label: t.menu.categories.hotDrinks },
+    { key: 'glaces', label: t.menu.categories.glaces },
+    { key: 'sucres', label: t.menu.categories.sucres },
+    { key: 'frappes', label: t.menu.categories.frappes },
+    { key: 'sales', label: t.menu.categories.sales },
   ];
 
   // Extract unique tags and helper to translate
@@ -88,6 +86,91 @@ export default function Menu() {
       getLocalizedText(item.description, language).toLowerCase().includes(searchQuery.toLowerCase());
     return categoryMatch && tagMatch && searchMatch;
   });
+
+  const artisanales = filteredItems.filter(item => item.subcategory !== 'creations');
+  const creations = filteredItems.filter(item => item.subcategory === 'creations');
+
+  const renderMenuItem = (item: MenuItem) => (
+    <motion.div
+      key={item.id}
+      layout
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.9 }}
+      whileHover={{ y: -10 }}
+      data-cursor={ITEM_EMOJI[item.id] ?? CATEGORY_CURSOR[item.category] ?? 'icecream'}
+      className="bg-cream rounded-3xl overflow-hidden shadow-xl border border-forest/5 group"
+    >
+      <div className="aspect-square overflow-hidden relative">
+        <img
+          key={item.image}
+          src={img(item.image, 400)}
+          alt={getLocalizedText(item.title, language)}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          loading="lazy"
+          decoding="async"
+        />
+        <div className="absolute top-4 right-4 flex flex-col items-end gap-2">
+          {item.tags.map(tag => (
+            <span key={tag} className="px-3 py-1 bg-white/95 backdrop-blur-md shadow-sm text-[10px] font-bold uppercase tracking-tighter rounded-full text-forest">
+              {getTagLabel(tag)}
+            </span>
+          ))}
+        </div>
+      </div>
+      <div className="p-8">
+        <div className="flex justify-between items-start mb-2">
+          <h3 className="text-2xl font-serif">{getLocalizedText(item.title, language)}</h3>
+          <span className="text-gold font-bold">{item.price}</span>
+        </div>
+        
+        {/* Rating Display */}
+        <div className="flex items-center gap-2 mb-4">
+          <StarRating rating={productStats[item.id]?.averageRating || 0} size={10} />
+          <span className="text-[10px] text-forest/40 uppercase tracking-widest font-bold">
+            {productStats[item.id] ? `${productStats[item.id].averageRating.toFixed(1)} (${productStats[item.id].reviewCount})` : t.menu.noReviews}
+          </span>
+        </div>
+
+        <p className="text-forest/70 text-sm leading-relaxed mb-6">
+          {getLocalizedText(item.description, language)}
+        </p>
+        
+        <div className="flex gap-3">
+          <button
+            onClick={() => handleAddToCart(item)}
+            className={`flex-1 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all ${
+              addedItems[item.id]
+                ? 'bg-green-600 text-white'
+                : 'bg-forest text-cream hover:bg-gold'
+            }`}
+          >
+            {addedItems[item.id] ? `${ITEM_EMOJI[item.id] ?? CATEGORY_EMOJI[item.category] ?? '✓'} ${(t as any).cart?.added || 'Ajouté'}` : t.menu.cta}
+          </button>
+          <button 
+            onClick={() => setSelectedProduct(item)}
+            className="p-3 border border-forest/10 rounded-xl text-forest/40 hover:text-gold hover:border-gold transition-all group/btn"
+            title="Voir les avis"
+          >
+            <MessageSquare size={18} className="group-hover/btn:scale-110 transition-transform" />
+          </button>
+        </div>
+      </div>
+    </motion.div>
+  );
+
+  const renderNoResults = () => (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="col-span-3 text-center py-20 text-forest/40"
+    >
+      <span className="text-5xl block mb-4">🍦</span>
+      <p className="text-sm font-bold uppercase tracking-widest">
+        {t.menu.noResults || 'Aucun résultat trouvé'}
+      </p>
+    </motion.div>
+  );
 
   return (
     <section id="menu" className="py-24 bg-white/30 overflow-hidden">
@@ -169,93 +252,52 @@ export default function Menu() {
           </div>
         </div>
 
-        <motion.div 
-          layout
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <AnimatePresence mode="popLayout">
-            {filteredItems.length === 0 && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="col-span-3 text-center py-20 text-forest/40"
-              >
-                <span className="text-5xl block mb-4">🍦</span>
-                <p className="text-sm font-bold uppercase tracking-widest">
-                  {t.menu.noResults || 'Aucun résultat trouvé'}
-                </p>
-              </motion.div>
-            )}
-            {filteredItems.map((item) => (
-              <motion.div
-                key={item.id}
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                whileHover={{ y: -10 }}
-                data-cursor={ITEM_EMOJI[item.id] ?? CATEGORY_CURSOR[item.category] ?? 'icecream'}
-                className="bg-cream rounded-3xl overflow-hidden shadow-xl border border-forest/5 group"
-              >
-                <div className="aspect-square overflow-hidden relative">
-                  <img
-                    key={item.image}
-                    src={img(item.image, 400)}
-                    alt={getLocalizedText(item.title, language)}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className="absolute top-4 right-4 flex flex-col items-end gap-2">
-                    {item.tags.map(tag => (
-                      <span key={tag} className="px-3 py-1 bg-white/95 backdrop-blur-md shadow-sm text-[10px] font-bold uppercase tracking-tighter rounded-full text-forest">
-                        {getTagLabel(tag)}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div className="p-8">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-2xl font-serif">{getLocalizedText(item.title, language)}</h3>
-                    <span className="text-gold font-bold">{item.price}</span>
-                  </div>
-                  
-                  {/* Rating Display */}
-                  <div className="flex items-center gap-2 mb-4">
-                    <StarRating rating={productStats[item.id]?.averageRating || 0} size={10} />
-                    <span className="text-[10px] text-forest/40 uppercase tracking-widest font-bold">
-                      {productStats[item.id] ? `${productStats[item.id].averageRating.toFixed(1)} (${productStats[item.id].reviewCount})` : t.menu.noReviews}
-                    </span>
-                  </div>
+        {(activeCategory === 'All' || activeCategory === 'sales' || activeCategory === 'hotDrinks') && (
+          <HappyBreakfastBuilder />
+        )}
 
-                  <p className="text-forest/70 text-sm leading-relaxed mb-6">
-                    {getLocalizedText(item.description, language)}
-                  </p>
-                  
-                  <div className="flex gap-3">
-                    <button
-                      onClick={() => handleAddToCart(item)}
-                      className={`flex-1 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all ${
-                        addedItems[item.id]
-                          ? 'bg-green-600 text-white'
-                          : 'bg-forest text-cream hover:bg-gold'
-                      }`}
-                    >
-                      {addedItems[item.id] ? `${ITEM_EMOJI[item.id] ?? CATEGORY_EMOJI[item.category] ?? '✓'} ${(t as any).cart?.added || 'Ajouté'}` : t.menu.cta}
-                    </button>
-                    <button 
-                      onClick={() => setSelectedProduct(item)}
-                      className="p-3 border border-forest/10 rounded-xl text-forest/40 hover:text-gold hover:border-gold transition-all group/btn"
-                      title="Voir les avis"
-                    >
-                      <MessageSquare size={18} className="group-hover/btn:scale-110 transition-transform" />
-                    </button>
-                  </div>
+        {activeCategory === 'glaces' ? (
+          <div className="space-y-16">
+            {artisanales.length > 0 && (
+              <div>
+                <div className="flex items-center gap-4 mb-8">
+                  <h3 className="text-2xl font-serif text-forest whitespace-nowrap">
+                    {t.menu.artisanalesHeading || 'Nos Glaces Artisanales'}
+                  </h3>
+                  <div className="h-[1px] w-full bg-forest/10" />
                 </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+                <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <AnimatePresence mode="popLayout">
+                    {artisanales.map((item) => renderMenuItem(item))}
+                  </AnimatePresence>
+                </motion.div>
+              </div>
+            )}
+            {creations.length > 0 && (
+              <div>
+                <div className="flex items-center gap-4 mb-8">
+                  <h3 className="text-2xl font-serif text-forest whitespace-nowrap">
+                    {t.menu.creationsHeading || 'Nos Glaces Créations'}
+                  </h3>
+                  <div className="h-[1px] w-full bg-forest/10" />
+                </div>
+                <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <AnimatePresence mode="popLayout">
+                    {creations.map((item) => renderMenuItem(item))}
+                  </AnimatePresence>
+                </motion.div>
+              </div>
+            )}
+            {filteredItems.length === 0 && renderNoResults()}
+          </div>
+        ) : (
+          <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <AnimatePresence mode="popLayout">
+              {filteredItems.length === 0 && renderNoResults()}
+              {filteredItems.map((item) => renderMenuItem(item))}
+            </AnimatePresence>
+          </motion.div>
+        )}
       </div>
 
       <AnimatePresence>

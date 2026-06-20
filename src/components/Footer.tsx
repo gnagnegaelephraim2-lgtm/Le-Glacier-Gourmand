@@ -51,6 +51,7 @@ export default function Footer() {
     { name: t.nav.menu, href: '#menu' },
     { name: t.nav.events, href: '#events' },
     { name: t.nav.experience, href: '#gallery' },
+    { name: t.nav.espacePro, href: '#espace-pro' },
     { name: t.nav.reviews, href: '#reviews' },
     { name: t.nav.contact, href: '#location' },
   ];

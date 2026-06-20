@@ -45,9 +45,9 @@ export default function Hero() {
   }, [currentImage, isFirstImageLoaded]);
 
   return (
-    <section id="hero" className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-black">
+    <section id="hero" className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-forest">
       {/* Background Image Slider */}
-      <div className="absolute inset-0 z-0 overflow-hidden bg-black">
+      <div className="absolute inset-0 z-0 overflow-hidden bg-forest">
         <AnimatePresence initial={false}>
           {isFirstImageLoaded && (
             <motion.img
@@ -59,12 +59,13 @@ export default function Hero() {
               transition={{ duration: 2, ease: "linear" }}
               alt="Hero background"
               fetchPriority={currentImage === 0 ? 'high' : 'auto'}
-              className="absolute inset-0 w-full h-full object-cover brightness-[0.75]"
+              className="absolute inset-0 w-full h-full object-cover brightness-[0.6] contrast-[1.05]"
             />
           )}
         </AnimatePresence>
-        {/* Dark overlay to ensure text readability and hide loading artifacts */}
-        <div className="absolute inset-0 bg-black/40 z-10" />
+        {/* Forest Green overlay to ensure text readability and theme consistency */}
+        <div className="absolute inset-0 bg-forest/40 mix-blend-multiply z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-forest via-transparent to-forest/20 z-10" />
       </div>
 
       <div className="relative z-10 text-center px-6 max-w-5xl pt-20">
@@ -102,7 +103,7 @@ export default function Hero() {
         >
           <a
             href="#menu"
-            className="w-full sm:w-auto px-10 py-5 bg-gold text-forest font-bold rounded-full transition-all hover:scale-105 shadow-xl text-center text-sm sm:text-base uppercase tracking-widest"
+            className="w-full sm:w-auto px-10 py-5 bg-cream text-forest font-bold rounded-full transition-all hover:scale-105 shadow-xl text-center text-sm sm:text-base uppercase tracking-widest hover:bg-white"
           >
             {t.hero.ctaMenu}
           </a>

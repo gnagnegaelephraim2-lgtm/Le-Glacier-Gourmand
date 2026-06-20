@@ -19,6 +19,7 @@ import CustomCursor from './components/CustomCursor';
 import ScrollProgressBar from './components/ScrollProgressBar';
 import BackToTop from './components/BackToTop';
 import WhatsAppButton from './components/WhatsAppButton';
+import EspacePro from './components/EspacePro';
 import { LanguageProvider } from './context/LanguageContext';
 import { CartProvider } from './context/CartContext';
 import { ToastProvider } from './context/ToastContext';
@@ -43,6 +44,7 @@ export default function App() {
               <Desserts />
               <Events />
               <Gallery />
+              <EspacePro />
               <Reviews />
             </main>
             <Footer />

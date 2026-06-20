@@ -74,6 +74,7 @@ export default function Navbar() {
     { name: t.nav.menu, href: '#menu' },
     { name: t.nav.events, href: '#events' },
     { name: t.nav.experience, href: '#gallery' },
+    { name: t.nav.espacePro, href: '#espace-pro' },
     { name: t.nav.reviews, href: '#reviews' },
     { name: t.nav.contact, href: '#location' },
   ];
@@ -90,7 +91,7 @@ export default function Navbar() {
           animate={{ opacity: 1, x: 0 }}
           className="flex-shrink-0"
         >
-          <Logo className={`h-16 md:h-20 ${isScrolled ? 'text-forest' : 'text-white'}`} showText={false} />
+          <Logo className={`h-28 md:h-36 ${isScrolled ? 'text-forest' : 'text-white'}`} showText={false} />
         </motion.div>
 
         {/* Open/Closed badge */}

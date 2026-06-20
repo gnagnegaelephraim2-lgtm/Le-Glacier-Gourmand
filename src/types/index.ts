@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export type Category = 'Ice Cream' | 'Sorbet' | 'Desserts' | 'Drinks' | 'Breakfast' | 'Lunch';
+export type Category = 'hotDrinks' | 'glaces' | 'sucres' | 'frappes' | 'sales';
 
 export type LocalizedText = {
   fr: string;
@@ -22,6 +22,7 @@ export interface MenuItem {
   category: Category;
   image: string;
   tags: string[];
+  subcategory?: 'artisanales' | 'creations';
 }
 
 export interface Review {

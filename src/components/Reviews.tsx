@@ -30,7 +30,7 @@ export default function Reviews() {
     : staticTestimonials;
 
   return (
-    <section id="reviews" className="py-24 bg-white overflow-hidden">
+    <section id="reviews" className="py-24 bg-cream overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <motion.span
@@ -40,26 +40,26 @@ export default function Reviews() {
           >
             {t.reviews.tagline}
           </motion.span>
-          <h2 className="text-4xl md:text-5xl mb-8">{t.reviews.title}</h2>
+          <h2 className="text-4xl md:text-5xl mb-8 text-forest">{t.reviews.title}</h2>
         </div>
 
         <div className="flex gap-4 sm:gap-8 animate-marquee">
           {[...testimonials, ...testimonials].map((review, i) => (
             <motion.div
               key={i}
-              className="flex-shrink-0 w-[260px] sm:w-[350px] p-6 sm:p-8 bg-cream rounded-3xl border border-forest/5 shadow-lg"
+              className="flex-shrink-0 w-[260px] sm:w-[350px] p-6 sm:p-8 bg-forest text-cream rounded-3xl border border-gold/10 shadow-xl"
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(review.rating)].map((_, idx) => (
                   <Star key={idx} size={16} className="fill-gold text-gold" />
                 ))}
               </div>
-              <p className="text-forest/80 italic mb-6 leading-relaxed">
+              <p className="text-cream/90 italic mb-6 leading-relaxed">
                 "{review.comment}"
               </p>
               <div className="flex justify-between items-center">
-                <span className="font-bold text-forest">{review.name}</span>
-                <span className="text-xs text-forest/40 uppercase tracking-widest">{review.date}</span>
+                <span className="font-bold text-gold">{review.name}</span>
+                <span className="text-xs text-cream/50 uppercase tracking-widest">{review.date}</span>
               </div>
             </motion.div>
           ))}
