@@ -11,6 +11,7 @@ import StarRating from './StarRating';
 import { TRANSLATIONS } from '../data/translations';
 import { useCart } from '../context/CartContext';
 import HappyBreakfastBuilder from './HappyBreakfastBuilder';
+import IceCreamTakeaway from './IceCreamTakeaway';
 
 export default function Menu() {
   const { t, language } = useLanguage();
@@ -260,6 +261,7 @@ export default function Menu() {
 
         {activeCategory === 'glaces' ? (
           <div className="space-y-16">
+            <IceCreamTakeaway />
             {artisanales.length > 0 && (
               <div>
                 <div className="flex items-center gap-4 mb-8">
