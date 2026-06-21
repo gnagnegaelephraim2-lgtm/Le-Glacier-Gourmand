@@ -1,22 +1,18 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Coffee, Check, Clock, PlusCircle } from 'lucide-react';
-import { useCart } from '../context/CartContext';
+import { Coffee, Clock } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { MenuItem } from '../types';
 
 export default function HappyBreakfastBuilder() {
-  const { addItem } = useCart();
   const { language } = useLanguage();
-  
+
   // Simulation states
-  const [isSimulated, setIsSimulated] = useState(true); // Default to true so they see it immediately!
+  const [isSimulated, setIsSimulated] = useState(true);
   const [isPromoActive, setIsPromoActive] = useState(true);
 
   // Configuration states
   const [base, setBase] = useState<'gaufre' | 'crepe'>('gaufre');
   const [topping, setTopping] = useState<string>('Caramel Beurre Salé');
-  const [quantity, setQuantity] = useState(1);
 
   // Check actual time (Mauritius timezone UTC+4)
   useEffect(() => {
@@ -55,37 +51,6 @@ export default function HappyBreakfastBuilder() {
   const regularTotal = basePrice + juicePrice + toppingValue;
   const promoTotal = promoBasePrice + promoJuicePrice + promoToppingPrice;
 
-  const handleAddCombo = () => {
-    const titleText = base === 'gaufre' 
-      ? (language === 'fr' ? 'Formule Happy Breakfast Gaufre' : 'Happy Waffle Breakfast Combo')
-      : (language === 'fr' ? 'Formule Happy Breakfast Crêpe' : 'Happy Crepe Breakfast Combo');
-      
-    const descText = language === 'fr'
-      ? `${base === 'gaufre' ? 'Gaufre' : 'Crêpe'} + Jus d'orange frais + Topping ${topping} (Offert)`
-      : `${base === 'gaufre' ? 'Waffle' : 'Crepe'} + Fresh Orange Juice + ${topping} Topping (Free)`;
-
-    const comboItem: MenuItem = {
-      id: `happy-breakfast-${base}-${topping.replace(/\s+/g, '-').toLowerCase()}-${isPromoActive ? 'promo' : 'regular'}`,
-      title: {
-        fr: titleText,
-        en: titleText
-      },
-      description: {
-        fr: descText,
-        en: descText
-      },
-      price: `Rs ${isPromoActive ? promoTotal : regularTotal}`,
-      category: 'sales',
-      image: base === 'gaufre' 
-        ? '/images/Gaufre-aux-fruits-202603181659.jpg'
-        : '/images/Caf-Gourmand-Cr-pe-202603182018.jpg',
-      tags: isPromoActive ? ['Happy Breakfast', '50% OFF', 'Topping Offert'] : ['Breakfast']
-    };
-
-    for (let i = 0; i < quantity; i++) {
-      addItem(comboItem);
-    }
-  };
 
   return (
     <div className="max-w-4xl mx-auto my-12 bg-white/70 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-forest/10 shadow-2xl relative overflow-hidden">
@@ -227,7 +192,7 @@ export default function HappyBreakfastBuilder() {
           </div>
 
           <div className="border-t border-forest/10 pt-4 mt-4">
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex justify-between items-center mb-4">
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-widest text-forest/40">Total</p>
                 <div className="flex items-center gap-2">
@@ -235,32 +200,16 @@ export default function HappyBreakfastBuilder() {
                   <span className="text-3xl font-serif font-bold text-gold">Rs {isPromoActive ? promoTotal : regularTotal}</span>
                 </div>
               </div>
-              
-              {/* Quantity Select */}
-              <div className="flex items-center border border-forest/10 rounded-xl bg-white overflow-hidden">
-                <button 
-                  onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="px-3 py-1.5 text-forest/60 hover:bg-forest/5 transition-colors font-bold"
-                >
-                  -
-                </button>
-                <span className="px-3 text-xs font-bold text-forest">{quantity}</span>
-                <button 
-                  onClick={() => setQuantity(quantity + 1)}
-                  className="px-3 py-1.5 text-forest/60 hover:bg-forest/5 transition-colors font-bold"
-                >
-                  +
-                </button>
-              </div>
             </div>
 
-            <button
-              onClick={handleAddCombo}
-              className="w-full py-4 bg-forest hover:bg-gold text-cream font-bold rounded-2xl text-[11px] font-bold uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-forest/10 hover:scale-[1.01]"
-            >
-              <PlusCircle size={16} />
-              {language === 'fr' ? 'Ajouter Formule Matin' : 'Add Morning Combo'}
-            </button>
+            <div className="w-full py-3 px-4 bg-gold/10 border border-gold/30 rounded-2xl flex items-center justify-center gap-2">
+              <Clock size={15} className="text-gold shrink-0" />
+              <p className="text-[11px] font-bold uppercase tracking-widest text-forest/70 text-center">
+                {language === 'fr'
+                  ? 'Commande en salon · 08:30 – 10:30'
+                  : 'Order in-store · 08:30 – 10:30'}
+              </p>
+            </div>
           </div>
         </div>
       </div>

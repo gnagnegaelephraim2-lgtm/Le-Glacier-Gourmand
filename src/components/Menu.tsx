@@ -211,13 +211,15 @@ export default function Menu() {
                 key={cat.key}
                 onClick={() => setActiveCategory(cat.key)}
                 data-cursor={cat.key === 'All' ? undefined : CATEGORY_CURSOR[cat.key]}
-                className={`px-3 sm:px-5 md:px-6 py-2.5 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all whitespace-nowrap ${
+                className={`px-3 sm:px-5 md:px-6 py-2 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-wider transition-all text-center leading-tight ${
                   activeCategory === cat.key
                     ? 'bg-forest text-cream shadow-lg'
                     : 'bg-cream text-forest border border-forest/10 hover:border-gold'
                 }`}
               >
-                {cat.label}
+                {cat.label.split('|').map((line: string, i: number) => (
+                  <span key={i} className="block">{line}</span>
+                ))}
               </button>
             ))}
           </div>

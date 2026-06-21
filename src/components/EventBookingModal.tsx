@@ -188,17 +188,17 @@ export default function EventBookingModal({ onClose }: Props) {
                     </div>
                   </div>
                   <a
-                    href="tel:+23059890767"
+                    href="tel:+23054217023"
                     className="flex items-center gap-2 text-cream/70 hover:text-gold transition-colors"
                   >
                     <Phone size={13} className="text-gold" />
-                    <span className="text-sm">+230 5989 0767</span>
+                    <span className="text-sm">+230 5421 7023</span>
                   </a>
                 </div>
 
                 {/* WhatsApp CTA */}
                 <a
-                  href={`https://wa.me/23059890767?text=${whatsappText}`}
+                  href={`https://wa.me/23054217023?text=${whatsappText}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#25D366] text-white rounded-xl font-bold text-sm hover:bg-[#1da851] transition-colors shadow-lg"
@@ -369,10 +369,10 @@ export default function EventBookingModal({ onClose }: Props) {
                     </p>
                     <p className="text-sm font-bold text-forest">Kaddour Djilali</p>
                     <a
-                      href="tel:+23059890767"
+                      href="tel:+23054217023"
                       className="text-xs text-forest/50 hover:text-gold transition-colors"
                     >
-                      +230 5989 0767
+                      +230 5421 7023
                     </a>
                   </div>
                 </div>

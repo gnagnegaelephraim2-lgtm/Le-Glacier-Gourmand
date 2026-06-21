@@ -5,8 +5,8 @@ import { useCart } from '../context/CartContext';
 import { useLanguage } from '../context/LanguageContext';
 import { getLocalizedText } from '../data';
 
-const MERCHANT_PHONE = '+23059890767';
-const MERCHANT_DISPLAY = '+230 59890767';
+const MERCHANT_PHONE = '+23054217023';
+const MERCHANT_DISPLAY = '+230 5421 7023';
 
 type PaymentMethod = 'cash' | 'juice' | 'myt' | 'orange' | 'maucash' | 'virement';
 

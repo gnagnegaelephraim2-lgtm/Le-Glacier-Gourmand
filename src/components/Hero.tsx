@@ -135,16 +135,19 @@ export default function Hero() {
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
-              className="bg-cream w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl relative"
+              className="bg-cream w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl relative"
             >
-              <button 
-                onClick={() => setIsMapOpen(false)}
-                className="absolute top-4 right-4 z-10 p-2 bg-forest text-white rounded-full hover:bg-gold transition-colors shadow-lg"
-              >
-                <X size={24} />
-              </button>
-              
-              <div className="p-8 md:p-12">
+              {/* Sticky close button — always reachable even when scrolled */}
+              <div className="sticky top-0 z-20 flex justify-end p-3 bg-cream/90 backdrop-blur-sm rounded-t-3xl">
+                <button
+                  onClick={() => setIsMapOpen(false)}
+                  className="p-2 bg-forest text-white rounded-full hover:bg-gold transition-colors shadow-lg"
+                >
+                  <X size={24} />
+                </button>
+              </div>
+
+              <div className="px-6 pb-8 md:px-10 md:pb-10">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="p-3 bg-gold/20 rounded-xl text-gold">
                     <MapPin size={24} />
@@ -155,33 +158,33 @@ export default function Hero() {
                   </div>
                 </div>
 
-                <div className="aspect-video w-full bg-forest/5 rounded-2xl overflow-hidden border border-forest/10 relative group">
+                <div className="aspect-video w-full bg-forest/5 rounded-2xl overflow-hidden border border-forest/10">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.343516641544!2d57.56846137604589!3d-20.09915698126343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c5567373f769f%3A0x8898950f5859560f!2sMahogany%20Shopping%20Promenade!5e0!3m2!1sen!2smu!4v1710680000000!5m2!1sen!2smu"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.2573816944576!2d57.568847469999996!3d-20.09905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c5567373f769f%3A0x8898950f5859560f!2sMahogany%20Shopping%20Promenade!5e0!3m2!1sfr!2smu!4v1710680000000!5m2!1sfr!2smu"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="grayscale hover:grayscale-0 transition-all duration-700"
                   ></iframe>
                 </div>
 
-                <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-                  <div className="text-center sm:text-left">
-                    <p className="text-forest font-medium">{t.hero.openingHours}</p>
-                    <div className="text-forest/60 text-[10px] uppercase tracking-wider space-y-0.5 mt-1">
+                <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                  <div>
+                    <p className="text-forest font-medium mb-1">{t.hero.openingHours}</p>
+                    <div className="text-forest/60 text-[10px] uppercase tracking-wider space-y-0.5">
                       <p>{t.hero.monThuHours}</p>
-                      <p>{t.hero.friSatHours}</p>
+                      <p>{t.hero.friSatHighSeason}</p>
+                      <p>{t.hero.friSatLowSeason}</p>
                       <p>{t.hero.sunHours}</p>
                     </div>
                   </div>
-                  <a 
-                    href="https://www.google.com/maps/dir/?api=1&destination=Mahogany+Shopping+Promenade+Beau+Plan+Mauritius" 
-                    target="_blank" 
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=Mahogany+Shopping+Promenade+Beau+Plan+Mauritius"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="px-8 py-4 bg-forest text-white rounded-full font-bold hover:bg-gold transition-all shadow-md flex items-center gap-2"
+                    className="shrink-0 px-8 py-4 bg-forest text-white rounded-full font-bold hover:bg-gold transition-all shadow-md flex items-center gap-2"
                   >
                     {t.hero.openInMaps}
                     <ArrowRight size={18} />
@@ -193,32 +196,6 @@ export default function Hero() {
         )}
       </AnimatePresence>
 
-      {/* Floating Elements - More Subtle */}
-      <motion.div
-        animate={{ 
-          y: [0, -20, 0],
-          rotate: [0, 5, 0]
-        }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-[25%] left-[12%] hidden lg:block"
-      >
-        <div className="w-24 h-24 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-4xl shadow-2xl opacity-60 hover:opacity-100 transition-opacity">
-          🍦
-        </div>
-      </motion.div>
-      
-      <motion.div
-        animate={{ 
-          y: [0, 20, 0],
-          rotate: [0, -5, 0]
-        }}
-        transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[35%] right-[10%] hidden lg:block"
-      >
-        <div className="w-20 h-20 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center text-4xl shadow-2xl opacity-60 hover:opacity-100 transition-opacity">
-          🍓
-        </div>
-      </motion.div>
     </section>
   );
 }

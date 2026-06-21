@@ -191,7 +191,7 @@ export default function EspacePro() {
       `Prix total estimé: Rs ${quantity * (format === '1/2' ? 450 : 750)}`
     ];
 
-    const url = `https://wa.me/+23059890767?text=${encodeURIComponent(lines.join('\n'))}`;
+    const url = `https://wa.me/+23054217023?text=${encodeURIComponent(lines.join('\n'))}`;
     window.open(url, '_blank');
   };
 
