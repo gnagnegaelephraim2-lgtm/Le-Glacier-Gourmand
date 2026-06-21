@@ -57,8 +57,11 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'login' }: Au
       let message = t.auth.genericError;
       if (err.code === 'auth/email-already-in-use') message = t.auth.emailInUse;
       if (err.code === 'auth/invalid-email') message = t.auth.invalidEmail;
-      if (err.code === 'auth/weak-password') message = t.auth.weakPassword;
-      if (err.code === 'auth/user-not-found' || err.code === 'auth/wrong-password') message = t.auth.wrongCredentials;
+      if (err.code === 'auth/weak-password') message = 'Mot de passe trop court (6 caractères minimum).';
+      if (err.code === 'auth/user-not-found' || err.code === 'auth/wrong-password' || err.code === 'auth/invalid-credential') message = t.auth.wrongCredentials;
+      if (err.code === 'auth/operation-not-allowed') message = 'La connexion par email est désactivée. Activez-la dans Firebase Console → Authentication → Sign-in methods.';
+      if (err.code === 'auth/too-many-requests') message = 'Trop de tentatives. Veuillez réessayer dans quelques minutes.';
+      if (err.code === 'auth/network-request-failed') message = 'Erreur réseau. Vérifiez votre connexion internet.';
       if (err.message && !err.code) message = err.message;
       setError(message);
     } finally {
@@ -179,9 +182,13 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'login' }: Au
                   placeholder={t.auth.passwordPlaceholder}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  minLength={6}
                   className="w-full bg-white border border-forest/10 rounded-xl py-3 pl-12 pr-4 text-sm focus:outline-none focus:border-gold transition-colors"
                   required
                 />
+                {mode === 'signup' && (
+                  <p className="text-[10px] text-forest/40 mt-1 pl-1">Minimum 6 caractères</p>
+                )}
               </div>
 
               {error && (

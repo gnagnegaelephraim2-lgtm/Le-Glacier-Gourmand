@@ -147,8 +147,9 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 160',
     category: 'glaces',
     subcategory: 'artisanales',
-    image: '/images/Cashew-ice-cream-202603181606.jpg',
+    image: '/images/gelato-gianduja.jpg',
     tags: ['Gourmand', 'Chocolat'],
+
   },
   {
     id: 'ice-noisette',
@@ -171,7 +172,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 160',
     category: 'glaces',
     subcategory: 'artisanales',
-    image: '/images/Cashew-ice-cream-202603181606.jpg',
+    image: '/images/gelato-noisette.jpg',
     tags: ['Naturel'],
   },
   {
@@ -195,7 +196,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 160',
     category: 'glaces',
     subcategory: 'artisanales',
-    image: '/images/Cashew-ice-cream-202603181606.jpg',
+    image: '/images/gelato-amande.jpg',
     tags: ['Naturel'],
   },
   {
@@ -372,7 +373,7 @@ export const MENU_ITEMS: MenuItem[] = [
     id: 'ice-watermelon',
     title: {
       fr: "Melon d'eau fleur d'oranger",
-      en: "Watermelon Orange Blossom",
+      en: "Watermelon Orange Blossom (seasonal)",
       cr: "Melon d'eau Fleur d'Oranger",
       ar: "البطيخ وزهر البرتقال",
       hi: "तरबूज ऑरेंज ब्लॉसम",
@@ -389,7 +390,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 190',
     category: 'glaces',
     subcategory: 'creations',
-    image: '/images/Fraise-des-Champs-202603181726.jpg',
+    image: '/images/sorbet-pasteque-fleur-oranger.jpg',
     tags: ['Nouveau'],
   },
   {
@@ -437,7 +438,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 190',
     category: 'glaces',
     subcategory: 'creations',
-    image: '/images/Fraise-des-Champs-202603181726.jpg',
+    image: '/images/sorbet-goyave-rouge-coriandre.jpg',
     tags: ['Saisonnier', 'Local'],
   },
   {
@@ -485,7 +486,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 'Rs 190',
     category: 'glaces',
     subcategory: 'creations',
-    image: '/images/Cashew-ice-cream-202603181606.jpg',
+    image: '/images/gelato-vanille-praline-noisette.jpg',
     tags: ['Sur Demande'],
   },
   {
