@@ -63,8 +63,6 @@ export default function Hero() {
             />
           )}
         </AnimatePresence>
-        {/* Forest Green overlay to ensure text readability and theme consistency */}
-        <div className="absolute inset-0 bg-forest/40 mix-blend-multiply z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-forest via-transparent to-forest/20 z-10" />
       </div>
 
