@@ -110,7 +110,6 @@ export default function Hero() {
             onClick={(e) => {
               e.preventDefault();
               setIsMapOpen(true);
-              document.getElementById('location')?.scrollIntoView({ behavior: 'smooth' });
             }}
             className="w-full sm:w-auto px-10 py-5 bg-white/5 backdrop-blur-md border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-all flex items-center justify-center gap-2 text-sm sm:text-base uppercase tracking-widest"
           >
