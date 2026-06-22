@@ -96,66 +96,67 @@ export default function Desserts() {
   const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + signaturePlats.length) % signaturePlats.length);
 
   return (
-    <section id="plats-signature" className="py-10 md:py-14 bg-forest text-cream overflow-hidden">
-      <div className="max-w-4xl mx-auto px-6">
+    <section id="plats-signature" className="py-16 md:py-24 bg-forest text-cream overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
 
-        {/* Intro text */}
-        <div className="max-w-xl mx-auto text-center mb-8">
+        {/* Full-width presentation text */}
+        <div className="max-w-3xl mx-auto text-center mb-20">
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-gold font-medium tracking-widest uppercase text-xs block mb-3"
+            className="text-gold font-medium tracking-widest uppercase text-sm block mb-4"
           >
             {t.desserts.tagline}
           </motion.span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-8 md:mb-10">
             <span className="block">{t.desserts.title}</span>
             <span className="italic font-light">{t.desserts.titleItalic}</span>
           </h2>
-          <div className="text-cream/70 text-sm leading-relaxed space-y-3 text-left">
+          <div className="text-cream/80 text-base leading-relaxed space-y-5 text-left">
             {t.desserts.description.split('\n\n').map((p: string, i: number) => (
               <p key={i}>{p}</p>
             ))}
           </div>
         </div>
 
-        {/* Slideshow */}
-        <div className="relative">
-          <div className="overflow-hidden rounded-2xl border border-cream/10 shadow-xl">
-            <AnimatePresence mode="wait">
+        {/* Wide slideshow of past creations */}
+        <div className="relative max-w-5xl mx-auto">
+          <div className="overflow-hidden rounded-3xl border border-cream/10 shadow-2xl">
+            {/* popLayout keeps container height stable during transitions, preventing page scroll */}
+            <AnimatePresence mode="popLayout">
               <motion.div
                 key={currentIndex}
-                initial={{ opacity: 0, x: 40 }}
+                initial={{ opacity: 0, x: 60 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -40 }}
-                transition={{ duration: 0.35, ease: "easeOut" }}
+                exit={{ opacity: 0, x: -60 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
                 className="grid md:grid-cols-2"
               >
                 {/* Photo */}
-                <div className="relative aspect-video md:aspect-auto md:min-h-[240px] lg:min-h-[270px] overflow-hidden">
+                <div className="relative aspect-video sm:aspect-square md:aspect-auto md:min-h-[380px] lg:min-h-[420px] overflow-hidden">
                   <img
-                    src={img(signaturePlats[currentIndex].image, 600)}
+                    src={img(signaturePlats[currentIndex].image, 800)}
                     alt={getLocalizedText(signaturePlats[currentIndex].title, language)}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-forest/60 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-forest/30" />
-                  <div className="absolute top-3 left-3 bg-gold text-forest px-3 py-1 rounded-full font-bold text-xs shadow-md">
+                  <div className="absolute top-4 left-4 bg-gold text-forest px-4 py-1.5 rounded-full font-bold text-sm shadow-md">
                     {signaturePlats[currentIndex].price}
                   </div>
                 </div>
 
                 {/* Info */}
-                <div className="bg-cream/5 p-6 flex flex-col justify-center space-y-4">
+                <div className="bg-cream/5 p-10 flex flex-col justify-center space-y-6">
                   <div>
-                    <p className="text-gold/70 text-[9px] font-bold uppercase tracking-widest mb-2">Création du jour</p>
-                    <h3 className="text-xl font-serif text-gold leading-snug">
+                    <p className="text-gold/70 text-[10px] font-bold uppercase tracking-widest mb-3">Création du jour</p>
+                    <h3 className="text-3xl font-serif text-gold leading-snug">
                       {getLocalizedText(signaturePlats[currentIndex].title, language)}
                     </h3>
                   </div>
-                  <div className="h-[1px] w-12 bg-gold/30" />
+                  <div className="h-[1px] w-16 bg-gold/30" />
                   <div>
-                    <p className="text-[9px] font-bold uppercase tracking-widest text-cream/40 mb-1.5">Ingrédients</p>
-                    <p className="text-cream/75 text-xs leading-relaxed italic">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-cream/40 mb-2">Ingrédients</p>
+                    <p className="text-cream/75 text-sm leading-relaxed italic">
                       {getLocalizedText(signaturePlats[currentIndex].ingredients, language)}
                     </p>
                   </div>
@@ -165,34 +166,38 @@ export default function Desserts() {
           </div>
 
           {/* Navigation */}
-          <div className="flex items-center justify-between mt-4 px-1">
-            <div className="flex gap-1.5">
+          <div className="flex items-center justify-between mt-6 px-2">
+            {/* Progress dots */}
+            <div className="flex gap-2">
               {signaturePlats.map((_, i) => (
                 <button
+                  type="button"
                   key={i}
                   onClick={() => setCurrentIndex(i)}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    currentIndex === i ? 'w-6 bg-gold' : 'w-1.5 bg-cream/20 hover:bg-cream/40'
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    currentIndex === i ? 'w-8 bg-gold' : 'w-2 bg-cream/20 hover:bg-cream/40'
                   }`}
                   aria-label={`Aller à la création ${i + 1}`}
                 />
               ))}
             </div>
 
-            <div className="flex gap-2">
+            <div className="flex gap-3">
               <button
+                type="button"
                 onClick={prevSlide}
-                className="p-2 bg-cream/10 hover:bg-gold hover:text-forest rounded-full transition-all border border-cream/10"
+                className="p-3 bg-cream/10 hover:bg-gold hover:text-forest rounded-full transition-all border border-cream/10"
                 aria-label="Création précédente"
               >
-                <ChevronLeft size={16} />
+                <ChevronLeft size={20} />
               </button>
               <button
+                type="button"
                 onClick={nextSlide}
-                className="p-2 bg-cream/10 hover:bg-gold hover:text-forest rounded-full transition-all border border-cream/10"
+                className="p-3 bg-cream/10 hover:bg-gold hover:text-forest rounded-full transition-all border border-cream/10"
                 aria-label="Création suivante"
               >
-                <ChevronRight size={16} />
+                <ChevronRight size={20} />
               </button>
             </div>
           </div>
