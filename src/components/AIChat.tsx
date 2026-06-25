@@ -144,7 +144,7 @@ export default function AIChat() {
   return (
     <>
       {/* Floating Button */}
-      <div className="fixed bottom-8 left-6 z-50">
+      <div className="fixed bottom-8 left-6 z-[49]">
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
