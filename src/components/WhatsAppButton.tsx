@@ -14,7 +14,7 @@ export default function WhatsAppButton() {
       transition={{ delay: 2, type: 'spring', stiffness: 200 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      className="fixed bottom-24 right-6 z-[99990] w-14 h-14 rounded-full shadow-xl flex items-center justify-center"
+      className="fixed bottom-24 right-6 z-[49] w-14 h-14 rounded-full shadow-xl flex items-center justify-center"
       style={{ background: '#25D366' }}
       aria-label="Contact WhatsApp"
     >
