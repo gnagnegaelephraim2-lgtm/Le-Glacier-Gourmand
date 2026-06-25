@@ -249,103 +249,118 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[99999] md:hidden bg-cream/98 backdrop-blur-xl flex flex-col pt-24"
+            className="fixed inset-0 z-[99999] md:hidden bg-cream flex flex-col"
           >
-            <div className="flex flex-col p-8 gap-6 overflow-y-auto">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-2xl font-serif text-forest hover:text-gold transition-colors flex items-center justify-between group"
-                >
-                  <span>{link.name}</span>
-                  <ChevronRight size={20} className="text-gold opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
-                </a>
-              ))}
+            {/* Header */}
+            <div className="flex items-center justify-between px-6 py-5 border-b border-forest/10 bg-cream flex-shrink-0">
+              <Logo className="h-10 sm:h-12" showText={false} variant="dark" />
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-2 rounded-full hover:bg-forest/5 text-forest transition-colors"
+                aria-label="Close menu"
+              >
+                <X size={28} />
+              </button>
             </div>
 
-            <div className="mt-auto p-8 border-t border-forest/10 space-y-8">
-              <div className="flex flex-col gap-4">
-                {user ? (
-                  <div className="flex items-center justify-between bg-forest/5 p-4 rounded-2xl">
-                    <div className="flex items-center gap-3">
-                      {user.photoURL ? (
-                        <img src={user.photoURL} alt="" className="w-10 h-10 rounded-full border-2 border-gold/20" />
-                      ) : (
-                        <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold">
-                          <UserIcon size={20} />
+            {/* Menu Content */}
+            <div className="flex-1 overflow-y-auto flex flex-col p-8 gap-6">
+              <div className="flex flex-col gap-6">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-2xl font-serif text-forest hover:text-gold transition-colors flex items-center justify-between group"
+                  >
+                    <span>{link.name}</span>
+                    <ChevronRight size={20} className="text-gold opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
+                  </a>
+                ))}
+              </div>
+
+              <div className="mt-auto pt-8 border-t border-forest/10 space-y-8">
+                <div className="flex flex-col gap-4">
+                  {user ? (
+                    <div className="flex items-center justify-between bg-forest/5 p-4 rounded-2xl">
+                      <div className="flex items-center gap-3">
+                        {user.photoURL ? (
+                          <img src={user.photoURL} alt="" className="w-10 h-10 rounded-full border-2 border-gold/20" />
+                        ) : (
+                          <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold">
+                            <UserIcon size={20} />
+                          </div>
+                        )}
+                        <div className="flex flex-col">
+                          <span className="text-sm font-bold text-forest uppercase tracking-widest truncate max-w-[150px]">{user.displayName}</span>
+                          <span className="text-[10px] text-forest/40 truncate max-w-[150px]">{user.email}</span>
                         </div>
-                      )}
-                      <div className="flex flex-col">
-                        <span className="text-sm font-bold text-forest uppercase tracking-widest truncate max-w-[150px]">{user.displayName}</span>
-                        <span className="text-[10px] text-forest/40 truncate max-w-[150px]">{user.email}</span>
                       </div>
+                      <button 
+                        onClick={() => {
+                          logout();
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className="p-3 text-red-500 hover:bg-red-500/10 rounded-full transition-colors"
+                      >
+                        <LogOut size={20} />
+                      </button>
                     </div>
-                    <button 
-                      onClick={() => {
-                        logout();
-                        setIsMobileMenuOpen(false);
-                      }}
-                      className="p-3 text-red-500 hover:bg-red-500/10 rounded-full transition-colors"
-                    >
-                      <LogOut size={20} />
-                    </button>
-                  </div>
-                ) : (
-                  <div className="flex flex-col gap-4">
-                    <button
-                      onClick={() => {
-                        openAuth('login');
-                        setTimeout(() => setIsMobileMenuOpen(false), 200);
-                      }}
-                      className="w-full py-4 bg-forest text-cream rounded-2xl text-xs font-bold uppercase tracking-widest hover:bg-gold transition-all shadow-lg shadow-forest/20"
-                    >
-                      {t.nav.login}
-                    </button>
-                  </div>
-                )}
-              </div>
-
-              {/* Language selector in mobile menu */}
-              <div>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-forest/40 block mb-3">{t.nav.languageLabel}</span>
-                <div className="grid grid-cols-3 gap-2">
-                  {LANGUAGES.map(lang => (
-                    <button
-                      key={lang.code}
-                      onClick={() => setLanguage(lang.code)}
-                      className={`flex flex-col items-center gap-1 py-2.5 px-2 rounded-xl border transition-all text-center ${
-                        language === lang.code
-                          ? 'border-gold bg-gold/10 text-forest'
-                          : 'border-forest/10 bg-white text-forest/60 hover:border-gold/40 hover:bg-gold/5'
-                      }`}
-                    >
-                      <span className="text-xl leading-none">{lang.flag}</span>
-                      <span className="text-[9px] font-bold uppercase tracking-wider leading-none">{lang.code.toUpperCase()}</span>
-                    </button>
-                  ))}
+                  ) : (
+                    <div className="flex flex-col gap-4">
+                      <button
+                        onClick={() => {
+                          openAuth('login');
+                          setTimeout(() => setIsMobileMenuOpen(false), 200);
+                        }}
+                        className="w-full py-4 bg-forest text-cream rounded-2xl text-xs font-bold uppercase tracking-widest hover:bg-gold transition-all shadow-lg shadow-forest/20"
+                      >
+                        {t.nav.login}
+                      </button>
+                    </div>
+                  )}
                 </div>
-              </div>
 
-              <div className="flex justify-between items-center">
-                <div className="flex gap-4">
-                  <a
-                    href="https://www.instagram.com/leglaciergourmand/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full border border-forest/10 flex items-center justify-center text-forest/60 hover:text-gold transition-colors"
-                  >
-                    <Instagram size={20} />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/p/Le-Glacier-Gourmand-61583599001010/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full border border-forest/10 flex items-center justify-center text-forest/60 hover:text-gold transition-colors"
-                  >
-                    <Facebook size={20} />
-                  </a>
+                {/* Language selector in mobile menu */}
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-forest/40 block mb-3">{t.nav.languageLabel}</span>
+                  <div className="grid grid-cols-3 gap-2">
+                    {LANGUAGES.map(lang => (
+                      <button
+                        key={lang.code}
+                        onClick={() => setLanguage(lang.code)}
+                        className={`flex flex-col items-center gap-1 py-2.5 px-2 rounded-xl border transition-all text-center ${
+                          language === lang.code
+                            ? 'border-gold bg-gold/10 text-forest'
+                            : 'border-forest/10 bg-white text-forest/60 hover:border-gold/40 hover:bg-gold/5'
+                        }`}
+                      >
+                        <span className="text-xl leading-none">{lang.flag}</span>
+                        <span className="text-[9px] font-bold uppercase tracking-wider leading-none">{lang.code.toUpperCase()}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex justify-between items-center">
+                  <div className="flex gap-4">
+                    <a
+                      href="https://www.instagram.com/leglaciergourmand/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-full border border-forest/10 flex items-center justify-center text-forest/60 hover:text-gold transition-colors"
+                    >
+                      <Instagram size={20} />
+                    </a>
+                    <a
+                      href="https://www.facebook.com/p/Le-Glacier-Gourmand-61583599001010/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-full border border-forest/10 flex items-center justify-center text-forest/60 hover:text-gold transition-colors"
+                    >
+                      <Facebook size={20} />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
