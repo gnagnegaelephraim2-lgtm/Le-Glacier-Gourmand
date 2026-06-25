@@ -189,7 +189,7 @@ export default function AIChat() {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-28 left-4 sm:left-8 z-50 w-[calc(100vw-2rem)] sm:w-[380px] h-[65dvh] sm:h-[520px] max-h-[calc(100dvh-10rem)] glass rounded-3xl shadow-2xl flex flex-col overflow-hidden border-forest/10"
+            className="fixed bottom-28 left-4 sm:left-8 z-50 w-[calc(100vw-2rem)] sm:w-[380px] h-[65dvh] sm:h-[520px] max-h-[calc(100dvh-13rem)] glass rounded-3xl shadow-2xl flex flex-col overflow-hidden border-forest/10"
           >
             {/* Header */}
             <div className="p-3 sm:p-5 bg-forest text-cream flex justify-between items-center flex-shrink-0">
