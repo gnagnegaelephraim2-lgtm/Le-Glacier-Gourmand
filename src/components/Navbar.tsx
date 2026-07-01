@@ -26,7 +26,7 @@ export default function Navbar() {
       const hours = muDate.getUTCHours() + muDate.getUTCMinutes() / 60;
       if (day >= 1 && day <= 4) setIsOpen(hours >= 8.5 && hours < 18);       // Mon–Thu
       else if (day === 5 || day === 6) setIsOpen(hours >= 8.5 && hours < 20); // Fri–Sat
-      else setIsOpen(hours >= 8.5 && hours < 15);                             // Sun
+      else setIsOpen(hours >= 9 && hours < 15);                               // Sun
     };
     checkOpen();
     const interval = setInterval(checkOpen, 60000);

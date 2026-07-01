@@ -146,7 +146,7 @@ export default function Footer() {
               </li>
               <li className="flex gap-4 items-center">
                 <Phone size={16} className="text-gold shrink-0" />
-                <span className="text-xs text-cream/60">+230 54217023</span>
+                <span className="text-xs text-cream/60">+230 5421 7023</span>
               </li>
               <li className="flex gap-4 items-center">
                 <Mail size={16} className="text-gold shrink-0" />
@@ -158,7 +158,7 @@ export default function Footer() {
               <ul className="space-y-2 text-[10px] text-cream/40 uppercase tracking-widest">
                 <li className="flex justify-between"><span>{t.footer.monThu}</span> <span className="text-cream/60">08:30 - 18:00</span></li>
                 <li className="flex justify-between"><span>{t.footer.friSat}</span> <span className="text-cream/60">08:30 - 20:00</span></li>
-                <li className="flex justify-between"><span>{t.footer.sunday}</span> <span className="text-cream/60">08:30 - 15:00</span></li>
+                <li className="flex justify-between"><span>{t.footer.sunday}</span> <span className="text-cream/60">09:00 - 15:00</span></li>
               </ul>
             </div>
           </div>

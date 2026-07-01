@@ -33,9 +33,9 @@ export default function HappyBreakfastBuilder() {
   }, [isSimulated]);
 
   // Topping list
-  const toppings = language === 'fr' 
-    ? ['Caramel Beurre Salé Maison', 'Chocolat Noir Artisanal', 'Fruits Tropicaux Frais', 'Sirop d\'Érable Bio']
-    : ['Homemade Salted Caramel', 'Artisanal Dark Chocolate', 'Fresh Tropical Fruits', 'Organic Maple Syrup'];
+  const toppings = language === 'fr'
+    ? ['Sauce Chocolat Noir Maison', 'Caramel Mou Maison', 'Confiture Artisanale Moris']
+    : ['Homemade Dark Chocolate Sauce', 'Homemade Soft Caramel', 'Artisanal Moris Jam'];
 
   // Price calculations
   const basePrice = base === 'gaufre' ? 280 : 180;

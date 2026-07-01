@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Check, Building2, Phone, Landmark } from 'lucide-react';
+import { X, Check, Building2, CreditCard } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useLanguage } from '../context/LanguageContext';
 import { getLocalizedText } from '../data';
@@ -8,7 +8,7 @@ import { getLocalizedText } from '../data';
 const MERCHANT_PHONE = '+23054217023';
 const MERCHANT_DISPLAY = '+230 5421 7023';
 
-type PaymentMethod = 'cash' | 'juice' | 'myt' | 'orange' | 'maucash' | 'virement';
+type PaymentMethod = 'juice' | 'card';
 
 interface PaymentOption {
   id: PaymentMethod;
@@ -30,17 +30,10 @@ export default function CheckoutModal() {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
-  const [payment, setPayment] = useState<PaymentMethod>('cash');
+  const [payment, setPayment] = useState<PaymentMethod>('juice');
   const [orderRef] = useState(generateRef);
 
   const paymentOptions: PaymentOption[] = [
-    {
-      id: 'cash',
-      label: cart?.cash || 'Espèces',
-      description: cart?.cashDesc || 'Payer au comptoir lors du retrait',
-      color: '#16a34a',
-      icon: <span className="text-xl">💵</span>,
-    },
     {
       id: 'juice',
       label: 'Juice by MCB',
@@ -49,32 +42,11 @@ export default function CheckoutModal() {
       icon: <Building2 size={20} />,
     },
     {
-      id: 'myt',
-      label: 'MyT Money',
-      description: `${cart?.sendTo || 'Envoyer à'} ${MERCHANT_DISPLAY}`,
-      color: '#009FE3',
-      icon: <Phone size={20} />,
-    },
-    {
-      id: 'orange',
-      label: 'Orange Money',
-      description: `${cart?.sendTo || 'Envoyer à'} ${MERCHANT_DISPLAY}`,
-      color: '#FF6600',
-      icon: <Phone size={20} />,
-    },
-    {
-      id: 'maucash',
-      label: 'MauCash (SBM)',
-      description: `${cart?.sendTo || 'Envoyer à'} ${MERCHANT_DISPLAY}`,
-      color: '#006400',
-      icon: <Phone size={20} />,
-    },
-    {
-      id: 'virement',
-      label: cart?.bankTransfer || 'Virement bancaire',
-      description: 'IBAN communiqué à la confirmation',
+      id: 'card',
+      label: cart?.cardPayment || 'Carte Bancaire',
+      description: cart?.cardDesc || 'Paiement par carte au retrait',
       color: '#1a1a2e',
-      icon: <Landmark size={20} />,
+      icon: <CreditCard size={20} />,
     },
   ];
 
@@ -270,7 +242,7 @@ export default function CheckoutModal() {
                   </motion.div>
 
                   <div>
-                    <h3 className="text-2xl font-serif text-forest mb-1">{cart?.orderConfirmed || 'Commande confirmée !'}</h3>
+                    <h3 className="text-2xl font-serif text-forest mb-1">{cart?.orderConfirmed || 'Commande enregistrée !'}</h3>
                     <p className="text-xs font-bold uppercase tracking-widest text-forest/40">
                       {cart?.orderRef || 'Référence'}: {orderRef}
                     </p>

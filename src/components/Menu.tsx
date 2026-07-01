@@ -264,6 +264,36 @@ export default function Menu() {
             <IceCreamTakeaway />
             {artisanales.length > 0 && (
               <div>
+                {/* Premium Vegan Gelato Banner */}
+                <div className="mb-10 rounded-3xl bg-forest text-cream overflow-hidden">
+                  <div className="h-1 bg-gradient-to-r from-gold via-cream/40 to-gold" />
+                  <div className="p-6 sm:p-8">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-gold/70 mb-3">
+                      {language === 'fr' ? 'À propos de nos glaces' : 'About our ice creams'}
+                    </p>
+                    <h4 className="text-xl sm:text-2xl font-serif text-gold mb-4 leading-snug">
+                      Mauritius' First Premium Vegan Gelato.
+                    </h4>
+                    <p className="text-sm text-cream/75 leading-relaxed font-light mb-6">
+                      {language === 'fr'
+                        ? "Nous avons créé ce qui n'existait pas — un gelato artisanal d'exception, entièrement vegan, ancré dans l'île Maurice. Sept créations signatures, sept histoires, sept raisons de redécouvrir le plaisir de la glace. Sans compromis sur la qualité. Sans compromis sur vos valeurs. Chaque bac est une promesse — d'ingrédients nobles, de saveurs authentiques, d'un artisanat qui ne se compromet jamais. Goûtez la différence."
+                        : "We created what didn't exist — an exceptional artisan gelato, entirely vegan, rooted in Mauritius. Seven signature creations, seven stories, seven reasons to rediscover the pleasure of ice cream. No compromise on quality. No compromise on your values. Every tub is a promise — of noble ingredients, authentic flavours, craftsmanship that never compromises. Taste the difference."}
+                    </p>
+                    <div className="flex flex-wrap gap-3">
+                      {[
+                        { icon: '🌿', label: language === 'fr' ? 'Sans Gluten' : 'Gluten Free' },
+                        { icon: '🌱', label: language === 'fr' ? '100 % Vegan' : '100% Vegan' },
+                        { icon: '✅', label: language === 'fr' ? 'Certifié Halal' : 'Halal Certified' },
+                      ].map(({ icon, label }) => (
+                        <span key={label} className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-cream/10 border border-cream/20 text-xs font-bold uppercase tracking-wider text-cream/90">
+                          <span>{icon}</span>
+                          {label}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
                 <div className="flex items-center gap-4 mb-8">
                   <h3 className="text-2xl font-serif text-forest whitespace-nowrap">
                     {t.menu.artisanalesHeading || 'Nos Glaces Artisanales'}

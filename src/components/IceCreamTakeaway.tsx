@@ -7,8 +7,8 @@ import { MENU_ITEMS, getLocalizedText } from '../data';
 import { img } from '../utils/image';
 
 const FORMATS = [
-  { key: '500ml', label: '½ Litre', price: 490, maxFlavors: 2, desc: '2 parfums au choix' },
-  { key: '1L',    label: '1 Litre',  price: 890, maxFlavors: 3, desc: '3 parfums au choix' },
+  { key: '500ml', label: '½ Litre', price: 800, maxFlavors: 2, desc: '2 parfums au choix' },
+  { key: '1L',    label: '1 Litre',  price: 1500, maxFlavors: 3, desc: '3 parfums au choix' },
 ] as const;
 
 type FormatKey = typeof FORMATS[number]['key'];
