@@ -196,8 +196,8 @@ export default function EspacePro() {
   };
 
   return (
-    <section id="espace-pro" className="py-24 bg-cream text-forest relative">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="espace-pro" className="py-12 md:py-24 bg-cream text-forest relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Banner Section */}
         <div className="text-center mb-16">

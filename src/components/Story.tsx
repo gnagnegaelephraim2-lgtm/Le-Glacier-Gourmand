@@ -6,7 +6,7 @@ export default function Story() {
   const { t } = useLanguage();
 
   return (
-    <section id="story" className="py-16 md:py-24 px-6 max-w-7xl mx-auto overflow-x-hidden">
+    <section id="story" className="py-10 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto overflow-x-hidden">
       <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -41,7 +41,7 @@ export default function Story() {
             <span className="block">{t.story.title}</span>
             <span className="italic font-light text-gold">{t.story.titleItalic}</span>
           </h2>
-          <p className="text-lg text-forest/80 mb-8 leading-relaxed">
+          <p className="text-base sm:text-lg text-forest/80 mb-8 leading-relaxed">
             {t.story.description}
           </p>
         </motion.div>

@@ -107,7 +107,7 @@ export default function CheckoutModal() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-          className="bg-cream w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
+          className="bg-cream w-full max-w-lg rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col mx-2 sm:mx-0"
         >
           {/* Header */}
           <div className="flex items-center justify-between px-6 py-5 border-b border-forest/10">

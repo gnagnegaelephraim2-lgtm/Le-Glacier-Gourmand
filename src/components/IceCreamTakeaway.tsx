@@ -81,23 +81,23 @@ export default function IceCreamTakeaway() {
   const isFull = selected.length >= current.maxFlavors;
 
   return (
-    <div className="max-w-5xl mx-auto my-12 bg-forest rounded-3xl overflow-hidden shadow-2xl">
+    <div className="max-w-5xl mx-auto my-8 sm:my-12 bg-forest rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
       {/* Gold top bar */}
       <div className="h-1.5 bg-gradient-to-r from-gold via-cream/60 to-gold" />
 
-      <div className="p-6 sm:p-10">
+      <div className="p-4 sm:p-6 md:p-10">
         {/* Header */}
-        <div className="flex items-center gap-3 mb-8">
-          <span className="p-2.5 bg-gold/20 rounded-xl text-gold">
-            <IceCream size={22} />
+        <div className="flex items-center gap-3 mb-6 sm:mb-8">
+          <span className="p-2 sm:p-2.5 bg-gold/20 rounded-xl text-gold shrink-0">
+            <IceCream size={20} />
           </span>
           <div>
             <p className="text-[10px] font-bold uppercase tracking-widest text-gold/60 mb-0.5">Emporter chez vous</p>
-            <h3 className="text-2xl font-serif text-cream">Glace Artisanale à Emporter</h3>
+            <h3 className="text-lg sm:text-2xl font-serif text-cream leading-tight">Glace Artisanale à Emporter</h3>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-start">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-start">
           {/* Left: Format + Flavor picker */}
           <div>
             {/* Format selector */}
@@ -154,7 +154,7 @@ export default function IceCreamTakeaway() {
           </div>
 
           {/* Right: Summary & Cart */}
-          <div className="bg-cream/5 rounded-2xl border border-cream/10 p-6 flex flex-col justify-between min-h-[260px]">
+          <div className="bg-cream/5 rounded-2xl border border-cream/10 p-4 sm:p-6 flex flex-col justify-between sm:min-h-[260px]">
             <div>
               <p className="text-[10px] font-bold uppercase tracking-widest text-cream/40 mb-4">Votre sélection</p>
 

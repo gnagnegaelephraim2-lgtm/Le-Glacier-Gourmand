@@ -10,8 +10,8 @@ export default function Events() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   return (
-    <section id="events" className="py-24 bg-cream overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="events" className="py-12 md:py-24 bg-cream overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -68,7 +68,7 @@ export default function Events() {
                 referrerPolicy="no-referrer"
               />
               
-              <div className="absolute bottom-8 left-8 right-8 p-6 rounded-2xl border border-white/30 bg-forest/40 backdrop-blur-[4px]">
+              <div className="absolute bottom-4 left-4 right-4 p-4 sm:bottom-8 sm:left-8 sm:right-8 sm:p-6 rounded-2xl border border-white/30 bg-forest/40 backdrop-blur-[4px]">
                 <div className="flex items-center gap-2 mb-2 drop-shadow-lg">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} size={16} className="fill-[#E9C46A] text-[#E9C46A]" />

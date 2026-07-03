@@ -53,24 +53,24 @@ export default function HappyBreakfastBuilder() {
 
 
   return (
-    <div className="max-w-4xl mx-auto my-12 bg-white/70 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-forest/10 shadow-2xl relative overflow-hidden">
+    <div className="max-w-4xl mx-auto my-8 sm:my-12 bg-white/70 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-forest/10 shadow-2xl relative overflow-hidden">
       {/* Decorative top border */}
       <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-gold via-forest to-gold" />
 
       {/* Simulator Control */}
-      <div className="absolute top-4 right-4 z-10 flex items-center gap-2">
-        <label className="text-[10px] font-bold uppercase tracking-wider text-forest/60 select-none cursor-pointer flex items-center gap-1.5 bg-cream px-3 py-1.5 rounded-full border border-forest/5 hover:border-gold transition-colors">
-          <input 
-            type="checkbox" 
+      <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10">
+        <label className="text-[10px] font-bold uppercase tracking-wider text-forest/60 select-none cursor-pointer flex items-center gap-1.5 bg-cream px-2.5 py-2 rounded-full border border-forest/5 hover:border-gold transition-colors min-h-[36px] min-w-[36px]">
+          <input
+            type="checkbox"
             checked={isSimulated}
             onChange={(e) => setIsSimulated(e.target.checked)}
             className="accent-forest"
           />
-          {language === 'fr' ? 'Simuler Happy Hours' : 'Simulate Happy Hours'}
+          <span className="hidden sm:inline">{language === 'fr' ? 'Simuler Happy Hours' : 'Simulate Happy Hours'}</span>
         </label>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start mt-10 sm:mt-6">
+      <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start mt-8 sm:mt-6">
         <div>
           <div className="flex items-center gap-2.5 mb-4">
             <span className="p-2 bg-gold/20 rounded-xl text-gold">

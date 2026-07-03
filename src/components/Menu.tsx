@@ -100,7 +100,7 @@ export default function Menu() {
       exit={{ opacity: 0, scale: 0.9 }}
       whileHover={{ y: -10 }}
       data-cursor={ITEM_EMOJI[item.id] ?? CATEGORY_CURSOR[item.category] ?? 'icecream'}
-      className="bg-cream rounded-3xl overflow-hidden shadow-xl border border-forest/5 group"
+      className="bg-cream rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-xl border border-forest/5 group"
     >
       <div className="aspect-square overflow-hidden relative">
         <img
@@ -119,10 +119,10 @@ export default function Menu() {
           ))}
         </div>
       </div>
-      <div className="p-8">
-        <div className="flex justify-between items-start mb-2">
-          <h3 className="text-2xl font-serif">{getLocalizedText(item.title, language)}</h3>
-          <span className="text-gold font-bold">{item.price}</span>
+      <div className="p-4 sm:p-6 md:p-8">
+        <div className="flex justify-between items-start gap-2 mb-2">
+          <h3 className="text-lg sm:text-xl md:text-2xl font-serif leading-tight">{getLocalizedText(item.title, language)}</h3>
+          <span className="text-gold font-bold shrink-0">{item.price}</span>
         </div>
         
         {/* Rating Display */}
@@ -133,11 +133,11 @@ export default function Menu() {
           </span>
         </div>
 
-        <p className="text-forest/70 text-sm leading-relaxed mb-6">
+        <p className="text-forest/70 text-sm leading-relaxed mb-4 sm:mb-6">
           {getLocalizedText(item.description, language)}
         </p>
-        
-        <div className="flex gap-3">
+
+        <div className="flex gap-2 sm:gap-3">
           <button
             onClick={() => handleAddToCart(item)}
             className={`flex-1 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest transition-all ${
@@ -174,9 +174,9 @@ export default function Menu() {
   );
 
   return (
-    <section id="menu" className="py-24 bg-white/30 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+    <section id="menu" className="py-12 md:py-24 bg-white/30 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 md:mb-16">
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -300,7 +300,7 @@ export default function Menu() {
                   </h3>
                   <div className="h-[1px] w-full bg-forest/10" />
                 </div>
-                <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                   <AnimatePresence mode="popLayout">
                     {artisanales.map((item) => renderMenuItem(item))}
                   </AnimatePresence>
@@ -315,7 +315,7 @@ export default function Menu() {
                   </h3>
                   <div className="h-[1px] w-full bg-forest/10" />
                 </div>
-                <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                   <AnimatePresence mode="popLayout">
                     {creations.map((item) => renderMenuItem(item))}
                   </AnimatePresence>
@@ -325,7 +325,7 @@ export default function Menu() {
             {filteredItems.length === 0 && renderNoResults()}
           </div>
         ) : (
-          <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-8">
             <AnimatePresence mode="popLayout">
               {filteredItems.length === 0 && renderNoResults()}
               {filteredItems.map((item) => renderMenuItem(item))}

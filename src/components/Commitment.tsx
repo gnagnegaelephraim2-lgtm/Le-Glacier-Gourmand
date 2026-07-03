@@ -49,12 +49,12 @@ export default function Commitment() {
   ];
 
   return (
-    <section id="savoir-faire" className="py-24 bg-forest text-cream relative overflow-hidden">
+    <section id="savoir-faire" className="py-12 md:py-24 bg-forest text-cream relative overflow-hidden">
       {/* Decorative background element */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -125,7 +125,7 @@ export default function Commitment() {
                 <motion.div
                   key={idx}
                   whileHover={{ y: -8, scale: 1.02 }}
-                  className="flex-shrink-0 w-64 h-80 rounded-2xl overflow-hidden relative shadow-2xl border border-white/5 group cursor-pointer"
+                  className="flex-shrink-0 w-52 h-64 sm:w-64 sm:h-80 rounded-2xl overflow-hidden relative shadow-2xl border border-white/5 group cursor-pointer"
                 >
                   <img 
                     src={img(item.url, 400)} 
