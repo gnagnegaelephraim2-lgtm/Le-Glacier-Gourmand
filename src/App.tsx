@@ -25,35 +25,45 @@ import { CartProvider } from './context/CartContext';
 import { ToastProvider } from './context/ToastContext';
 import CartDrawer from './components/CartDrawer';
 import CheckoutModal from './components/CheckoutModal';
+import { MenuProvider } from './context/MenuContext';
+import AdminPage from './pages/AdminPage';
+
+const isAdmin = typeof window !== 'undefined' && window.location.pathname === '/admin';
 
 export default function App() {
+  if (isAdmin) {
+    return <AdminPage />;
+  }
+
   return (
     <LanguageProvider>
       <ToastProvider>
         <CartProvider>
-          <CustomCursor />
-          <ScrollProgressBar />
-          <Preloader />
-          <div className="min-h-screen selection:bg-gold selection:text-forest">
-            <Navbar />
-            <main>
-              <Hero />
-              <Story />
-              <Commitment />
-              <Menu />
-              <Desserts />
-              <Events />
-              <Gallery />
-              <EspacePro />
-              <Reviews />
-            </main>
-            <Footer />
-            <AIChat />
-            <CartDrawer />
-            <CheckoutModal />
-            <WhatsAppButton />
-            <BackToTop />
-          </div>
+          <MenuProvider>
+            <CustomCursor />
+            <ScrollProgressBar />
+            <Preloader />
+            <div className="min-h-screen selection:bg-gold selection:text-forest">
+              <Navbar />
+              <main>
+                <Hero />
+                <Story />
+                <Commitment />
+                <Menu />
+                <Desserts />
+                <Events />
+                <Gallery />
+                <EspacePro />
+                <Reviews />
+              </main>
+              <Footer />
+              <AIChat />
+              <CartDrawer />
+              <CheckoutModal />
+              <WhatsAppButton />
+              <BackToTop />
+            </div>
+          </MenuProvider>
         </CartProvider>
       </ToastProvider>
     </LanguageProvider>

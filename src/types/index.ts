@@ -23,6 +23,8 @@ export interface MenuItem {
   image: string;
   tags: string[];
   subcategory?: 'artisanales' | 'creations';
+  available?: boolean;
+  order?: number;
 }
 
 export interface Review {

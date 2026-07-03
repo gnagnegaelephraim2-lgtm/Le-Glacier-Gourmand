@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MessageSquare, Search, X } from 'lucide-react';
-import { MENU_ITEMS, getLocalizedText } from '../data';
+import { getLocalizedText } from '../data';
 import { Category, MenuItem, ProductStats } from '../types';
 import { useLanguage } from '../context/LanguageContext';
+import { useMenu } from '../context/MenuContext';
 import { img } from '../utils/image';
 import ProductReviewSection from './ProductReviewSection';
 import { ReviewService } from '../services/ReviewService';
@@ -16,6 +17,7 @@ import IceCreamTakeaway from './IceCreamTakeaway';
 export default function Menu() {
   const { t, language } = useLanguage();
   const { addItem } = useCart();
+  const { menuItems: MENU_ITEMS } = useMenu();
   const [activeCategory, setActiveCategory] = useState<Category | 'All'>('All');
   const [activeTag, setActiveTag] = useState<string | 'All'>('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -71,7 +73,7 @@ export default function Menu() {
   ];
 
   // Extract unique tags and helper to translate
-  const allTags = Array.from(new Set(MENU_ITEMS.flatMap(item => item.tags))).sort();
+  const allTags: string[] = Array.from(new Set<string>(MENU_ITEMS.flatMap(item => item.tags))).sort();
   
   const getTagLabel = (tag: string) => {
     const frTags = TRANSLATIONS.fr.tags as Record<string, string>;

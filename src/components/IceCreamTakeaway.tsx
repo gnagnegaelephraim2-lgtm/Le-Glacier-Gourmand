@@ -3,8 +3,9 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ShoppingBag, Check, IceCream } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useLanguage } from '../context/LanguageContext';
-import { MENU_ITEMS, getLocalizedText } from '../data';
+import { getLocalizedText } from '../data';
 import { img } from '../utils/image';
+import { useMenu } from '../context/MenuContext';
 
 const FORMATS = [
   { key: '500ml', label: '½ Litre', price: 800, maxFlavors: 2, desc: '2 parfums au choix' },
@@ -13,11 +14,11 @@ const FORMATS = [
 
 type FormatKey = typeof FORMATS[number]['key'];
 
-const ICE_CREAMS = MENU_ITEMS.filter(item => item.category === 'glaces');
-
 export default function IceCreamTakeaway() {
   const { addItem } = useCart();
   const { language } = useLanguage();
+  const { menuItems } = useMenu();
+  const ICE_CREAMS = menuItems.filter(item => item.category === 'glaces');
   const [format, setFormat] = useState<FormatKey>('500ml');
   const [selected, setSelected] = useState<string[]>([]);
   const [added, setAdded] = useState(false);
