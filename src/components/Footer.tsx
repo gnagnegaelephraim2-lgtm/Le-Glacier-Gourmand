@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { MapPin, Phone, Mail, Instagram, Facebook, Send } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useToast } from '../context/ToastContext';
+import { useEspacePro } from '../context/EspaceProContext';
 import { db } from '../firebase';
 import { collection, addDoc, query, where, getDocs, serverTimestamp } from 'firebase/firestore';
 import Logo from './Logo';
@@ -10,6 +11,7 @@ import Logo from './Logo';
 export default function Footer() {
   const { t } = useLanguage();
   const { showToast } = useToast();
+  const { openEspacePro } = useEspacePro();
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -45,13 +47,13 @@ export default function Footer() {
     }
   };
 
-  const navLinks = [
+  const navLinks: { name: string; href?: string; onClick?: () => void }[] = [
     { name: t.nav.home, href: '#hero' },
     { name: t.nav.story, href: '#story' },
     { name: t.nav.menu, href: '#menu' },
     { name: t.nav.events, href: '#events' },
     { name: t.nav.experience, href: '#gallery' },
-    { name: t.nav.espacePro, href: '#espace-pro' },
+    { name: t.nav.espacePro, onClick: openEspacePro },
     { name: t.nav.reviews, href: '#reviews' },
     { name: t.nav.contact, href: '#location' },
   ];
@@ -93,12 +95,21 @@ export default function Footer() {
               <ul className="grid grid-cols-2 sm:grid-cols-1 gap-4">
                 {navLinks.map((link) => (
                   <li key={link.name}>
-                    <a 
-                      href={link.href} 
-                      className="text-xs text-cream/40 hover:text-gold transition-colors flex items-center group uppercase tracking-widest"
-                    >
-                      {link.name}
-                    </a>
+                    {link.onClick ? (
+                      <button 
+                        onClick={link.onClick}
+                        className="text-xs text-cream/40 hover:text-gold transition-colors flex items-center group uppercase tracking-widest"
+                      >
+                        {link.name}
+                      </button>
+                    ) : (
+                      <a 
+                        href={link.href} 
+                        className="text-xs text-cream/40 hover:text-gold transition-colors flex items-center group uppercase tracking-widest"
+                      >
+                        {link.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

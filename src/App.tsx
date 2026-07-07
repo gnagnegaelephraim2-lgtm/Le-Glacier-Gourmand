@@ -26,6 +26,7 @@ import { ToastProvider } from './context/ToastContext';
 import CartDrawer from './components/CartDrawer';
 import CheckoutModal from './components/CheckoutModal';
 import { MenuProvider } from './context/MenuContext';
+import { EspaceProProvider } from './context/EspaceProContext';
 import AdminPage from './pages/AdminPage';
 
 const isAdmin = typeof window !== 'undefined' && window.location.pathname === '/admin';
@@ -40,29 +41,31 @@ export default function App() {
       <ToastProvider>
         <CartProvider>
           <MenuProvider>
-            <CustomCursor />
-            <ScrollProgressBar />
-            <Preloader />
-            <div className="min-h-screen selection:bg-gold selection:text-forest">
-              <Navbar />
-              <main>
-                <Hero />
-                <Story />
-                <Commitment />
-                <Menu />
-                <Desserts />
-                <Events />
-                <Gallery />
+            <EspaceProProvider>
+              <CustomCursor />
+              <ScrollProgressBar />
+              <Preloader />
+              <div className="min-h-screen selection:bg-gold selection:text-forest">
+                <Navbar />
+                <main>
+                  <Hero />
+                  <Story />
+                  <Commitment />
+                  <Menu />
+                  <Desserts />
+                  <Events />
+                  <Gallery />
+                  <Reviews />
+                </main>
+                <Footer />
+                <AIChat />
+                <CartDrawer />
+                <CheckoutModal />
+                <WhatsAppButton />
+                <BackToTop />
                 <EspacePro />
-                <Reviews />
-              </main>
-              <Footer />
-              <AIChat />
-              <CartDrawer />
-              <CheckoutModal />
-              <WhatsAppButton />
-              <BackToTop />
-            </div>
+              </div>
+            </EspaceProProvider>
           </MenuProvider>
         </CartProvider>
       </ToastProvider>

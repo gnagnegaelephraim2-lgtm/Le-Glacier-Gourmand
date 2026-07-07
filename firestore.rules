@@ -23,6 +23,15 @@ service cloud.firestore {
     //
     // ===============================================================
 
+    // Admin accounts allowed to manage the menu via /admin
+    function isAdmin() {
+      return request.auth != null &&
+             request.auth.token.email in [
+               'chrysolite77ci@gmail.com',
+               'lali76610@gmail.com'
+             ];
+    }
+
     // Helper Functions
     function isAuthenticated() {
       return request.auth != null;
@@ -70,6 +79,12 @@ service cloud.firestore {
       allow read: if false;
       allow create: if request.resource.data.email is string &&
                        request.resource.data.email.size() > 0;
+    }
+
+    // Menu items (managed via /admin back-office)
+    match /menuItems/{itemId} {
+      allow read: if true;
+      allow write: if isAdmin();
     }
   }
 }

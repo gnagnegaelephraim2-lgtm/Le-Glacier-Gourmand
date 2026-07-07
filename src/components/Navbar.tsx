@@ -4,6 +4,7 @@ import { Menu, X, ShoppingCart, Instagram, Facebook, User as UserIcon, LogOut, C
 import { useLanguage } from '../context/LanguageContext';
 import { Language } from '../data/translations';
 import { useCart } from '../context/CartContext';
+import { useEspacePro } from '../context/EspaceProContext';
 import Logo from './Logo';
 import { auth, logout } from '../firebase';
 import { onAuthStateChanged, User } from 'firebase/auth';
@@ -45,6 +46,7 @@ export default function Navbar() {
   ];
 
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const { openEspacePro } = useEspacePro();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,29 +64,42 @@ export default function Navbar() {
     };
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
 
   const openAuth = (mode: 'login' | 'signup') => {
     setAuthMode(mode);
     setIsAuthModalOpen(true);
   };
 
-  const navLinks = [
+  const navLinks: { name: string; href?: string; onClick?: () => void }[] = [
     { name: t.nav.home, href: '#hero' },
     { name: t.nav.story, href: '#story' },
     { name: t.nav.menu, href: '#menu' },
     { name: t.nav.events, href: '#events' },
     { name: t.nav.experience, href: '#gallery' },
-    { name: t.nav.espacePro, href: '#espace-pro' },
+    { name: t.nav.espacePro, onClick: openEspacePro },
     { name: t.nav.reviews, href: '#reviews' },
     { name: t.nav.contact, href: '#location' },
   ];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? 'bg-forest/95 backdrop-blur-md py-4 shadow-lg text-white' : 'bg-transparent py-6 text-white'
-      }`}
-    >
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          isScrolled ? 'bg-forest/95 backdrop-blur-md py-4 shadow-lg text-white' : 'bg-transparent py-6 text-white'
+        }`}
+      >
       <div className="max-w-[1400px] mx-auto px-6 flex items-center justify-between">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -103,17 +118,31 @@ export default function Navbar() {
         {/* Center: Links */}
         <div className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8">
           {navLinks.map((link, i) => (
-            <motion.a
-              key={link.name}
-              href={link.href}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              className="text-[9px] lg:text-[10px] xl:text-xs font-bold uppercase tracking-[0.1em] lg:tracking-[0.2em] hover:text-gold transition-colors whitespace-nowrap relative group"
-            >
-              {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full" />
-            </motion.a>
+            link.onClick ? (
+              <motion.button
+                key={link.name}
+                onClick={link.onClick}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                className="text-[9px] lg:text-[10px] xl:text-xs font-bold uppercase tracking-[0.1em] lg:tracking-[0.2em] hover:text-gold transition-colors whitespace-nowrap relative group"
+              >
+                {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full" />
+              </motion.button>
+            ) : (
+              <motion.a
+                key={link.name}
+                href={link.href}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                className="text-[9px] lg:text-[10px] xl:text-xs font-bold uppercase tracking-[0.1em] lg:tracking-[0.2em] hover:text-gold transition-colors whitespace-nowrap relative group"
+              >
+                {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full" />
+              </motion.a>
+            )
           ))}
         </div>
 
@@ -240,6 +269,7 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+    </nav>
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -267,15 +297,29 @@ export default function Navbar() {
             <div className="flex-1 overflow-y-auto flex flex-col p-8 gap-6">
               <div className="flex flex-col gap-6">
                 {navLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-2xl font-serif text-forest hover:text-gold transition-colors flex items-center justify-between group"
-                  >
-                    <span>{link.name}</span>
-                    <ChevronRight size={20} className="text-gold opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
-                  </a>
+                  link.onClick ? (
+                    <button
+                      key={link.name}
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setTimeout(() => link.onClick!(), 300);
+                      }}
+                      className="text-2xl font-serif text-forest hover:text-gold transition-colors flex items-center justify-between group text-left"
+                    >
+                      <span>{link.name}</span>
+                      <ChevronRight size={20} className="text-gold opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
+                    </button>
+                  ) : (
+                    <a
+                      key={link.name}
+                      href={link.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-2xl font-serif text-forest hover:text-gold transition-colors flex items-center justify-between group"
+                    >
+                      <span>{link.name}</span>
+                      <ChevronRight size={20} className="text-gold opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
+                    </a>
+                  )
                 ))}
               </div>
 
@@ -313,7 +357,7 @@ export default function Navbar() {
                           openAuth('login');
                           setTimeout(() => setIsMobileMenuOpen(false), 200);
                         }}
-                        className="w-full py-4 bg-forest text-cream rounded-2xl text-xs font-bold uppercase tracking-widest hover:bg-gold transition-all shadow-lg shadow-forest/20"
+                        className="w-full py-4 bg-gradient-to-r from-gold to-gold/80 text-forest rounded-2xl text-xs font-bold uppercase tracking-widest hover:from-forest hover:to-forest hover:text-cream transition-all shadow-lg shadow-gold/20"
                       >
                         {t.nav.login}
                       </button>
@@ -373,6 +417,6 @@ export default function Navbar() {
         onClose={() => setIsAuthModalOpen(false)} 
         initialMode={authMode}
       />
-    </nav>
+    </>
   );
 }
