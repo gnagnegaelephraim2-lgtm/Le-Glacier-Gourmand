@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\deps\query_map-e738cc6b9e0080b5.d: C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\lib.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\serde\mod.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\serde\aws_api_gateway_v1.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\serde\aws_api_gateway_v2.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\serde\standard.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\url_query.rs
+
+C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\deps\libquery_map-e738cc6b9e0080b5.rmeta: C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\lib.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\serde\mod.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\serde\aws_api_gateway_v1.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\serde\aws_api_gateway_v2.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\serde\standard.rs C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\url_query.rs
+
+C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\lib.rs:
+C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\serde\mod.rs:
+C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\serde\aws_api_gateway_v1.rs:
+C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\serde\aws_api_gateway_v2.rs:
+C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\serde\standard.rs:
+C:\Users\User\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\query_map-0.7.0\src\url_query.rs:

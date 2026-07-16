@@ -23,8 +23,8 @@ const ALL_TAGS = ['Best-Seller', 'Sans Gluten', 'Vegan', 'Halal', 'Nouveau', 'Cl
 
 // ─── empty form ───────────────────────────────────────────────────────────────
 const emptyForm = (): Partial<MenuItem> => ({
-  title: { fr: '' },
-  description: { fr: '' },
+  title: { fr: '', en: '' },
+  description: { fr: '', en: '' },
   price: 'Rs ',
   category: 'glaces',
   subcategory: undefined,
@@ -134,8 +134,8 @@ function ProductFormModal({
         setUploadProgress(null);
       }
       const toSave: Omit<MenuItem, 'id'> = {
-        title: { fr: (form.title as any).fr, en: (form.title as any).fr },
-        description: { fr: (form.description as any)?.fr ?? '', en: (form.description as any)?.fr ?? '' },
+        title: { fr: (form.title as any).fr, en: (form.title as any).en || (form.title as any).fr },
+        description: { fr: (form.description as any)?.fr ?? '', en: (form.description as any)?.en ?? '' },
         price: form.price ?? 'Rs 0',
         category: form.category as Category,
         subcategory: form.subcategory as any,
@@ -194,26 +194,49 @@ function ProductFormModal({
           </div>
 
           {/* Name */}
-          <div>
-            <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 block mb-2">Nom du produit *</label>
-            <input
-              value={(form.title as any)?.fr ?? ''}
-              onChange={e => setTitle(e.target.value)}
-              placeholder="Ex : Pistache de Sicile"
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#c4a55a]"
-            />
+          <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex-1">
+              <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 block mb-2">Nom du produit (FR) *</label>
+              <input
+                value={(form.title as any)?.fr ?? ''}
+                onChange={e => setTitle(e.target.value)}
+                placeholder="Ex : Pistache de Sicile"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#c4a55a]"
+              />
+            </div>
+            <div className="flex-1">
+              <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 block mb-2">Nom (EN)</label>
+              <input
+                value={(form.title as any)?.en ?? ''}
+                onChange={e => setForm(f => ({ ...f, title: { ...f.title, en: e.target.value } as any }))}
+                placeholder="Ex : Sicilian Pistachio"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#c4a55a]"
+              />
+            </div>
           </div>
 
           {/* Description */}
-          <div>
-            <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 block mb-2">Description</label>
-            <textarea
-              value={(form.description as any)?.fr ?? ''}
-              onChange={e => setDesc(e.target.value)}
-              placeholder="Décrivez le produit..."
-              rows={3}
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#c4a55a] resize-none"
-            />
+          <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex-1">
+              <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 block mb-2">Description (FR)</label>
+              <textarea
+                value={(form.description as any)?.fr ?? ''}
+                onChange={e => setDesc(e.target.value)}
+                placeholder="Décrivez le produit..."
+                rows={3}
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#c4a55a] resize-none"
+              />
+            </div>
+            <div className="flex-1">
+              <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400 block mb-2">Description (EN)</label>
+              <textarea
+                value={(form.description as any)?.en ?? ''}
+                onChange={e => setForm(f => ({ ...f, description: { ...f.description, en: e.target.value } as any }))}
+                placeholder="Describe the product..."
+                rows={3}
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-[#c4a55a] resize-none"
+              />
+            </div>
           </div>
 
           {/* Price */}

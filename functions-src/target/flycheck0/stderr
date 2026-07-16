@@ -1,0 +1,3002 @@
+   0.134389000s  INFO prepare_target{force=false package_id=chat v0.1.0 (C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src) target="bootstrap"}: cargo::core::compiler::fingerprint: fingerprint error for chat v0.1.0 (C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src)/Check { test: false }/TargetInner { name: "bootstrap", doc: true, ..: with_path("C:\\Users\\User\\Desktop\\Le-Glacier-Gourmand\\functions-src\\src\\main.rs", Edition2021) }
+   0.134444400s  INFO prepare_target{force=false package_id=chat v0.1.0 (C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src) target="bootstrap"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\chat-7fd20980a9f85287\bin-bootstrap`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.141645500s  INFO prepare_target{force=false package_id=lambda_http v0.13.0 target="lambda_http"}: cargo::core::compiler::fingerprint: fingerprint error for lambda_http v0.13.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("lambda_http", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lambda_http-0.13.0\\src\\lib.rs", Edition2021) }
+   0.141670200s  INFO prepare_target{force=false package_id=lambda_http v0.13.0 target="lambda_http"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\lambda_http-9d740bedcad59414\lib-lambda_http`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_libgit2_prerelease
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: git_midx_writer_dump
+  18: git_filter_source_repo
+  19: git_midx_writer_dump
+  20: BaseThreadInitThunk
+  21: RtlUserThreadStart
+   0.142032200s  INFO prepare_target{force=false package_id=aws_lambda_events v0.15.1 target="aws_lambda_events"}: cargo::core::compiler::fingerprint: fingerprint error for aws_lambda_events v0.15.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("aws_lambda_events", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\aws_lambda_events-0.15.1\\src\\lib.rs", Edition2021) }
+   0.142044100s  INFO prepare_target{force=false package_id=aws_lambda_events v0.15.1 target="aws_lambda_events"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\aws_lambda_events-1716e0482d4cb8a0\lib-aws_lambda_events`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.142247800s  INFO prepare_target{force=false package_id=base64 v0.22.1 target="base64"}: cargo::core::compiler::fingerprint: fingerprint error for base64 v0.22.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("base64", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\base64-0.22.1\\src\\lib.rs", Edition2018) }
+   0.142261800s  INFO prepare_target{force=false package_id=base64 v0.22.1 target="base64"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\base64-abbb6c0fe31e8c8e\lib-base64`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.142400000s  INFO prepare_target{force=false package_id=bytes v1.12.1 target="bytes"}: cargo::core::compiler::fingerprint: fingerprint error for bytes v1.12.1/Check { test: false }/TargetInner { ..: lib_target("bytes", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytes-1.12.1\\src\\lib.rs", Edition2021) }
+   0.142413700s  INFO prepare_target{force=false package_id=bytes v1.12.1 target="bytes"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\bytes-e08f5edd6cf78660\lib-bytes`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.142550700s  INFO prepare_target{force=false package_id=serde v1.0.228 target="serde"}: cargo::core::compiler::fingerprint: fingerprint error for serde v1.0.228/Check { test: false }/TargetInner { ..: lib_target("serde", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.228\\src\\lib.rs", Edition2021) }
+   0.142562500s  INFO prepare_target{force=false package_id=serde v1.0.228 target="serde"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\serde-2824890a59f0c08d\lib-serde`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.143340400s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="serde_core"}: cargo::core::compiler::fingerprint: fingerprint error for serde_core v1.0.228/Check { test: false }/TargetInner { ..: lib_target("serde_core", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_core-1.0.228\\src\\lib.rs", Edition2021) }
+   0.143354500s  INFO prepare_target{force=false package_id=serde_core v1.0.228 target="serde_core"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\serde_core-856d24ec2fcd286f\lib-serde_core`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.145620900s  INFO prepare_target{force=false package_id=http v1.4.2 target="http"}: cargo::core::compiler::fingerprint: fingerprint error for http v1.4.2/Check { test: false }/TargetInner { ..: lib_target("http", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\http-1.4.2\\src\\lib.rs", Edition2021) }
+   0.145646000s  INFO prepare_target{force=false package_id=http v1.4.2 target="http"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\http-ad9192372eae67d7\lib-http`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.146059700s  INFO prepare_target{force=false package_id=http-body v1.0.1 target="http_body"}: cargo::core::compiler::fingerprint: fingerprint error for http-body v1.0.1/Check { test: false }/TargetInner { ..: lib_target("http_body", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\http-body-1.0.1\\src\\lib.rs", Edition2018) }
+   0.146073500s  INFO prepare_target{force=false package_id=http-body v1.0.1 target="http_body"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\http-body-b83e09967f0641b7\lib-http_body`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.146636200s  INFO prepare_target{force=false package_id=http-serde v2.1.1 target="http_serde"}: cargo::core::compiler::fingerprint: fingerprint error for http-serde v2.1.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("http_serde", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\http-serde-2.1.1\\src\\lib.rs", Edition2021) }
+   0.146671000s  INFO prepare_target{force=false package_id=http-serde v2.1.1 target="http_serde"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\http-serde-f19d65b3f468f011\lib-http_serde`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.147094700s  INFO prepare_target{force=false package_id=query_map v0.7.0 target="query_map"}: cargo::core::compiler::fingerprint: fingerprint error for query_map v0.7.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("query_map", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\query_map-0.7.0\\src\\lib.rs", Edition2018) }
+   0.147113400s  INFO prepare_target{force=false package_id=query_map v0.7.0 target="query_map"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\query_map-e738cc6b9e0080b5\lib-query_map`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.147365800s  INFO prepare_target{force=false package_id=form_urlencoded v1.2.2 target="form_urlencoded"}: cargo::core::compiler::fingerprint: fingerprint error for form_urlencoded v1.2.2/Check { test: false }/TargetInner { tested: false, ..: lib_target("form_urlencoded", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\form_urlencoded-1.2.2\\src\\lib.rs", Edition2018) }
+   0.147377300s  INFO prepare_target{force=false package_id=form_urlencoded v1.2.2 target="form_urlencoded"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\form_urlencoded-fba38a9a8573079e\lib-form_urlencoded`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.147695000s  INFO prepare_target{force=false package_id=serde_json v1.0.150 target="serde_json"}: cargo::core::compiler::fingerprint: fingerprint error for serde_json v1.0.150/Check { test: false }/TargetInner { ..: lib_target("serde_json", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.150\\src\\lib.rs", Edition2021) }
+   0.147707300s  INFO prepare_target{force=false package_id=serde_json v1.0.150 target="serde_json"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\serde_json-10abedeb9e9d7acc\lib-serde_json`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.147965300s  INFO prepare_target{force=false package_id=memchr v2.8.3 target="memchr"}: cargo::core::compiler::fingerprint: fingerprint error for memchr v2.8.3/Check { test: false }/TargetInner { benched: false, ..: lib_target("memchr", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\memchr-2.8.3\\src\\lib.rs", Edition2021) }
+   0.147982200s  INFO prepare_target{force=false package_id=memchr v2.8.3 target="memchr"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\memchr-4040f00bda4913e6\lib-memchr`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.148829700s  INFO prepare_target{force=false package_id=zmij v1.0.22 target="zmij"}: cargo::core::compiler::fingerprint: fingerprint error for zmij v1.0.22/Check { test: false }/TargetInner { ..: lib_target("zmij", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zmij-1.0.22\\src\\lib.rs", Edition2021) }
+   0.148851100s  INFO prepare_target{force=false package_id=zmij v1.0.22 target="zmij"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\zmij-4141a699707318dd\lib-zmij`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.149540900s  INFO prepare_target{force=false package_id=encoding_rs v0.8.35 target="encoding_rs"}: cargo::core::compiler::fingerprint: fingerprint error for encoding_rs v0.8.35/Check { test: false }/TargetInner { ..: lib_target("encoding_rs", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\encoding_rs-0.8.35\\src\\lib.rs", Edition2018) }
+   0.149554100s  INFO prepare_target{force=false package_id=encoding_rs v0.8.35 target="encoding_rs"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\encoding_rs-d552695e8bbed3ed\lib-encoding_rs`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.149838300s  INFO prepare_target{force=false package_id=futures v0.3.32 target="futures"}: cargo::core::compiler::fingerprint: fingerprint error for futures v0.3.32/Check { test: false }/TargetInner { ..: lib_target("futures", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-0.3.32\\src\\lib.rs", Edition2018) }
+   0.149849700s  INFO prepare_target{force=false package_id=futures v0.3.32 target="futures"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\futures-df1186d441a795fb\lib-futures`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.150126400s  INFO prepare_target{force=false package_id=futures-channel v0.3.32 target="futures_channel"}: cargo::core::compiler::fingerprint: fingerprint error for futures-channel v0.3.32/Check { test: false }/TargetInner { ..: lib_target("futures_channel", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-channel-0.3.32\\src\\lib.rs", Edition2018) }
+   0.150138600s  INFO prepare_target{force=false package_id=futures-channel v0.3.32 target="futures_channel"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\futures-channel-f1c2c677f761e5b6\lib-futures_channel`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.150567600s  INFO prepare_target{force=false package_id=futures-executor v0.3.32 target="futures_executor"}: cargo::core::compiler::fingerprint: fingerprint error for futures-executor v0.3.32/Check { test: false }/TargetInner { ..: lib_target("futures_executor", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-executor-0.3.32\\src\\lib.rs", Edition2018) }
+   0.150579900s  INFO prepare_target{force=false package_id=futures-executor v0.3.32 target="futures_executor"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\futures-executor-f8c9a41478cb9cd0\lib-futures_executor`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.150878800s  INFO prepare_target{force=false package_id=futures-util v0.3.32 target="futures_util"}: cargo::core::compiler::fingerprint: fingerprint error for futures-util v0.3.32/Check { test: false }/TargetInner { ..: lib_target("futures_util", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-util-0.3.32\\src\\lib.rs", Edition2018) }
+   0.150889000s  INFO prepare_target{force=false package_id=futures-util v0.3.32 target="futures_util"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\futures-util-95ae4206537e5a00\lib-futures_util`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.151618300s  INFO prepare_target{force=false package_id=http-body-util v0.1.3 target="http_body_util"}: cargo::core::compiler::fingerprint: fingerprint error for http-body-util v0.1.3/Check { test: false }/TargetInner { ..: lib_target("http_body_util", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\http-body-util-0.1.3\\src\\lib.rs", Edition2018) }
+   0.151634700s  INFO prepare_target{force=false package_id=http-body-util v0.1.3 target="http_body_util"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\http-body-util-0fa8663a5ea978c3\lib-http_body_util`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.151882000s  INFO prepare_target{force=false package_id=hyper v1.10.1 target="hyper"}: cargo::core::compiler::fingerprint: fingerprint error for hyper v1.10.1/Check { test: false }/TargetInner { ..: lib_target("hyper", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hyper-1.10.1\\src\\lib.rs", Edition2021) }
+   0.151894000s  INFO prepare_target{force=false package_id=hyper v1.10.1 target="hyper"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\hyper-93bc6f75a993e7e9\lib-hyper`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.152338500s  INFO prepare_target{force=false package_id=atomic-waker v1.1.2 target="atomic_waker"}: cargo::core::compiler::fingerprint: fingerprint error for atomic-waker v1.1.2/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("atomic_waker", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\atomic-waker-1.1.2\\src\\lib.rs", Edition2018) }
+   0.152349700s  INFO prepare_target{force=false package_id=atomic-waker v1.1.2 target="atomic_waker"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\atomic-waker-7d468e857fd11632\lib-atomic_waker`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.152501000s  INFO prepare_target{force=false package_id=httparse v1.10.1 target="httparse"}: cargo::core::compiler::fingerprint: fingerprint error for httparse v1.10.1/Check { test: false }/TargetInner { benched: false, ..: lib_target("httparse", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\httparse-1.10.1\\src\\lib.rs", Edition2018) }
+   0.152510300s  INFO prepare_target{force=false package_id=httparse v1.10.1 target="httparse"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\httparse-8e72a2100eef0f6b\lib-httparse`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.153333000s  INFO prepare_target{force=false package_id=tokio v1.52.3 target="tokio"}: cargo::core::compiler::fingerprint: fingerprint error for tokio v1.52.3/Check { test: false }/TargetInner { ..: lib_target("tokio", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.52.3\\src\\lib.rs", Edition2021) }
+   0.153356200s  INFO prepare_target{force=false package_id=tokio v1.52.3 target="tokio"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\tokio-4037525d6f210efe\lib-tokio`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.153667800s  INFO prepare_target{force=false package_id=mio v1.2.1 target="mio"}: cargo::core::compiler::fingerprint: fingerprint error for mio v1.2.1/Check { test: false }/TargetInner { ..: lib_target("mio", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\mio-1.2.1\\src\\lib.rs", Edition2021) }
+   0.153679900s  INFO prepare_target{force=false package_id=mio v1.2.1 target="mio"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\mio-6d66ac70db2f3d9d\lib-mio`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.153854300s  INFO prepare_target{force=false package_id=windows-sys v0.61.2 target="windows_sys"}: cargo::core::compiler::fingerprint: fingerprint error for windows-sys v0.61.2/Check { test: false }/TargetInner { tested: false, doctest: false, ..: lib_target("windows_sys", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-sys-0.61.2\\src\\lib.rs", Edition2021) }
+   0.153864100s  INFO prepare_target{force=false package_id=windows-sys v0.61.2 target="windows_sys"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\windows-sys-dc3c75ab495a4f19\lib-windows_sys`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.154212800s  INFO prepare_target{force=false package_id=socket2 v0.6.4 target="socket2"}: cargo::core::compiler::fingerprint: fingerprint error for socket2 v0.6.4/Check { test: false }/TargetInner { ..: lib_target("socket2", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\socket2-0.6.4\\src\\lib.rs", Edition2021) }
+   0.154227000s  INFO prepare_target{force=false package_id=socket2 v0.6.4 target="socket2"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\socket2-b6575b451989e961\lib-socket2`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.154490600s  INFO prepare_target{force=false package_id=want v0.3.1 target="want"}: cargo::core::compiler::fingerprint: fingerprint error for want v0.3.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("want", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\want-0.3.1\\src\\lib.rs", Edition2018) }
+   0.154502600s  INFO prepare_target{force=false package_id=want v0.3.1 target="want"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\want-a5154952c149b38e\lib-want`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.154695800s  INFO prepare_target{force=false package_id=try-lock v0.2.5 target="try_lock"}: cargo::core::compiler::fingerprint: fingerprint error for try-lock v0.2.5/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("try_lock", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\try-lock-0.2.5\\src\\lib.rs", Edition2015) }
+   0.154706300s  INFO prepare_target{force=false package_id=try-lock v0.2.5 target="try_lock"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\try-lock-3c05ca19c877fec8\lib-try_lock`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.154853900s  INFO prepare_target{force=false package_id=lambda_runtime v0.13.0 target="lambda_runtime"}: cargo::core::compiler::fingerprint: fingerprint error for lambda_runtime v0.13.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("lambda_runtime", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lambda_runtime-0.13.0\\src\\lib.rs", Edition2021) }
+   0.154863200s  INFO prepare_target{force=false package_id=lambda_runtime v0.13.0 target="lambda_runtime"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\lambda_runtime-0533c5f778757267\lib-lambda_runtime`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.155382800s  INFO prepare_target{force=false package_id=async-stream v0.3.6 target="async_stream"}: cargo::core::compiler::fingerprint: fingerprint error for async-stream v0.3.6/Check { test: false }/TargetInner { ..: lib_target("async_stream", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\async-stream-0.3.6\\src\\lib.rs", Edition2021) }
+   0.155399800s  INFO prepare_target{force=false package_id=async-stream v0.3.6 target="async_stream"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\async-stream-6291898004a34b68\lib-async_stream`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.155734100s  INFO prepare_target{force=false package_id=hyper-util v0.1.20 target="hyper_util"}: cargo::core::compiler::fingerprint: fingerprint error for hyper-util v0.1.20/Check { test: false }/TargetInner { ..: lib_target("hyper_util", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hyper-util-0.1.20\\src\\lib.rs", Edition2021) }
+   0.155746400s  INFO prepare_target{force=false package_id=hyper-util v0.1.20 target="hyper_util"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\hyper-util-3fa89af141ac31d7\lib-hyper_util`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.156051900s  INFO prepare_target{force=false package_id=ipnet v2.12.0 target="ipnet"}: cargo::core::compiler::fingerprint: fingerprint error for ipnet v2.12.0/Check { test: false }/TargetInner { ..: lib_target("ipnet", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ipnet-2.12.0\\src\\lib.rs", Edition2018) }
+   0.156062700s  INFO prepare_target{force=false package_id=ipnet v2.12.0 target="ipnet"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\ipnet-d0d2dc0970260691\lib-ipnet`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.156218800s  INFO prepare_target{force=false package_id=libc v0.2.186 target="libc"}: cargo::core::compiler::fingerprint: fingerprint error for libc v0.2.186/Check { test: false }/TargetInner { ..: lib_target("libc", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.186\\src\\lib.rs", Edition2021) }
+   0.156229400s  INFO prepare_target{force=false package_id=libc v0.2.186 target="libc"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\libc-5efafdffa66c4ce0\lib-libc`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.157043300s  INFO prepare_target{force=false package_id=tower-service v0.3.3 target="tower_service"}: cargo::core::compiler::fingerprint: fingerprint error for tower-service v0.3.3/Check { test: false }/TargetInner { ..: lib_target("tower_service", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tower-service-0.3.3\\src\\lib.rs", Edition2018) }
+   0.157064300s  INFO prepare_target{force=false package_id=tower-service v0.3.3 target="tower_service"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\tower-service-74900c90b6b64b60\lib-tower_service`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.157252100s  INFO prepare_target{force=false package_id=tracing v0.1.44 target="tracing"}: cargo::core::compiler::fingerprint: fingerprint error for tracing v0.1.44/Check { test: false }/TargetInner { ..: lib_target("tracing", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tracing-0.1.44\\src\\lib.rs", Edition2018) }
+   0.157263200s  INFO prepare_target{force=false package_id=tracing v0.1.44 target="tracing"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\tracing-4cd016396599d28d\lib-tracing`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.157485700s  INFO prepare_target{force=false package_id=log v0.4.33 target="log"}: cargo::core::compiler::fingerprint: fingerprint error for log v0.4.33/Check { test: false }/TargetInner { ..: lib_target("log", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\log-0.4.33\\src\\lib.rs", Edition2021) }
+   0.157495800s  INFO prepare_target{force=false package_id=log v0.4.33 target="log"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\log-d2c54933c17d2722\lib-log`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.157781000s  INFO prepare_target{force=false package_id=tracing-core v0.1.36 target="tracing_core"}: cargo::core::compiler::fingerprint: fingerprint error for tracing-core v0.1.36/Check { test: false }/TargetInner { ..: lib_target("tracing_core", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tracing-core-0.1.36\\src\\lib.rs", Edition2018) }
+   0.157792500s  INFO prepare_target{force=false package_id=tracing-core v0.1.36 target="tracing_core"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\tracing-core-fd5be8137f0076cd\lib-tracing_core`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.158063800s  INFO prepare_target{force=false package_id=lambda_runtime_api_client v0.11.1 target="lambda_runtime_api_client"}: cargo::core::compiler::fingerprint: fingerprint error for lambda_runtime_api_client v0.11.1/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("lambda_runtime_api_client", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lambda_runtime_api_client-0.11.1\\src\\lib.rs", Edition2021) }
+   0.158077100s  INFO prepare_target{force=false package_id=lambda_runtime_api_client v0.11.1 target="lambda_runtime_api_client"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\lambda_runtime_api_client-a0ee1467d72b808d\lib-lambda_runtime_api_client`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.158556500s  INFO prepare_target{force=false package_id=tower v0.4.13 target="tower"}: cargo::core::compiler::fingerprint: fingerprint error for tower v0.4.13/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("tower", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tower-0.4.13\\src\\lib.rs", Edition2018) }
+   0.158570500s  INFO prepare_target{force=false package_id=tower v0.4.13 target="tower"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\tower-0c5e9b3080f506e3\lib-tower`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.158820700s  INFO prepare_target{force=false package_id=pin-project v1.1.13 target="pin_project"}: cargo::core::compiler::fingerprint: fingerprint error for pin-project v1.1.13/Check { test: false }/TargetInner { doc_scrape_examples: Disabled, ..: lib_target("pin_project", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-1.1.13\\src\\lib.rs", Edition2021) }
+   0.158832400s  INFO prepare_target{force=false package_id=pin-project v1.1.13 target="pin_project"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\pin-project-795d845d593f499b\lib-pin_project`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.159189700s  INFO prepare_target{force=false package_id=tower-layer v0.3.3 target="tower_layer"}: cargo::core::compiler::fingerprint: fingerprint error for tower-layer v0.3.3/Check { test: false }/TargetInner { ..: lib_target("tower_layer", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tower-layer-0.3.3\\src\\lib.rs", Edition2018) }
+   0.159202900s  INFO prepare_target{force=false package_id=tower-layer v0.3.3 target="tower_layer"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\tower-layer-e7e2ef93d87d0258\lib-tower_layer`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.159381200s  INFO prepare_target{force=false package_id=tracing-subscriber v0.3.23 target="tracing_subscriber"}: cargo::core::compiler::fingerprint: fingerprint error for tracing-subscriber v0.3.23/Check { test: false }/TargetInner { ..: lib_target("tracing_subscriber", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tracing-subscriber-0.3.23\\src\\lib.rs", Edition2018) }
+   0.159392400s  INFO prepare_target{force=false package_id=tracing-subscriber v0.3.23 target="tracing_subscriber"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\tracing-subscriber-1d02ba1d8e09fd50\lib-tracing_subscriber`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.159625700s  INFO prepare_target{force=false package_id=matchers v0.2.0 target="matchers"}: cargo::core::compiler::fingerprint: fingerprint error for matchers v0.2.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("matchers", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\matchers-0.2.0\\src\\lib.rs", Edition2018) }
+   0.159637700s  INFO prepare_target{force=false package_id=matchers v0.2.0 target="matchers"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\matchers-dac76e718d6f9d38\lib-matchers`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.159807800s  INFO prepare_target{force=false package_id=regex-automata v0.4.15 target="regex_automata"}: cargo::core::compiler::fingerprint: fingerprint error for regex-automata v0.4.15/Check { test: false }/TargetInner { benched: false, ..: lib_target("regex_automata", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\regex-automata-0.4.15\\src\\lib.rs", Edition2021) }
+   0.159817000s  INFO prepare_target{force=false package_id=regex-automata v0.4.15 target="regex_automata"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\regex-automata-47c692fbb8f3f3a0\lib-regex_automata`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_libgit2_prerelease
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: git_midx_writer_dump
+  23: git_filter_source_repo
+  24: git_midx_writer_dump
+  25: BaseThreadInitThunk
+  26: RtlUserThreadStart
+   0.159963400s  INFO prepare_target{force=false package_id=regex-syntax v0.8.11 target="regex_syntax"}: cargo::core::compiler::fingerprint: fingerprint error for regex-syntax v0.8.11/Check { test: false }/TargetInner { ..: lib_target("regex_syntax", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\regex-syntax-0.8.11\\src\\lib.rs", Edition2021) }
+   0.159972700s  INFO prepare_target{force=false package_id=regex-syntax v0.8.11 target="regex_syntax"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\regex-syntax-bcd41cc79791043a\lib-regex_syntax`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_libgit2_prerelease
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: git_midx_writer_dump
+  24: git_filter_source_repo
+  25: git_midx_writer_dump
+  26: BaseThreadInitThunk
+  27: RtlUserThreadStart
+   0.160119200s  INFO prepare_target{force=false package_id=sharded-slab v0.1.7 target="sharded_slab"}: cargo::core::compiler::fingerprint: fingerprint error for sharded-slab v0.1.7/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("sharded_slab", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\sharded-slab-0.1.7\\src\\lib.rs", Edition2018) }
+   0.160128300s  INFO prepare_target{force=false package_id=sharded-slab v0.1.7 target="sharded_slab"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\sharded-slab-6a3680386eee463b\lib-sharded_slab`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.160266500s  INFO prepare_target{force=false package_id=lazy_static v1.5.0 target="lazy_static"}: cargo::core::compiler::fingerprint: fingerprint error for lazy_static v1.5.0/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("lazy_static", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lazy_static-1.5.0\\src\\lib.rs", Edition2015) }
+   0.160275600s  INFO prepare_target{force=false package_id=lazy_static v1.5.0 target="lazy_static"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\lazy_static-ad43a1527160ea1e\lib-lazy_static`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_libgit2_prerelease
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: git_midx_writer_dump
+  23: git_filter_source_repo
+  24: git_midx_writer_dump
+  25: BaseThreadInitThunk
+  26: RtlUserThreadStart
+   0.160409600s  INFO prepare_target{force=false package_id=thread_local v1.1.10 target="thread_local"}: cargo::core::compiler::fingerprint: fingerprint error for thread_local v1.1.10/Check { test: false }/TargetInner { ..: lib_target("thread_local", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\thread_local-1.1.10\\src\\lib.rs", Edition2021) }
+   0.160417900s  INFO prepare_target{force=false package_id=thread_local v1.1.10 target="thread_local"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\thread_local-3ebf9962735f446f\lib-thread_local`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.160557600s  INFO prepare_target{force=false package_id=tracing-serde v0.2.0 target="tracing_serde"}: cargo::core::compiler::fingerprint: fingerprint error for tracing-serde v0.2.0/Check { test: false }/TargetInner { ..: lib_target("tracing_serde", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tracing-serde-0.2.0\\src\\lib.rs", Edition2018) }
+   0.160566400s  INFO prepare_target{force=false package_id=tracing-serde v0.2.0 target="tracing_serde"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\tracing-serde-453e183d3874d556\lib-tracing_serde`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.160735700s  INFO prepare_target{force=false package_id=serde_path_to_error v0.1.20 target="serde_path_to_error"}: cargo::core::compiler::fingerprint: fingerprint error for serde_path_to_error v0.1.20/Check { test: false }/TargetInner { ..: lib_target("serde_path_to_error", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_path_to_error-0.1.20\\src\\lib.rs", Edition2021) }
+   0.160745100s  INFO prepare_target{force=false package_id=serde_path_to_error v0.1.20 target="serde_path_to_error"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\serde_path_to_error-3be0e831f7533b88\lib-serde_path_to_error`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.160883100s  INFO prepare_target{force=false package_id=tokio-stream v0.1.18 target="tokio_stream"}: cargo::core::compiler::fingerprint: fingerprint error for tokio-stream v0.1.18/Check { test: false }/TargetInner { ..: lib_target("tokio_stream", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-stream-0.1.18\\src\\lib.rs", Edition2021) }
+   0.160892500s  INFO prepare_target{force=false package_id=tokio-stream v0.1.18 target="tokio_stream"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\tokio-stream-58339440ce13c91c\lib-tokio_stream`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.161086700s  INFO prepare_target{force=false package_id=mime v0.3.17 target="mime"}: cargo::core::compiler::fingerprint: fingerprint error for mime v0.3.17/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("mime", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\mime-0.3.17\\src\\lib.rs", Edition2015) }
+   0.161098100s  INFO prepare_target{force=false package_id=mime v0.3.17 target="mime"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\mime-1f02be28a2d040c5\lib-mime`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.161234100s  INFO prepare_target{force=false package_id=serde_urlencoded v0.7.1 target="serde_urlencoded"}: cargo::core::compiler::fingerprint: fingerprint error for serde_urlencoded v0.7.1/Check { test: false }/TargetInner { name_inferred: true, tested: false, ..: lib_target("serde_urlencoded", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_urlencoded-0.7.1\\src\\lib.rs", Edition2018) }
+   0.161243400s  INFO prepare_target{force=false package_id=serde_urlencoded v0.7.1 target="serde_urlencoded"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\serde_urlencoded-e3661bacc96ece3f\lib-serde_urlencoded`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.161406000s  INFO prepare_target{force=false package_id=ryu v1.0.23 target="ryu"}: cargo::core::compiler::fingerprint: fingerprint error for ryu v1.0.23/Check { test: false }/TargetInner { ..: lib_target("ryu", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ryu-1.0.23\\src\\lib.rs", Edition2021) }
+   0.161414600s  INFO prepare_target{force=false package_id=ryu v1.0.23 target="ryu"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\ryu-297175d27d4cfc94\lib-ryu`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.161582800s  INFO prepare_target{force=false package_id=url v2.5.8 target="url"}: cargo::core::compiler::fingerprint: fingerprint error for url v2.5.8/Check { test: false }/TargetInner { ..: lib_target("url", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\url-2.5.8\\src\\lib.rs", Edition2018) }
+   0.161591900s  INFO prepare_target{force=false package_id=url v2.5.8 target="url"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\url-58c446fead9209e1\lib-url`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.161803500s  INFO prepare_target{force=false package_id=idna v1.1.0 target="idna"}: cargo::core::compiler::fingerprint: fingerprint error for idna v1.1.0/Check { test: false }/TargetInner { doctest: false, ..: lib_target("idna", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\idna-1.1.0\\src\\lib.rs", Edition2018) }
+   0.161812600s  INFO prepare_target{force=false package_id=idna v1.1.0 target="idna"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\idna-b6d4f50a19f7d933\lib-idna`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.161990000s  INFO prepare_target{force=false package_id=idna_adapter v1.2.2 target="idna_adapter"}: cargo::core::compiler::fingerprint: fingerprint error for idna_adapter v1.2.2/Check { test: false }/TargetInner { ..: lib_target("idna_adapter", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\idna_adapter-1.2.2\\src\\lib.rs", Edition2024) }
+   0.161999900s  INFO prepare_target{force=false package_id=idna_adapter v1.2.2 target="idna_adapter"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\idna_adapter-46bb952fb63010eb\lib-idna_adapter`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.162199800s  INFO prepare_target{force=false package_id=icu_normalizer v2.2.0 target="icu_normalizer"}: cargo::core::compiler::fingerprint: fingerprint error for icu_normalizer v2.2.0/Check { test: false }/TargetInner { ..: lib_target("icu_normalizer", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\icu_normalizer-2.2.0\\src\\lib.rs", Edition2021) }
+   0.162209500s  INFO prepare_target{force=false package_id=icu_normalizer v2.2.0 target="icu_normalizer"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\icu_normalizer-a0433fdd82504784\lib-icu_normalizer`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.162411000s  INFO prepare_target{force=false package_id=icu_collections v2.2.0 target="icu_collections"}: cargo::core::compiler::fingerprint: fingerprint error for icu_collections v2.2.0/Check { test: false }/TargetInner { benched: false, ..: lib_target("icu_collections", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\icu_collections-2.2.0\\src\\lib.rs", Edition2021) }
+   0.162420300s  INFO prepare_target{force=false package_id=icu_collections v2.2.0 target="icu_collections"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\icu_collections-8e2d852799ae7521\lib-icu_collections`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_libgit2_prerelease
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: git_midx_writer_dump
+  23: git_filter_source_repo
+  24: git_midx_writer_dump
+  25: BaseThreadInitThunk
+  26: RtlUserThreadStart
+   0.162939900s  INFO prepare_target{force=false package_id=potential_utf v0.1.5 target="potential_utf"}: cargo::core::compiler::fingerprint: fingerprint error for potential_utf v0.1.5/Check { test: false }/TargetInner { ..: lib_target("potential_utf", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\potential_utf-0.1.5\\src\\lib.rs", Edition2021) }
+   0.162972900s  INFO prepare_target{force=false package_id=potential_utf v0.1.5 target="potential_utf"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\potential_utf-fb4578fab7943a67\lib-potential_utf`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_libgit2_prerelease
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: git_midx_writer_dump
+  24: git_filter_source_repo
+  25: git_midx_writer_dump
+  26: BaseThreadInitThunk
+  27: RtlUserThreadStart
+   0.163528800s  INFO prepare_target{force=false package_id=zerovec v0.11.6 target="zerovec"}: cargo::core::compiler::fingerprint: fingerprint error for zerovec v0.11.6/Check { test: false }/TargetInner { benched: false, ..: lib_target("zerovec", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zerovec-0.11.6\\src\\lib.rs", Edition2021) }
+   0.163559200s  INFO prepare_target{force=false package_id=zerovec v0.11.6 target="zerovec"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\zerovec-aad12acff58bd794\lib-zerovec`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_filter_source_repo
+  19: git_libgit2_prerelease
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: <unknown>
+  24: git_midx_writer_dump
+  25: git_filter_source_repo
+  26: git_midx_writer_dump
+  27: BaseThreadInitThunk
+  28: RtlUserThreadStart
+   0.164022500s  INFO prepare_target{force=false package_id=yoke v0.8.3 target="yoke"}: cargo::core::compiler::fingerprint: fingerprint error for yoke v0.8.3/Check { test: false }/TargetInner { ..: lib_target("yoke", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\yoke-0.8.3\\src\\lib.rs", Edition2021) }
+   0.164038400s  INFO prepare_target{force=false package_id=yoke v0.8.3 target="yoke"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\yoke-18189b2804ebd207\lib-yoke`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_filter_source_repo
+  19: git_filter_source_repo
+  20: git_libgit2_prerelease
+  21: <unknown>
+  22: <unknown>
+  23: <unknown>
+  24: <unknown>
+  25: git_midx_writer_dump
+  26: git_filter_source_repo
+  27: git_midx_writer_dump
+  28: BaseThreadInitThunk
+  29: RtlUserThreadStart
+   0.165116400s  INFO prepare_target{force=false package_id=utf8_iter v1.0.4 target="utf8_iter"}: cargo::core::compiler::fingerprint: fingerprint error for utf8_iter v1.0.4/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("utf8_iter", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\utf8_iter-1.0.4\\src\\lib.rs", Edition2021) }
+   0.165136700s  INFO prepare_target{force=false package_id=utf8_iter v1.0.4 target="utf8_iter"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\utf8_iter-85bb9dd52e26652f\lib-utf8_iter`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_libgit2_prerelease
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: git_midx_writer_dump
+  24: git_filter_source_repo
+  25: git_midx_writer_dump
+  26: BaseThreadInitThunk
+  27: RtlUserThreadStart
+   0.165339400s  INFO prepare_target{force=false package_id=icu_normalizer_data v2.2.0 target="icu_normalizer_data"}: cargo::core::compiler::fingerprint: fingerprint error for icu_normalizer_data v2.2.0/Check { test: false }/TargetInner { ..: lib_target("icu_normalizer_data", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\icu_normalizer_data-2.2.0\\src\\lib.rs", Edition2021) }
+   0.165351900s  INFO prepare_target{force=false package_id=icu_normalizer_data v2.2.0 target="icu_normalizer_data"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\icu_normalizer_data-0d438d14dcde6ba8\lib-icu_normalizer_data`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_libgit2_prerelease
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: git_midx_writer_dump
+  23: git_filter_source_repo
+  24: git_midx_writer_dump
+  25: BaseThreadInitThunk
+  26: RtlUserThreadStart
+   0.166120600s  INFO prepare_target{force=false package_id=icu_provider v2.2.0 target="icu_provider"}: cargo::core::compiler::fingerprint: fingerprint error for icu_provider v2.2.0/Check { test: false }/TargetInner { benched: false, ..: lib_target("icu_provider", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\icu_provider-2.2.0\\src\\lib.rs", Edition2021) }
+   0.166141300s  INFO prepare_target{force=false package_id=icu_provider v2.2.0 target="icu_provider"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\icu_provider-5012500de9c84621\lib-icu_provider`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_libgit2_prerelease
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: git_midx_writer_dump
+  23: git_filter_source_repo
+  24: git_midx_writer_dump
+  25: BaseThreadInitThunk
+  26: RtlUserThreadStart
+   0.166406700s  INFO prepare_target{force=false package_id=icu_locale_core v2.2.0 target="icu_locale_core"}: cargo::core::compiler::fingerprint: fingerprint error for icu_locale_core v2.2.0/Check { test: false }/TargetInner { benched: false, ..: lib_target("icu_locale_core", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\icu_locale_core-2.2.0\\src\\lib.rs", Edition2021) }
+   0.166419300s  INFO prepare_target{force=false package_id=icu_locale_core v2.2.0 target="icu_locale_core"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\icu_locale_core-168b6ddacbabf043\lib-icu_locale_core`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_libgit2_prerelease
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: git_midx_writer_dump
+  24: git_filter_source_repo
+  25: git_midx_writer_dump
+  26: BaseThreadInitThunk
+  27: RtlUserThreadStart
+   0.166660200s  INFO prepare_target{force=false package_id=litemap v0.8.2 target="litemap"}: cargo::core::compiler::fingerprint: fingerprint error for litemap v0.8.2/Check { test: false }/TargetInner { benched: false, ..: lib_target("litemap", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\litemap-0.8.2\\src\\lib.rs", Edition2021) }
+   0.166671300s  INFO prepare_target{force=false package_id=litemap v0.8.2 target="litemap"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\litemap-4cf6dd5b45bfa7c8\lib-litemap`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_filter_source_repo
+  19: git_libgit2_prerelease
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: <unknown>
+  24: git_midx_writer_dump
+  25: git_filter_source_repo
+  26: git_midx_writer_dump
+  27: BaseThreadInitThunk
+  28: RtlUserThreadStart
+   0.166824000s  INFO prepare_target{force=false package_id=tinystr v0.8.3 target="tinystr"}: cargo::core::compiler::fingerprint: fingerprint error for tinystr v0.8.3/Check { test: false }/TargetInner { benched: false, ..: lib_target("tinystr", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tinystr-0.8.3\\src\\lib.rs", Edition2021) }
+   0.166833500s  INFO prepare_target{force=false package_id=tinystr v0.8.3 target="tinystr"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\tinystr-3ea0f81e5253a6e8\lib-tinystr`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_filter_source_repo
+  19: git_libgit2_prerelease
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: <unknown>
+  24: git_midx_writer_dump
+  25: git_filter_source_repo
+  26: git_midx_writer_dump
+  27: BaseThreadInitThunk
+  28: RtlUserThreadStart
+   0.167045300s  INFO prepare_target{force=false package_id=writeable v0.6.3 target="writeable"}: cargo::core::compiler::fingerprint: fingerprint error for writeable v0.6.3/Check { test: false }/TargetInner { benched: false, ..: lib_target("writeable", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\writeable-0.6.3\\src\\lib.rs", Edition2021) }
+   0.167055200s  INFO prepare_target{force=false package_id=writeable v0.6.3 target="writeable"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\writeable-e4761bf4b8adc33a\lib-writeable`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_filter_source_repo
+  19: git_libgit2_prerelease
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: <unknown>
+  24: git_midx_writer_dump
+  25: git_filter_source_repo
+  26: git_midx_writer_dump
+  27: BaseThreadInitThunk
+  28: RtlUserThreadStart
+   0.167216300s  INFO prepare_target{force=false package_id=zerotrie v0.2.4 target="zerotrie"}: cargo::core::compiler::fingerprint: fingerprint error for zerotrie v0.2.4/Check { test: false }/TargetInner { benched: false, ..: lib_target("zerotrie", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zerotrie-0.2.4\\src\\lib.rs", Edition2021) }
+   0.167225500s  INFO prepare_target{force=false package_id=zerotrie v0.2.4 target="zerotrie"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\zerotrie-94bc1361701b5c42\lib-zerotrie`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: git_libgit2_prerelease
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: <unknown>
+  23: git_midx_writer_dump
+  24: git_filter_source_repo
+  25: git_midx_writer_dump
+  26: BaseThreadInitThunk
+  27: RtlUserThreadStart
+   0.167382200s  INFO prepare_target{force=false package_id=icu_properties v2.2.0 target="icu_properties"}: cargo::core::compiler::fingerprint: fingerprint error for icu_properties v2.2.0/Check { test: false }/TargetInner { ..: lib_target("icu_properties", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\icu_properties-2.2.0\\src\\lib.rs", Edition2021) }
+   0.167392500s  INFO prepare_target{force=false package_id=icu_properties v2.2.0 target="icu_properties"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\icu_properties-687e41723604a416\lib-icu_properties`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.167582400s  INFO prepare_target{force=false package_id=icu_properties_data v2.2.0 target="icu_properties_data"}: cargo::core::compiler::fingerprint: fingerprint error for icu_properties_data v2.2.0/Check { test: false }/TargetInner { ..: lib_target("icu_properties_data", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\icu_properties_data-2.2.0\\src\\lib.rs", Edition2021) }
+   0.167591400s  INFO prepare_target{force=false package_id=icu_properties_data v2.2.0 target="icu_properties_data"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\icu_properties_data-be7ba0727747e572\lib-icu_properties_data`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_libgit2_prerelease
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: <unknown>
+  22: git_midx_writer_dump
+  23: git_filter_source_repo
+  24: git_midx_writer_dump
+  25: BaseThreadInitThunk
+  26: RtlUserThreadStart
+   0.168257300s  INFO prepare_target{force=false package_id=reqwest v0.12.28 target="reqwest"}: cargo::core::compiler::fingerprint: fingerprint error for reqwest v0.12.28/Check { test: false }/TargetInner { ..: lib_target("reqwest", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\reqwest-0.12.28\\src\\lib.rs", Edition2021) }
+   0.168272800s  INFO prepare_target{force=false package_id=reqwest v0.12.28 target="reqwest"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\reqwest-9a2716077e47c08f\lib-reqwest`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_libgit2_prerelease
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: git_midx_writer_dump
+  18: git_filter_source_repo
+  19: git_midx_writer_dump
+  20: BaseThreadInitThunk
+  21: RtlUserThreadStart
+   0.168753100s  INFO prepare_target{force=false package_id=hyper-rustls v0.27.9 target="hyper_rustls"}: cargo::core::compiler::fingerprint: fingerprint error for hyper-rustls v0.27.9/Check { test: false }/TargetInner { ..: lib_target("hyper_rustls", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hyper-rustls-0.27.9\\src\\lib.rs", Edition2021) }
+   0.168764400s  INFO prepare_target{force=false package_id=hyper-rustls v0.27.9 target="hyper_rustls"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\hyper-rustls-4790c2a8f8af6ead\lib-hyper_rustls`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.169021800s  INFO prepare_target{force=false package_id=rustls v0.23.41 target="rustls"}: cargo::core::compiler::fingerprint: fingerprint error for rustls v0.23.41/Check { test: false }/TargetInner { ..: lib_target("rustls", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustls-0.23.41\\src\\lib.rs", Edition2021) }
+   0.169031600s  INFO prepare_target{force=false package_id=rustls v0.23.41 target="rustls"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\rustls-1b88fe535f01756d\lib-rustls`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.169218600s  INFO prepare_target{force=false package_id=ring v0.17.14 target="ring"}: cargo::core::compiler::fingerprint: fingerprint error for ring v0.17.14/Check { test: false }/TargetInner { ..: lib_target("ring", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ring-0.17.14\\src\\lib.rs", Edition2021) }
+   0.169229700s  INFO prepare_target{force=false package_id=ring v0.17.14 target="ring"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\ring-e452194f5f4ad12c\lib-ring`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.169402200s  INFO prepare_target{force=false package_id=getrandom v0.2.17 target="getrandom"}: cargo::core::compiler::fingerprint: fingerprint error for getrandom v0.2.17/Check { test: false }/TargetInner { ..: lib_target("getrandom", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.2.17\\src\\lib.rs", Edition2018) }
+   0.169411300s  INFO prepare_target{force=false package_id=getrandom v0.2.17 target="getrandom"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\getrandom-85cc28cf4b40d6cd\lib-getrandom`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.170434800s  INFO prepare_target{force=false package_id=untrusted v0.9.0 target="untrusted"}: cargo::core::compiler::fingerprint: fingerprint error for untrusted v0.9.0/Check { test: false }/TargetInner { ..: lib_target("untrusted", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\untrusted-0.9.0\\src\\lib.rs", Edition2018) }
+   0.170456700s  INFO prepare_target{force=false package_id=untrusted v0.9.0 target="untrusted"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\untrusted-77edbbdd353c554e\lib-untrusted`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.171245900s  INFO prepare_target{force=false package_id=rustls-pki-types v1.15.0 target="rustls_pki_types"}: cargo::core::compiler::fingerprint: fingerprint error for rustls-pki-types v1.15.0/Check { test: false }/TargetInner { ..: lib_target("rustls_pki_types", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustls-pki-types-1.15.0\\src\\lib.rs", Edition2021) }
+   0.171263100s  INFO prepare_target{force=false package_id=rustls-pki-types v1.15.0 target="rustls_pki_types"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\rustls-pki-types-330c8ae5a2711f26\lib-rustls_pki_types`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.171464400s  INFO prepare_target{force=false package_id=zeroize v1.9.0 target="zeroize"}: cargo::core::compiler::fingerprint: fingerprint error for zeroize v1.9.0/Check { test: false }/TargetInner { ..: lib_target("zeroize", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zeroize-1.9.0\\src\\lib.rs", Edition2024) }
+   0.171474400s  INFO prepare_target{force=false package_id=zeroize v1.9.0 target="zeroize"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\zeroize-3021638e1c94188a\lib-zeroize`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_libgit2_prerelease
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: <unknown>
+  21: git_midx_writer_dump
+  22: git_filter_source_repo
+  23: git_midx_writer_dump
+  24: BaseThreadInitThunk
+  25: RtlUserThreadStart
+   0.171634200s  INFO prepare_target{force=false package_id=rustls-webpki v0.103.13 target="webpki"}: cargo::core::compiler::fingerprint: fingerprint error for rustls-webpki v0.103.13/Check { test: false }/TargetInner { ..: lib_target("webpki", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustls-webpki-0.103.13\\src\\lib.rs", Edition2021) }
+   0.171644200s  INFO prepare_target{force=false package_id=rustls-webpki v0.103.13 target="webpki"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\rustls-webpki-185fa82933fe9eb0\lib-webpki`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.171814300s  INFO prepare_target{force=false package_id=subtle v2.6.1 target="subtle"}: cargo::core::compiler::fingerprint: fingerprint error for subtle v2.6.1/Check { test: false }/TargetInner { ..: lib_target("subtle", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\src\\lib.rs", Edition2018) }
+   0.171827700s  INFO prepare_target{force=false package_id=subtle v2.6.1 target="subtle"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\subtle-61807d6a4ba84f63\lib-subtle`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_libgit2_prerelease
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   0.171974200s  INFO prepare_target{force=false package_id=tokio-rustls v0.26.4 target="tokio_rustls"}: cargo::core::compiler::fingerprint: fingerprint error for tokio-rustls v0.26.4/Check { test: false }/TargetInner { ..: lib_target("tokio_rustls", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-rustls-0.26.4\\src\\lib.rs", Edition2021) }
+   0.171984000s  INFO prepare_target{force=false package_id=tokio-rustls v0.26.4 target="tokio_rustls"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\tokio-rustls-1fb7c49bddaf82f0\lib-tokio_rustls`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.172202900s  INFO prepare_target{force=false package_id=webpki-roots v1.0.8 target="webpki_roots"}: cargo::core::compiler::fingerprint: fingerprint error for webpki-roots v1.0.8/Check { test: false }/TargetInner { ..: lib_target("webpki_roots", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\webpki-roots-1.0.8\\src\\lib.rs", Edition2021) }
+   0.172212600s  INFO prepare_target{force=false package_id=webpki-roots v1.0.8 target="webpki_roots"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\webpki-roots-8c6dfae69a191b7f\lib-webpki_roots`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.172359300s  INFO prepare_target{force=false package_id=sync_wrapper v1.0.2 target="sync_wrapper"}: cargo::core::compiler::fingerprint: fingerprint error for sync_wrapper v1.0.2/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("sync_wrapper", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\sync_wrapper-1.0.2\\src\\lib.rs", Edition2021) }
+   0.172368300s  INFO prepare_target{force=false package_id=sync_wrapper v1.0.2 target="sync_wrapper"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\sync_wrapper-40039cbeaf40a8e5\lib-sync_wrapper`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.172507500s  INFO prepare_target{force=false package_id=tower v0.5.3 target="tower"}: cargo::core::compiler::fingerprint: fingerprint error for tower v0.5.3/Check { test: false }/TargetInner { ..: lib_target("tower", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tower-0.5.3\\src\\lib.rs", Edition2018) }
+   0.172516200s  INFO prepare_target{force=false package_id=tower v0.5.3 target="tower"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\tower-efbe14f92a4ae77e\lib-tower`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.172713300s  INFO prepare_target{force=false package_id=tower-http v0.6.11 target="tower_http"}: cargo::core::compiler::fingerprint: fingerprint error for tower-http v0.6.11/Check { test: false }/TargetInner { ..: lib_target("tower_http", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tower-http-0.6.11\\src\\lib.rs", Edition2018) }
+   0.172722400s  INFO prepare_target{force=false package_id=tower-http v0.6.11 target="tower_http"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\tower-http-56e4d6a3770fbb76\lib-tower_http`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.172998500s  INFO prepare_target{force=false package_id=bitflags v2.13.0 target="bitflags"}: cargo::core::compiler::fingerprint: fingerprint error for bitflags v2.13.0/Check { test: false }/TargetInner { ..: lib_target("bitflags", ["lib"], "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bitflags-2.13.0\\src\\lib.rs", Edition2021) }
+   0.173008100s  INFO prepare_target{force=false package_id=bitflags v2.13.0 target="bitflags"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\bitflags-dd3f1cdcd4ee0ea6\lib-bitflags`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_libgit2_prerelease
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   0.173172100s  INFO prepare_target{force=false package_id=chat v0.1.0 (C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src) target="bootstrap"}: cargo::core::compiler::fingerprint: fingerprint error for chat v0.1.0 (C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src)/Check { test: true }/TargetInner { name: "bootstrap", doc: true, ..: with_path("C:\\Users\\User\\Desktop\\Le-Glacier-Gourmand\\functions-src\\src\\main.rs", Edition2021) }
+   0.173181800s  INFO prepare_target{force=false package_id=chat v0.1.0 (C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src) target="bootstrap"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src\target\debug\.fingerprint\chat-4da781545e76ed16\test-bin-bootstrap`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+    Checking memchr v2.8.3
+    Checking windows-sys v0.61.2
+    Checking futures-channel v0.3.32
+    Checking serde_core v1.0.228
+    Checking tracing-core v0.1.36
+    Checking writeable v0.6.3
+    Checking litemap v0.8.2
+    Checking tower-service v0.3.3
+    Checking utf8_iter v1.0.4
+    Checking yoke v0.8.3
+    Checking log v0.4.33
+    Checking try-lock v0.2.5
+    Checking httparse v1.10.1
+    Checking want v0.3.1
+    Checking icu_normalizer_data v2.2.0
+    Checking zmij v1.0.22
+    Checking icu_properties_data v2.2.0
+    Checking form_urlencoded v1.2.2
+    Checking tower-layer v0.3.3
+    Checking zerovec v0.11.6
+    Checking zerotrie v0.2.4
+    Checking base64 v0.22.1
+    Checking atomic-waker v1.1.2
+    Checking zeroize v1.9.0
+    Checking tracing v0.1.44
+    Checking libc v0.2.186
+    Checking getrandom v0.2.17
+    Checking futures-util v0.3.32
+    Checking regex-syntax v0.8.11
+    Checking untrusted v0.9.0
+    Checking rustls-pki-types v1.15.0
+    Checking ipnet v2.12.0
+    Checking lazy_static v1.5.0
+    Checking pin-project v1.1.13
+    Checking thread_local v1.1.10
+    Checking ring v0.17.14
+    Checking subtle v2.6.1
+    Checking sharded-slab v0.1.7
+    Checking sync_wrapper v1.0.2
+    Checking ryu v1.0.23
+    Checking tinystr v0.8.3
+    Checking potential_utf v0.1.5
+    Checking async-stream v0.3.6
+    Checking webpki-roots v1.0.8
+    Checking bitflags v2.13.0
+    Checking icu_collections v2.2.0
+    Checking encoding_rs v0.8.35
+    Checking mime v0.3.17
+    Checking icu_locale_core v2.2.0
+    Checking regex-automata v0.4.15
+    Checking icu_provider v2.2.0
+    Checking rustls-webpki v0.103.13
+    Checking icu_normalizer v2.2.0
+    Checking icu_properties v2.2.0
+    Checking rustls v0.23.41
+    Checking serde v1.0.228
+    Checking serde_json v1.0.150
+    Checking serde_path_to_error v0.1.20
+    Checking bytes v1.12.1
+    Checking tracing-serde v0.2.0
+    Checking query_map v0.7.0
+    Checking serde_urlencoded v0.7.1
+    Checking socket2 v0.6.4
+    Checking mio v1.2.1
+    Checking matchers v0.2.0
+    Checking idna_adapter v1.2.2
+    Checking tracing-subscriber v0.3.23
+    Checking idna v1.1.0
+    Checking tower v0.4.13
+    Checking futures-executor v0.3.32
+    Checking http v1.4.2
+    Checking tokio v1.52.3
+    Checking futures v0.3.32
+    Checking url v2.5.8
+    Checking http-body v1.0.1
+    Checking http-serde v2.1.1
+    Checking http-body-util v0.1.3
+    Checking aws_lambda_events v0.15.1
+    Checking hyper v1.10.1
+    Checking tokio-stream v0.1.18
+    Checking tokio-rustls v0.26.4
+    Checking tower v0.5.3
+    Checking tower-http v0.6.11
+    Checking hyper-util v0.1.20
+    Checking lambda_runtime_api_client v0.11.1
+    Checking hyper-rustls v0.27.9
+    Checking reqwest v0.12.28
+    Checking lambda_runtime v0.13.0
+    Checking lambda_http v0.13.0
+    Checking chat v0.1.0 (C:\Users\User\Desktop\Le-Glacier-Gourmand\functions-src)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 19.58s
