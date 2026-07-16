@@ -64,14 +64,33 @@ export const MenuService = {
   },
 
   async uploadImage(file: File, onProgress?: (p: number) => void): Promise<string> {
-    const storageRef = ref(storage, `products/${Date.now()}-${file.name}`);
-    const task = uploadBytesResumable(storageRef, file);
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', 'glacier_gourmand_unsigned');
+
     return new Promise((resolve, reject) => {
-      task.on('state_changed',
-        (snap) => onProgress?.(snap.bytesTransferred / snap.totalBytes * 100),
-        reject,
-        async () => resolve(await getDownloadURL(task.snapshot.ref))
-      );
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', 'https://api.cloudinary.com/v1_1/aworuara/image/upload', true);
+
+      if (onProgress && xhr.upload) {
+        xhr.upload.onprogress = (e) => {
+          if (e.lengthComputable) {
+            onProgress((e.loaded / e.total) * 100);
+          }
+        };
+      }
+
+      xhr.onload = () => {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          const response = JSON.parse(xhr.responseText);
+          resolve(response.secure_url);
+        } else {
+          reject(new Error('Cloudinary upload failed: ' + xhr.statusText));
+        }
+      };
+
+      xhr.onerror = () => reject(new Error('Network error during upload'));
+      xhr.send(formData);
     });
   },
 };
