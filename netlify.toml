@@ -12,12 +12,6 @@
 
 # ── Redirects ─────────────────────────────────────────────────────────────────
 
-# API → Rust function
-[[redirects]]
-  from   = "/api/chat"
-  to     = "/.netlify/functions/chat"
-  status = 200
-
 # SPA fallback (React Router)
 [[redirects]]
   from   = "/*"
