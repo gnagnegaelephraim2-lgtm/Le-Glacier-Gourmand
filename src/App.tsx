@@ -13,7 +13,6 @@ import Gallery from './components/Gallery';
 import Events from './components/Events';
 import Reviews from './components/Reviews';
 import Footer from './components/Footer';
-import AIChat from './components/AIChat';
 import Preloader from './components/Preloader';
 import CustomCursor from './components/CustomCursor';
 import ScrollProgressBar from './components/ScrollProgressBar';
@@ -58,7 +57,6 @@ export default function App() {
                   <Reviews />
                 </main>
                 <Footer />
-                <AIChat />
                 <CartDrawer />
                 <CheckoutModal />
                 <WhatsAppButton />
